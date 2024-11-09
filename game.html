@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Survival Game</title>
+    <style>
+        canvas {
+            background-color: #222;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h2>Score: <span id="score">0</span></h2>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        const socket = io();
+
+        // Game variables
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        let score = 0; // Initial score
+
+        // Update score on the game page when received from server
+        socket.on('update_score', data => {
+            score = data.score;
+            document.getElementById('score').textContent = score;
+        });
+
+        // Player setup
+        const player = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            size: 20,
+            speed: 4,
+            health: 100
+        };
+
+        // Zombie array to store multiple zombies
+        let zombies = [];
+        let isGameOver = false;
+
+        // Controls
+        const keys = {
+            ArrowUp: false,
+            ArrowDown: false,
+            ArrowLeft: false,
+            ArrowRight: false
+        };
+
+        // Control key events
+        window.addEventListener("keydown", (e) => keys[e.key] = true);
+        window.addEventListener("keyup", (e) => keys[e.key] = false);
+
+        // Update player movement based on key inputs
+        function movePlayer() {
+            if (keys.ArrowUp && player.y > 0) player.y -= player.speed;
+            if (keys.ArrowDown && player.y < canvas.height - player.size) player.y += player.speed;
+            if (keys.ArrowLeft && player.x > 0) player.x -= player.speed;
+            if (keys.ArrowRight && player.x < canvas.width - player.size) player.x += player.speed;
+        }
+
+        // Spawn zombies at random locations
+        function spawnZombie() {
+            const zombie = {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: 20,
+                speed: 1.5
+            };
+            zombies.push(zombie);
+        }
+
+        // Move zombies towards the player
+        function moveZombies() {
+            zombies.forEach(zombie => {
+                const dx = player.x - zombie.x;
+                const dy = player.y - zombie.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                zombie.x += (dx / distance) * zombie.speed;
+                zombie.y += (dy / distance) * zombie.speed;
+
+                // Check collision with player
+                if (distance < player.size) {
+                    player.health -= 1; // Player loses health on collision
+                }
+            });
+        }
+
+        // Draw the player on the canvas
+        function drawPlayer() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(player.x, player.y, player.size, player.size);
+        }
+
+        // Draw zombies on the canvas
+        function drawZombies() {
+            ctx.fillStyle = "green";
+            zombies.forEach(zombie => {
+                ctx.fillRect(zombie.x, zombie.y, zombie.size, zombie.size);
+            });
+        }
+
+        // Draw health bar
+        function drawHealth() {
+            ctx.fillStyle = "red";
+            ctx.fillRect(10, 10, player.health * 2, 20);
+        }
+
+        // Game loop and game over logic
+        function update() {
+            if (player.health <= 0) {
+                isGameOver = true;
+            }
+
+            if (!isGameOver) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                movePlayer();
+                moveZombies();
+
+                drawPlayer();
+                drawZombies();
+                drawHealth();
+
+                requestAnimationFrame(update);
+            } else {
+                ctx.fillStyle = "white";
+                ctx.font = "30px Arial";
+                ctx.fillText("Game Over", canvas.width / 2 - 75, canvas.height / 2);
+            }
+        }
+
+        // Spawn zombies periodically
+        setInterval(spawnZombie, 2000);
+        update();
+    </script>
+</body>
+</html>
