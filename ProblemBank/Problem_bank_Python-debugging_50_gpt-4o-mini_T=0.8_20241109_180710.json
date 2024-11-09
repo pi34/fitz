@@ -1,0 +1,1156 @@
+[
+    {
+        "question": "In the following code snippet, identify where the variable `result` is incorrectly calculated due to a missing operator.\n\n```\n1: def calculate_area(length, width):\n2:     area = length width\n3:     return area\n4: \n5: print(calculate_area(5, 3))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "In this code example, find the line that causes a `TypeError` due to an incompatible operation between string and integer types.\n\n```\n1: def repeat_string(string, times):\n2:     if times < 0:\n3:         return \"Error\"\n4:     return string * times\n5: \n6: print(repeat_string(\"Hello\", \"3\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "In the code below, identify the line that will raise an `IndexError` when the list is accessed.\n\n```\n1: def get_last_element(lst):\n2:     return lst[len(lst)]\n3: \n4: print(get_last_element([1, 2, 3]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "In the following code, which line incorrectly tries to reference a variable that has not been defined yet?\n\n```\n1: def increment(value):\n2:     new_value = value + increment_value\n3:     return new_value\n4: \n5: print(increment(10))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "Locate the line that incorrectly modifies a string, which will lead to a `TypeError` since strings are immutable in Python.\n\n```\n1: def update_string(original):\n2:     original[0] = 'H'\n3:     return original\n4: \n5: print(update_string(\"hello\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In the following code snippet, identify the line that attempts to divide by zero, which causes a `ZeroDivisionError`.\n\n```\n1: def divide_numbers(num1, num2):\n2:     return num1 / num2\n3: \n4: print(divide_numbers(10, 0))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "In the code snippet below, find the line that causes a `NameError` because the variable `total` is referenced before it is assigned.\n\n```\n1: def calculate_total(prices):\n2:     for price in prices:\n3:         total += price\n4:     return total\n5: \n6: print(calculate_total([10, 20, 30]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 2"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "Identify the line in the following code that causes a `KeyError` when trying to access a key that does not exist in the dictionary.\n\n```\n1: def get_value(dictionary, key):\n2:     return dictionary[key]\n3: \n4: sample_dict = {'a': 1, 'b': 2}\n5: print(get_value(sample_dict, 'c'))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "In the following code, which line causes a `TypeError` when attempting to concatenate a string and an integer without conversion?\n\n```\n1: def concatenate_values(str_value, int_value):\n2:     return str_value + int_value\n3: \n4: print(concatenate_values(\"Number: \", 5))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "In the code snippet below, find the line that raises an `AttributeError` when trying to call a method on an integer.\n\n```\n1: def get_length_of_number(num):\n2:     return num.length()\n3: \n4: print(get_length_of_number(12345))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "In the following code snippet, identify the line that raises an `UnboundLocalError` due to the local variable `count` being referenced before assignment.\n\n```\n1: def increment_count():\n2:     count += 1\n3:     return count\n4: \n5: print(increment_count())\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "In the following code, which line will cause a `ValueError` when trying to convert a non-numeric string to an integer?\n\n```\n1: def convert_to_integer(value):\n2:     return int(value)\n3: \n4: print(convert_to_integer(\"abc\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "In the following code snippet, identify the line that will trigger a `TypeError` due to trying to add a list and an integer.\n\n```\n1: def add_elements(base_list, number):\n2:     return base_list + number\n3: \n4: print(add_elements([1, 2, 3], 5))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "In the following code, which line causes a `RuntimeError` due to an infinite recursion in the function definition?\n\n```\n1: def recursive_function():\n2:     return recursive_function()\n3: \n4: print(recursive_function())\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "Identify the line in the following code that will raise a `ModuleNotFoundError` when trying to import a non-existent module.\n\n```\n1: import non_existent_module\n2: \n3: def main():\n4:     print(\"This will not run.\")\n5: \n6: main()\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "In the following code, identify the line that attempts to access an element from an empty list, which will cause an `IndexError`.\n\n```\n1: def first_element(lst):\n2:     return lst[0]\n3: \n4: print(first_element([]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "In the following code snippet, locate the line that will cause a `TypeError` due to attempting to access an attribute on a `NoneType` object.\n\n```\n1: def get_first_char(string):\n2:     if not string:\n3:         return None\n4:     return string[0].upper()\n5: \n6: print(get_first_char(None))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "In this code, identify the line where a `StopIteration` exception will be raised when attempting to retrieve the next item from an exhausted iterator.\n\n```\n1: def get_next_item(iterator):\n2:     return next(iterator)\n3: \n4: my_list = [1, 2, 3]\n5: iterator = iter(my_list)\n6: for _ in range(4):\n7:     print(get_next_item(iterator))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "In the following code snippet, identify the line that causes a `ValueError` due to mismatched unpacking of variables.\n\n```\n1: def split_coordinates(coord_string):\n2:     x, y = coord_string.split(',')\n3:     return (int(x), int(y))\n4: \n5: print(split_coordinates(\"10\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "In the following code, find the line that will raise a `RecursionError` due to exceeding the maximum recursion depth without a base case.\n\n```\n1: def faulty_recursion():\n2:     return faulty_recursion()\n3: \n4: print(faulty_recursion())\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    },
+    {
+        "question": "In the following code snippet, identify the line that causes a `NameError` because `number` is used before it is assigned a value.\n\n```\n1: def calculate_square():\n2:     return number ** 2\n3: \n4: number = 5\n5: print(calculate_square())\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "In the following code snippet, locate the line that will trigger a `TypeError` by trying to subtract a string from an integer.\n\n```\n1: def subtract_values(a, b):\n2:     return a - b\n3: \n4: print(subtract_values(10, \"5\"))\n```",
+        "options": [
+            [
+                "b",
+                ":"
+            ],
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "Identify the line in the following code that will raise a `KeyError` when attempting to access a dictionary with a non-existent key.\n\n```\n1: def get_item(my_dict, key):\n2:     return my_dict[key]\n3: \n4: my_dict = {'name': 'Alice', 'age': 30}\n5: print(get_item(my_dict, 'address'))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "D",
+        "index": 23
+    },
+    {
+        "question": "In the following code snippet, locate the line that raises a `TypeError` due to an unsupported operand type for the `*` operator with a list and a non-integer.\n\n```\n1: def repeat_list(lst, times):\n2:     return lst * times\n3: \n4: print(repeat_list([1, 2, 3], \"3\"))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 24
+    },
+    {
+        "question": "In the following code, identify the line that will raise a `FloatDivisionError` because of division by zero with floats.\n\n```\n1: def divide_floats(num1, num2):\n2:     return num1 / num2\n3: \n4: print(divide_floats(10.0, 0.0))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    },
+    {
+        "question": "In the following code snippet, identify where the `KeyError` occurs due to attempting to access a key that is not present in the dictionary.\n\n```\n1: def get_user_age(user_dict, user):\n2:     return user_dict[user]['age']\n3: \n4: user_data = {'Alice': {'age': 30}, 'Bob': {'age': 25}}\n5: print(get_user_age(user_data, 'Charlie'))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 26
+    },
+    {
+        "question": "In the following code, which line will throw a `TypeError` because of attempting to concatenate a list to a string without proper conversion?\n\n```\n1: def concatenate_elements(string, elements):\n2:     return string + elements\n3: \n4: my_string = \"Numbers: \"\n5: print(concatenate_elements(my_string, [1, 2, 3]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 27
+    },
+    {
+        "question": "In this code snippet, identify which line causes an `AttributeError` because a method is being called on an unsupported type.\n\n```\n1: def reverse_string(string):\n2:     return string.reverse()\n3: \n4: print(reverse_string(\"hello\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 28
+    },
+    {
+        "question": "In the following code, locate the line that causes a `TypeError` due to trying to perform a mathematical operation on incompatible types.\n\n```\n1: def calculate_sum(x, y):\n2:     return x + y\n3: \n4: print(calculate_sum(10, \"20\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 29
+    },
+    {
+        "question": "In this code snippet, identify the line that raises a `ValueError` for converting an invalid string to an integer.\n\n```\n1: def string_to_int(value):\n2:     return int(value)\n3: \n4: print(string_to_int(\"invalid\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 30
+    },
+    {
+        "question": "In the following code snippet, identify which line causes a `TypeError` due to trying to multiply a list by a string instead of an integer.\n\n```\n1: def scale_list(lst, factor):\n2:     return lst * factor\n3: \n4: print(scale_list([1, 2, 3], \"2\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 31
+    },
+    {
+        "question": "In the following code snippet, locate the line that raises an `IndexError` by attempting to access an index that is out of range for the list.\n\n```\n1: def get_element(lst, index):\n2:     return lst[index]\n3: \n4: print(get_element([10, 20, 30], 3))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 32
+    },
+    {
+        "question": "In this code, identify the line that will cause a `TypeError` because attempting to use an unsupported operation on a dictionary.\n\n```\n1: def get_value(d, key):\n2:     return d + key\n3: \n4: my_dict = {'a': 1, 'b': 2}\n5: print(get_value(my_dict, 'a'))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 33
+    },
+    {
+        "question": "In the following code snippet, find the line that will trigger a `NameError` because the variable `result` is referenced before assignment.\n\n```\n1: def calculate_sum():\n2:     return result + 10\n3: \n4: result = 5\n5: print(calculate_sum())\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 34
+    },
+    {
+        "question": "Identify the line in the following code that will raise a `TypeError` when trying to join a list of integers into a string.\n\n```\n1: def join_numbers(numbers):\n2:     return \", \".join(numbers)\n3: \n4: print(join_numbers([1, 2, 3, 4]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 35
+    },
+    {
+        "question": "---\n\n**Question 1**: In the following code snippet, identify the line that causes a `TypeError` when attempting to perform an operation on incompatible types (a dictionary and a list).\n\n```\n1: def merge_dict_and_list(my_dict, my_list):\n2:     return my_dict + my_list\n3: \n4: print(merge_dict_and_list({'a': 1}, [1, 2, 3]))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 36
+    },
+    {
+        "question": "In the following code snippet, find the line that will raise a `ValueError` due to trying to unpack a sequence with the wrong number of values.\n\n```\n1: def unpack_coordinates(coord_tuple):\n2:     x, y, z = coord_tuple\n3:     return x + y + z\n4: \n5: print(unpack_coordinates((10, 20)))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "B",
+        "index": 37
+    },
+    {
+        "question": "In the following code snippet, identify the line that causes an `AttributeError` because an integer does not have the method `split()`.\n\n```\n1: def split_number(num):\n2:     return num.split('.')\n3: \n4: print(split_number(12345))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 38
+    },
+    {
+        "question": "In the following code, locate the line that will raise a `ZeroDivisionError` due to a division operation with zero.\n\n```\n1: def calculate_ratio(numerator, denominator):\n2:     if denominator == 0:\n3:         return \"Cannot divide by zero\"\n4:     return numerator / denominator\n5: \n6: print(calculate_ratio(10, 0))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "D",
+        "index": 39
+    },
+    {
+        "question": "Identify the line in the following code that will raise a `TypeError` because of trying to access an element of a string as if it were a list.\n\n```\n1: def access_string_element(my_string):\n2:     return my_string[0] + my_string[1]\n3: \n4: print(access_string_element(12345))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "D",
+        "index": 40
+    },
+    {
+        "question": "In the following code snippet, identify the line that causes a `TypeError` when attempting to add a dictionary to a list.\n\n```\n1: def add_dict_to_list(my_dict, my_list):\n2:     return my_dict + my_list\n3: \n4: print(add_dict_to_list({'key': 'value'}, [1, 2, 3]))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 41
+    },
+    {
+        "question": "In the following code snippet, identify which line will raise an `UnpackingError` due to a mismatch in the number of values.\n\n```\n1: def unpack_values(value_tuple):\n2:     a, b, c = value_tuple\n3:     return a + b + c\n4: \n5: print(unpack_values((1, 2)))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 42
+    },
+    {
+        "question": "In the following code snippet, identify the line that will raise an `AttributeError` because a method is being called on a float.\n\n```\n1: def float_to_string(num):\n2:     return num.split('.')\n3: \n4: print(float_to_string(12.345))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 43
+    },
+    {
+        "question": "In the following code snippet, locate the line that causes a `ZeroDivisionError` due to a division operation where the denominator is checked but not handled properly.\n\n```\n1: def safe_division(numerator, denominator):\n2:     if denominator == 0:\n3:         return \"Division not possible\"\n4:     return numerator / denominator\n5: \n6: print(safe_division(10, 0))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "C",
+        "index": 44
+    },
+    {
+        "question": "In the following code snippet, identify the line that will raise a `TypeError` because an operation is being performed on a string that expects a numeric type.\n\n```\n1: def subtract_from_string(basis, value):\n2:     return basis - value\n3: \n4: print(subtract_from_string(\"100\", 50))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 45
+    },
+    {
+        "question": "In the following code snippet, identify the line that causes a `TypeError` when attempting to perform an operation on incompatible types (a list and a string).\n\n```\n1: def append_to_list(my_list, item):\n2:     my_list += item\n3:     return my_list\n4: \n5: print(append_to_list([1, 2, 3], \"4\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 46
+    },
+    {
+        "question": "In this code snippet, locate the line that will raise an `IndexError` due to trying to access an index that does not exist in the list.\n\n```\n1: def get_item(my_list, index):\n2:     return my_list[index]\n3: \n4: print(get_item([10, 20, 30], 5))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 47
+    },
+    {
+        "question": "In the following code snippet, identify the line that will raise a `TypeError` when trying to concatenate a list with a string.\n\n```\n1: def create_sentence(words):\n2:     return \" \".join(words)\n3: \n4: print(create_sentence([\"Hello\", \"world!\"] + \" How are you?\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "D",
+        "index": 48
+    },
+    {
+        "question": "In the following code, find the line that leads to a `KeyError` because the key does not exist in the dictionary.\n\n```\n1: def get_value(dictionary, key):\n2:     return dictionary[key]\n3: \n4: sample_dict = {'name': 'Alice', 'age': 30}\n5: print(get_value(sample_dict, 'address'))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 49
+    },
+    {
+        "question": "In this code snippet, identify the line that causes a `TypeError` due to attempting to multiply a string with a list.\n\n```\n1: def multiply_elements(my_list, factor):\n2:     return my_list * factor\n3: \n4: print(multiply_elements([1, 2, 3], \"3\"))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 50
+    }
+]
