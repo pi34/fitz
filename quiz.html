@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <p>Help defend the castle by answering questions correctly!</p>
+
+    <p>What is the capital of France?</p>
+    <button onclick="submitAnswer(true)">Paris (Correct)</button>
+    <button onclick="submitAnswer(false)">Berlin (Incorrect)</button>
+
+    <script>
+        const socket = io();
+
+        function submitAnswer(correct) {
+            // Emit answer correctness to server
+            socket.emit('submit_answer', { correct: correct });
+        }
+    </script>
+</body>
+</html>
