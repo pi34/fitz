@@ -101,8 +101,8 @@
 
     <div class="quiz-container">
         <div class="type-selector">
-            <button class="type-button active" data-type="type1">Type 1</button>
-            <button class="type-button" data-type="type2">Type 2</button>
+            <button class="type-button active" data-type="Debugging">Debugging</button>
+            <button class="type-button" data-type="Git">Git</button>
         </div>
         <div id="loading">Loading questions...</div>
         <div id="question"></div>
@@ -192,12 +192,12 @@
             
                 resultDiv.textContent = 'Correct!';
                 resultDiv.className = 'result correct';
-                submitAnswer(true)
+                submitAnswer(true, currentQuestionType)
             } else {
                 
                 resultDiv.textContent = `Incorrect. The correct answer is ${currentQuestion.answer}`;
                 resultDiv.className = 'result incorrect';
-                submitAnswer(false)
+                submitAnswer(false, currentQuestionType)
             }
             
             resultDiv.style.display = 'block';
@@ -210,9 +210,9 @@
             });
         }
 
-        function submitAnswer(correct) {
+        function submitAnswer(correct, type) {
             // Emit answer correctness to server
-            socket.emit('submit_answer', { correct: correct });
+            socket.emit('submit_answer', { correct: correct, type: type});
         }
 
         function loadQuestions(type) {

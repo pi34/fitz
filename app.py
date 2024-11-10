@@ -28,7 +28,7 @@ def get_questions(type):
             with open('static/data/Debugging/5/questions.json') as f:
                 questions = json.load(f)
         elif type == 'Git':
-            with open('static/assets/data/Git/5/questions.json') as f:
+            with open('static/data/Git/5/questions.json') as f:
                 questions = json.load(f)
         else:
             return jsonify({'error': 'Invalid question type'}), 400
@@ -41,15 +41,21 @@ def get_questions(type):
 @socketio.on('submit_answer')
 def handle_answer(data):
     correct = data.get('correct', False)
+    type = data.get('type', 'Debugging')
     # Adjust score based on quiz answer
-    points = 0
-    if correct:
-        points += 20  # Increase score for correct answer
-    else:
-        points -= 10   # Decrease score for incorrect answer
+    if type == 'Debugging':
+        points = 0
+        if correct:
+            points += 20  # Increase score for correct answer
+        else:
+            points -= 10   # Decrease score for incorrect answer
 
-    # Broadcast the updated score to all clients on the game page
-    emit('update_score', {'score': points}, broadcast=True)
+        # Broadcast the updated score to all clients on the game page
+        emit('update_score', {'score': points}, broadcast=True)
+
+    else:
+        if correct:
+            emit('upgrade_projectile', broadcast=True)
 
 if __name__ == '__main__':
-    socketio.run(app, port=8000, host='172.20.10.2', debug=True)
+    socketio.run(app, port=8000, host='10.29.28.91', debug=True)

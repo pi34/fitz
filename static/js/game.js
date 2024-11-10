@@ -52,9 +52,18 @@ function create() {
         }
     });
 
+    socket.on('upgrade_projectile', () => {
+        if (currentProjectileType === 'basic') {
+            currentProjectileType = 'laser';
+        } else if (currentProjectileType === 'laser') {
+            currentProjectileType = 'plasma'
+;        }
+    })
+
     // Calculate scale factor based on game size
-    background = this.add.tileSprite(0, 0, config.width, config.height, 'background')
-        .setOrigin(0, 0);
+    background = this.add.sprite(0, 0, 'background')
+        .setOrigin(0, 0)
+        .setDisplaySize(config.width, config.height);
     const gameWidth = this.sys.game.config.width;
     const baseSize = 32; // Desired base size for sprites
 
@@ -134,6 +143,7 @@ function update() {
 
 function spawnEnemy() {
     // Spawn enemy at random edge of screen
+    if (gameOver) return
     let x, y;
     if (Math.random() < 0.5) {
         x = Math.random() < 0.5 ? 0 : config.width;
