@@ -119,19 +119,23 @@ function update() {
 
     // Player movement
     const cursors = this.input.keyboard.createCursorKeys();
+    this.wKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+    this.aKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+    this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
+    this.dKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     const speed = 200;
 
-    if (cursors.left.isDown) {
+    if (cursors.left.isDown || this.aKey.isDown) {
         player.body.setVelocityX(-speed);
-    } else if (cursors.right.isDown) {
+    } else if (cursors.right.isDown || this.dKey.isDown) {
         player.body.setVelocityX(speed);
     } else {
         player.body.setVelocityX(0);
     }
 
-    if (cursors.up.isDown) {
+    if (cursors.up.isDown || this.wKey.isDown) {
         player.body.setVelocityY(-speed);
-    } else if (cursors.down.isDown) {
+    } else if (cursors.down.isDown || this.sKey.isDown) {
         player.body.setVelocityY(speed);
     } else {
         player.body.setVelocityY(0);
