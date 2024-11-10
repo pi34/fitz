@@ -38,6 +38,9 @@ function preload() {
     this.load.image('laser', 'static/assets/laser-projectile.png');
     this.load.image('plasma', 'static/assets/plasma-projectile.png');
     this.load.image('background', 'static/assets/background.png')
+    this.load.audio('die', 'static/assets/chicken_die_2.mp3');
+    this.load.audio('hit', 'static/assets/hit_marker.mp3');
+    this.load.audio('hurt', 'static/assets/take_damage.mp3');
 }
 
 function create() {
@@ -83,6 +86,11 @@ function create() {
         callbackScope: this,
         loop: true
     });
+
+    // SFX
+    this.dieSound = this.sound.add('die');
+    this.hitSound = this.sound.add('hit');
+    this.hurtSound = this.sound.add('hurt');
 }
 
 function update() {
@@ -199,18 +207,23 @@ function hitEnemy(projectile, enemy) {
     }
     
     enemy.health -= damage;
+    this.hitSound.play();
     
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
         scoreText.setText('Score: ' + score);
+        this.dieSound.play();
     }
+
+
 }
 
 function hitPlayer(player, enemy) {
     enemy.destroy();
     player.health -= 10;
     healthText.setText('Health: ' + player.health);
+    this.hurtSound.play();
 
     if (player.health <= 0) {
         gameOver = true;
