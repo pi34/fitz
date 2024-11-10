@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO, emit
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -19,6 +20,22 @@ def game():
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
+
+@app.route('/get-questions/<type>')
+def get_questions(type):
+    try:
+        if type == 'Debugging':
+            with open('static/data/Debugging/5/questions.json') as f:
+                questions = json.load(f)
+        elif type == 'Git':
+            with open('static/assets/data/Git/5/questions.json') as f:
+                questions = json.load(f)
+        else:
+            return jsonify({'error': 'Invalid question type'}), 400
+        
+        return jsonify(questions)
+    except FileNotFoundError:
+        return jsonify({'error': 'Questions file not found'}), 404
 
 # Handle quiz answer submissions
 @socketio.on('submit_answer')

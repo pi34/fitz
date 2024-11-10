@@ -57,7 +57,7 @@ function create() {
 
     // Create player with sprite instead of shape
     player = this.add.sprite(400, 300, 'player');
-    player.setDisplaySize(baseSize, baseSize); // Set exact pixel size
+    player.setDisplaySize(48, 64); // Set exact pixel size
     this.physics.add.existing(player);
     player.body.setCollideWorldBounds(true);
     player.health = 100;
@@ -74,15 +74,7 @@ function create() {
     healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#fff' });
     scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#fff' });
 
-    // Add quiz button
-    const quizBtn = this.add.text(600, 16, 'Get Question', { 
-        fontSize: '24px', 
-        backgroundColor: '#444',
-        padding: { x: 10, y: 5 },
-        fill: '#fff' 
-    })
-    .setInteractive()
-    .on('pointerdown', () => showQuestion());
+    
 
     // Spawn enemies periodically
     this.time.addEvent({
@@ -144,7 +136,7 @@ function spawnEnemy() {
     }
 
     const enemy = this.add.sprite(x, y, 'enemy');
-    enemy.setDisplaySize(32, 32); // Set enemy size
+    enemy.setDisplaySize(48, 60); // Set enemy size
     this.physics.add.existing(enemy);
     enemies.add(enemy);
     enemy.health = 30;
@@ -246,78 +238,5 @@ function findNearestEnemy() {
     return nearestEnemy;
 }
 
-function showQuestion() {
-    const questions = [
-        {
-            type: 'debug',
-            question: "What's wrong with: for(let i = 0; i <= arr.length; i++)",
-            options: ["Should be <", "Should be >=", "Nothing wrong", "Should be ++i"],
-            correct: 0,
-            reward: 'laser' // Changed reward type to projectile name
-        },
-        {
-            type: 'git',
-            question: "Git command to create & switch to new branch?",
-            options: ["git branch new", "git checkout -b new", "git switch new", "git create new"],
-            correct: 1,
-            reward: 'plasma' // Changed reward type to projectile name
-        }
-    ];
-
-    const question = questions[Math.floor(Math.random() * questions.length)];
-    
-    const quizDiv = document.createElement('div');
-    quizDiv.style.cssText = `
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        z-index: 1000;
-        color: black;
-    `;
-    
-    quizDiv.innerHTML = `
-        <h3>${question.question}</h3>
-        <p style="color: #666;">Question Type: ${question.type}</p>
-        ${question.options.map((opt, i) => `
-            <button onclick="answerQuestion(${i}, ${question.correct}, '${question.reward}', this)"
-                    style="display: block; width: 100%; margin: 10px 0; padding: 10px;">
-                ${opt}
-            </button>
-        `).join('')}
-    `;
-    
-    document.body.appendChild(quizDiv);
-}
-
-// Add this to window scope so the onclick can access it
-window.answerQuestion = function(selected, correct, reward, button) {
-    if (selected === correct) {
-        // Update projectile type based on question reward
-        currentProjectileType = reward;
-        
-        // Show feedback
-        const feedback = document.createElement('div');
-        feedback.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            animation: fadeOut 2s forwards;
-        `;
-        feedback.textContent = `Upgraded to ${reward} projectile!`;
-        document.body.appendChild(feedback);
-        
-        setTimeout(() => feedback.remove(), 2000);
-    }
-    // Remove quiz UI
-    button.parentElement.remove();
-};
 
 new Phaser.Game(config);
