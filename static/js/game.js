@@ -100,7 +100,7 @@ function create() {
 
     // Spawn enemies periodically
     this.time.addEvent({
-        delay: 750,
+        delay: 750 - 300*level,
         callback: spawnEnemy,
         callbackScope: this,
         loop: true
@@ -246,7 +246,7 @@ function hitEnemy(projectile, enemy) {
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
-        level = 0.001 * score
+        level += 0.02
         scoreText.setText('Score: ' + score);
         this.dieSound.play();
     }
