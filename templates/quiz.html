@@ -4,100 +4,181 @@
     <meta charset="UTF-8">
     <title>Quiz Page</title>
     <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('static/assets/quiz.webp');
+            background-size: cover;
+            background-width: 1200px;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;    /* Center content horizontally */
+        }
+
+        /* Style for legible text */
+        .legible-text {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem; /* Adjust size as needed */
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+            margin: 1rem 0;
+}
+
+        .header-text {
+            color: white;
+            font-weight: bold;
+            font-size: 2rem; /* Adjust size as needed */
+            text-align: center;
+            margin: 1rem 0;
+        }
+
         .quiz-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-}
+            max-width: 900px;
+            width: 90%;
+            margin: 1rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
 
-.option {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
-    text-align: left;
-    background-color: white;
-}
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
 
-.option:hover {
-    background-color: #e9e9e9;
-}
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
 
-.result {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 4px;
-}
+        .type-selector {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
 
-.correct {
-    background-color: #d4edda;
-    color: #155724;
-}
+        .type-button {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid #007bff;
+            background-color: white;
+            color: #007bff;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
 
-.incorrect {
-    background-color: #f8d7da;
-    color: #721c24;
-}
+        .type-button:hover {
+            background-color: #e6f0ff;
+        }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        .type-button.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
 
-.button:hover {
-    background-color: #0056b3;
-}
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 400px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            background-color: white;
+            font-size: 1rem;
+        }
 
-#loading {
-    text-align: center;
-    padding: 20px;
-}
+        .option:hover {
+            background-color: #f1f8ff;
+            transform: translateY(-2px);
+        }
 
-.type-selector {
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1rem;
+        }
 
-.type-button {
-    padding: 0.5rem 1rem;
-    border: 2px solid #007bff;
-    background-color: white;
-    color: #007bff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
 
-.type-button:hover {
-    background-color: #f8f9fa;
-}
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
 
-.type-button.active {
-    background-color: #007bff;
-    color: white;
-}
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 1.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #loading {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
 </head>
 <body>
-    <h1>Quiz</h1>
-    <p>Help defend the castle by answering questions correctly!</p>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <p class="legible-text">Help your friend by answering questions correctly!</p>
+    <p class="legible-text">Answer Git questions for strength of projectile and answer debugging questions for health</p>
 
     <div class="quiz-container">
         <div class="type-selector">
@@ -122,11 +203,10 @@
         let currentQuestionType = 'Debugging';
 
         function getRandomQuestion(type) {
-            const typeQuestions = questions[type];  // Get the array for this type
+            const typeQuestions = questions[type];
             if (!typeQuestions || typeQuestions.length === 0) return null;
             return typeQuestions[Math.floor(Math.random() * typeQuestions.length)];
         }
-
 
         function displayQuestion(question) {
             if (!question) {
@@ -138,7 +218,6 @@
             document.getElementById('loading').style.display = 'none';
             currentQuestion = question;
             
-            // Parse markdown and set innerHTML
             const questionElement = document.getElementById('question');
             questionElement.innerHTML = marked.parse(question.question);
             
@@ -147,7 +226,8 @@
             
             question.options.forEach(option => {
                 const button = document.createElement('button');
-                button.className = 'option';button.innerHTML = marked.parse(`${option[0]}. ${option[1]}`);
+                button.className = 'option';
+                button.innerHTML = marked.parse(`${option[0]}. ${option[1]}`);
                 button.disabled = false;
                 button.addEventListener('click', function() {
                     checkAnswer(option);
@@ -159,23 +239,15 @@
             resultDiv.style.display = 'none';
             resultDiv.textContent = '';
             document.getElementById('nextQuestion').style.display = 'none';
-
         }
 
         function switchQuestionType(type) {
             currentQuestionType = type;
-            // Update active state of type buttons
             document.querySelectorAll('.type-button').forEach(button => {
-                if (button.dataset.type === type) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
+                button.classList.toggle('active', button.dataset.type === type);
             });
 
-            // Check if we already have questions of this type loaded
             if (questions[type].length === 0) {
-                // Load questions for this type
                 loadQuestions(type);
             } else {
                 displayQuestion(getRandomQuestion(type));
@@ -185,43 +257,35 @@
         function checkAnswer(selectedAnswer) {
             const resultDiv = document.getElementById('result');
             const nextButton = document.getElementById('nextQuestion');
-            console.log(selectedAnswer[0])
-            console.log(currentQuestion.answer)
             
             if (selectedAnswer[0] == currentQuestion.answer) {
-            
                 resultDiv.textContent = 'Correct!';
                 resultDiv.className = 'result correct';
-                submitAnswer(true, currentQuestionType)
+                submitAnswer(true, currentQuestionType);
             } else {
-                
                 resultDiv.textContent = `Incorrect. The correct answer is ${currentQuestion.answer}`;
                 resultDiv.className = 'result incorrect';
-                submitAnswer(false, currentQuestionType)
+                submitAnswer(false, currentQuestionType);
             }
             
             resultDiv.style.display = 'block';
             nextButton.style.display = 'block';
 
-            const options = document.getElementsByClassName('option');
-            Array.from(options).forEach(option => {
+            Array.from(document.getElementsByClassName('option')).forEach(option => {
                 option.disabled = true;
                 option.style.cursor = 'default';
             });
         }
 
         function submitAnswer(correct, type) {
-            // Emit answer correctness to server
-            socket.emit('submit_answer', { correct: correct, type: type});
+            socket.emit('submit_answer', { correct: correct, type: type });
         }
 
         function loadQuestions(type) {
             document.getElementById('loading').style.display = 'block';
             fetch(`/get-questions/${type}`)
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load questions');
-                    }
+                    if (!response.ok) throw new Error('Failed to load questions');
                     return response.json();
                 })
                 .then(data => {
@@ -236,23 +300,16 @@
         }
 
         window.onload = () => {
-            // Load initial question type
             loadQuestions(currentQuestionType);
-
-            // Add event listener for next question button
-            const nextButton = document.getElementById('nextQuestion');
-            nextButton.addEventListener('click', function() {
+            document.getElementById('nextQuestion').addEventListener('click', () => {
                 displayQuestion(getRandomQuestion(currentQuestionType));
             });
-
-            // Add event listeners for type buttons
             document.querySelectorAll('.type-button').forEach(button => {
                 button.addEventListener('click', function() {
                     switchQuestionType(this.dataset.type);
                 });
             });
         };
-
     </script>
 </body>
 </html>
