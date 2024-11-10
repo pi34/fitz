@@ -5,10 +5,19 @@ from ProblemBank.question_generator import QuestionGenerator
 
 demos = (
     # ("Abstract Algebra", "", 5),
-    ("Git tools", "", 25, 3),
+    # ("Git tools", "", 25, 3),
     # ("Python debugging", "Give the student a few lines of sample buggy code in python and ask them to locate which line number the bug is. Make sure to generate the sample code with line numbers on the left, and make sure that the answer choices correspond to the correct line numbers", 50),
-    ("Python debugging",
-     "Give the student lines of sample buggy code in python and ask them to locate which line number the bug is. Make sure to generate the sample code with line numbers on the left, and make sure that the answer choices correspond to the correct line numbers",
+    # ("Python debugging",
+    #  "Give the student lines of sample buggy code in python and ask them to locate which line number the bug is. Make sure to generate the sample code with line numbers on the left, and make sure that the answer choices correspond to the correct line numbers",
+    #  25)
+    # ("Python fill-in-the-blank",
+    #  "Give the student lines of python code, but remove an important line or part of a line of code for the student to fill in. The give the student several options to fill in with, one of which is the correct answer",
+    #  25),
+    ("Data structure and algorithms",
+     "Test the student on Big-O (runtime, memory) and DSA, etc. Feel free to create different types of questions, and feel free to give questions that include code snippets",
+     25),
+    ("SWE and quant interviews",
+     "Give a variety of questions that help the student prep for SWE and quant interviews (both behavioral and technical",
      25)
 )
 

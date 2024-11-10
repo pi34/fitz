@@ -1,0 +1,577 @@
+[
+    {
+        "question": "---\n\n**Question 1**: What is the time complexity of searching for an element in a balanced binary search tree (BST) with 'n' nodes?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Consider the following code snippet that reverses an array of integers. What is the space complexity of this algorithm?\n\n```python\ndef reverse_array(arr):\n    n = len(arr)\n    for i in range(n // 2):\n        arr[i], arr[n - i - 1] = arr[n - i - 1], arr[i]\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "Which of the following data structures would be the most efficient for implementing a priority queue where elements with higher priority are dequeued before those with lower priority?",
+        "options": [
+            [
+                "A",
+                "Array"
+            ],
+            [
+                "B",
+                "Linked List"
+            ],
+            [
+                "C",
+                "Binary Heap"
+            ],
+            [
+                "D",
+                "Hash Table"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "In the context of Big-O notation, which of the following statements is true regarding the algorithm with a time complexity of O(n^2)?",
+        "options": [
+            [
+                "A",
+                "It will always run faster than an O(n) algorithm regardless of input size."
+            ],
+            [
+                "B",
+                "It will run faster than an O(n log n) algorithm for small input sizes."
+            ],
+            [
+                "C",
+                "As the input size grows, it will eventually run slower than an O(n) algorithm."
+            ],
+            [
+                "D",
+                "It is the most efficient algorithm possible for any problem."
+            ]
+        ],
+        "answer": "C",
+        "index": 4
+    },
+    {
+        "question": "If you have a list of integers and want to sort them using a sorting algorithm that has a worst-case time complexity of O(n log n), which of the following algorithms would you likely use?",
+        "options": [
+            [
+                "A",
+                "Bubble Sort"
+            ],
+            [
+                "B",
+                "Merge Sort"
+            ],
+            [
+                "C",
+                "Insertion Sort"
+            ],
+            [
+                "D",
+                "Selection Sort"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: In the context of analyzing sorting algorithms, if you have a list of 'n' integers and use the QuickSort algorithm, what is the average-case time complexity of this algorithm assuming optimal pivot selection?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "Consider the following code snippet that uses a Python list to implement a dynamic array. What is the amortized time complexity of appending an element to this dynamic array?\n\n```python\nmy_list = []\nfor i in range(100):\n    my_list.append(i)\n```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "In a scenario where you are managing a database of student records using a hash table, what would be the best-case time complexity for searching for a student record using their unique ID?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "Imagine you are developing an application that requires frequent insertions and deletions of elements. Which of the following data structures would provide the most efficient performance for these operations?",
+        "options": [
+            [
+                "A",
+                "Array"
+            ],
+            [
+                "B",
+                "Linked List"
+            ],
+            [
+                "C",
+                "Stack"
+            ],
+            [
+                "D",
+                "Queue"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "A function calculates the Fibonacci sequence using recursion. What is the time complexity of the following implementation?\n\n```python\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(2^n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "You\u2019re building a navigation system that utilizes Dijkstra's algorithm to find the shortest path between two points in a graph. If the graph contains 'V' vertices and 'E' edges, what is the time complexity of Dijkstra's algorithm when implemented using a priority queue?",
+        "options": [
+            [
+                "A",
+                "O(E log V)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E + V)"
+            ],
+            [
+                "D",
+                "O(V log E)"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "Consider the following code snippet that merges two sorted lists into a single sorted list. What is the time complexity of this merge operation?\n\n```python\ndef merge_lists(list1, list2):\n    merged_list = []\n    i, j = 0, 0\n    while i < len(list1) and j < len(list2):\n        if list1[i] < list2[j]:\n            merged_list.append(list1[i])\n            i += 1\n        else:\n            merged_list.append(list2[j])\n            j += 1\n    merged_list.extend(list1[i:])\n    merged_list.extend(list2[j:])\n    return merged_list\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n + m), where n and m are the lengths of list1 and list2"
+            ]
+        ],
+        "answer": "D",
+        "index": 12
+    },
+    {
+        "question": "In a fantasy game, you are tasked with implementing an inventory system to store and retrieve items using a hash table. If the average load factor of the hash table is maintained at a constant value, what is the average-case time complexity for inserting an item into this hash table?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "Imagine you are optimizing a function that calculates the number of unique paths in a grid of size 'm x n' from the top-left corner to the bottom-right corner, moving only down or to the right. If the function uses dynamic programming, what is the time complexity of the solution?\n\n```python\ndef unique_paths(m, n):\n    dp = [[1] * n for _ in range(m)]\n    for i in range(1, m):\n        for j in range(1, n):\n            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]\n    return dp[m - 1][n - 1]\n```",
+        "options": [
+            [
+                "A",
+                "O(m + n)"
+            ],
+            [
+                "B",
+                "O(m * n)"
+            ],
+            [
+                "C",
+                "O(m^2)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "You are designing a function that checks if a string is a permutation of a palindrome. This function uses a hash map to count character occurrences. If 'n' is the length of the string, what is the time complexity of this function?\n\n```python\ndef can_form_palindrome(s):\n    char_count = {}\n    for char in s:\n        char_count[char] = char_count.get(char, 0) + 1\n    odd_count = sum(1 for count in char_count.values() if count % 2 != 0)\n    return odd_count <= 1\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "In a futuristic city, you are tasked with optimizing the transport network using a minimum spanning tree (MST) approach. If you use Prim's algorithm on a graph with 'V' vertices and 'E' edges and represent the graph using an adjacency matrix, what is the time complexity of finding the Minimum Spanning Tree?",
+        "options": [
+            [
+                "A",
+                "O(V^2)"
+            ],
+            [
+                "B",
+                "O(E log V)"
+            ],
+            [
+                "C",
+                "O(V + E)"
+            ],
+            [
+                "D",
+                "O(E^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "Imagine you are developing a social media application and need to efficiently manage a feed where posts are displayed based on the time they were created. If you want to implement a data structure that allows you to insert posts quickly and retrieve them in chronological order, which of the following data structures would be most suitable?",
+        "options": [
+            [
+                "A",
+                "Singly Linked List"
+            ],
+            [
+                "B",
+                "Sorted Array"
+            ],
+            [
+                "C",
+                "Doubly Linked List"
+            ],
+            [
+                "D",
+                "Hash Table"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "You have a large dataset consisting of user transactions stored in a hash table. Each transaction can have a unique identifier. If the hash table has a load factor of 0.75 and you want to insert a new transaction, what is the average-case time complexity of this insertion operation assuming the hash function distributes entries uniformly?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "In a gaming application, you're implementing a character skill tree as a binary tree where each node represents a skill and branches represent prerequisites. What would be the worst-case time complexity for searching for a skill that is deep in the tree if the tree is balanced?",
+        "options": [
+            [
+                "A",
+                "O(log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "Consider a scenario where you need to analyze a time series of stock prices. You decide to use a sliding window technique to compute the maximum price in every contiguous subarray of size 'k'. What is the time complexity of your solution if you implement it using a deque?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(k)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Question 1**: In a scenario where you have a list of 'n' integers and you want to find the maximum value using a linear search, what is the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "C",
+        "index": 21
+    },
+    {
+        "question": "Imagine you are implementing a stack using an array. If you have a stack of 'n' elements and you perform 'n' push operations, what will be the time complexity for the entire sequence of operations?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "You are given a scenario where you need to determine whether two strings are anagrams of each other. If the length of the strings is 'n', which of the following algorithms would give you the best time complexity?",
+        "options": [
+            [
+                "A",
+                "Sort both strings and compare (O(n log n))"
+            ],
+            [
+                "B",
+                "Count characters using a hash map (O(n))"
+            ],
+            [
+                "C",
+                "Use a brute force approach to check all permutations (O(n!))"
+            ],
+            [
+                "D",
+                "Convert both strings to arrays and compare (O(n))"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "If you are using a binary heap to implement a priority queue, what is the worst-case time complexity for inserting an element into the heap?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 24
+    },
+    {
+        "question": "Consider a situation where you want to check if there is a cycle in a directed graph using Depth-First Search (DFS). If the graph has 'V' vertices and 'E' edges, what is the time complexity of this cycle detection algorithm?",
+        "options": [
+            [
+                "A",
+                "O(V + E)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E log V)"
+            ],
+            [
+                "D",
+                "O(V log V)"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

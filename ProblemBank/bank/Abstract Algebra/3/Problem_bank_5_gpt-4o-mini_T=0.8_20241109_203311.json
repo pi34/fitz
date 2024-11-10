@@ -1,0 +1,117 @@
+[
+    {
+        "question": "---\n\n**Question 1**: In a group \\( G \\) of order 12, which of the following statements must be true, according to Lagrange's Theorem?",
+        "options": [
+            [
+                "A",
+                "Every element in \\( G \\) has an order of 3."
+            ],
+            [
+                "B",
+                "There exists a subgroup of order 6."
+            ],
+            [
+                "C",
+                "The group \\( G \\) is abelian."
+            ],
+            [
+                "D",
+                "All subgroups of \\( G \\) are normal."
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Consider the polynomial ring \\( \\mathbb{Z}[x] \\). Which of the following polynomials is irreducible over \\( \\mathbb{Z} \\)?",
+        "options": [
+            [
+                "A",
+                "\\( x^2 + 1 \\)"
+            ],
+            [
+                "B",
+                "\\( 2x^2 + 2 \\)"
+            ],
+            [
+                "C",
+                "\\( x^4 - 16 \\)"
+            ],
+            [
+                "D",
+                "\\( x^2 - 4x + 4 \\)"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "In a field \\( F \\), which of the following properties is true for a finite-dimensional vector space \\( V \\) over \\( F \\)?",
+        "options": [
+            [
+                "A",
+                "Any set of vectors in \\( V \\) is linearly independent."
+            ],
+            [
+                "B",
+                "The dimension of \\( V \\) cannot exceed the number of elements in \\( F \\)."
+            ],
+            [
+                "C",
+                "The field \\( F \\) must be infinite."
+            ],
+            [
+                "D",
+                "Any basis of \\( V \\) can be extended to a basis of \\( F^n \\) for some \\( n \\)."
+            ]
+        ],
+        "answer": "D",
+        "index": 3
+    },
+    {
+        "question": "If \\( R \\) is a commutative ring with unity and \\( I \\) is an ideal of \\( R \\), which of the following statements is true about the quotient ring \\( R/I \\)?",
+        "options": [
+            [
+                "A",
+                "\\( R/I \\) is always a field."
+            ],
+            [
+                "B",
+                "Every element in \\( R/I \\) can be represented as \\( r + I \\) for \\( r \\in R \\)."
+            ],
+            [
+                "C",
+                "The ideal \\( I \\) must be maximal for \\( R/I \\) to be a ring."
+            ],
+            [
+                "D",
+                "The quotient \\( R/I \\) has the same number of elements as \\( R \\)."
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In the context of group homomorphisms, which of the following scenarios best illustrates the First Isomorphism Theorem?",
+        "options": [
+            [
+                "A",
+                "The image of an injective function is the entire codomain."
+            ],
+            [
+                "B",
+                "A group \\( G \\) that is mapped to a subgroup \\( H \\) where every element is preserved in terms of structure."
+            ],
+            [
+                "C",
+                "A surjective homomorphism \\( f: G \\to H \\) leads to an isomorphism \\( G/\\ker(f) \\cong H \\)."
+            ],
+            [
+                "D",
+                "Any function between two groups can be extended to a homomorphism."
+            ]
+        ],
+        "answer": "C",
+        "index": 5
+    }
+]

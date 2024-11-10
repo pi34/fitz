@@ -1,0 +1,577 @@
+[
+    {
+        "question": "---\n\n### Question 1:\nIn a world where data is gold, you're tasked with performing a complex data transformation using the Pandas library. What crucial method must you fill in the blank to concatenate two DataFrames, `df1` and `df2`, along the rows?\n\n```python\nresult = pd.___(df1, df2)\n```",
+        "options": [
+            [
+                "A",
+                "merge"
+            ],
+            [
+                "B",
+                "concat"
+            ],
+            [
+                "C",
+                "append"
+            ],
+            [
+                "D",
+                "join"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Imagine you're developing a web application that requires real-time data analysis. You decide to utilize the `asyncio` library for asynchronous programming. What function should you use to schedule a coroutine within the event loop?\n\n```python\nasync def main():\n    await ___.sleep(1)\n\nasyncio.run(main())\n```",
+        "options": [
+            [
+                "A",
+                "asyncio"
+            ],
+            [
+                "B",
+                "time"
+            ],
+            [
+                "C",
+                "threading"
+            ],
+            [
+                "D",
+                "math"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "In the mystical world of text processing, you are using the `nltk` library to analyze sentiment. You have loaded a text corpus, but what method should you invoke to tokenize a sentence into words?\n\n```python\nfrom nltk.tokenize import ____\ntokens = tokenizer(\"The quick brown fox jumps over the lazy dog.\")\n```",
+        "options": [
+            [
+                "A",
+                "word_tokenize"
+            ],
+            [
+                "B",
+                "sent_tokenize"
+            ],
+            [
+                "C",
+                "tokenize_words"
+            ],
+            [
+                "D",
+                "split_words"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "You are a Python sorcerer crafting a visualization of complex data using the `matplotlib` library. In your code, you have plotted a line graph, but you notice the axes are unlabeled. What method will you use to set the label for the x-axis?\n\n```python\nplt.plot(data)\n___.xlabel('Time (seconds)')\n```",
+        "options": [
+            [
+                "A",
+                "plt"
+            ],
+            [
+                "B",
+                "ax"
+            ],
+            [
+                "C",
+                "set"
+            ],
+            [
+                "D",
+                "figure"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "Venturing into the depths of machine learning with the `scikit-learn` library, you are about to create a decision tree classifier. To split your dataset into training and testing sets, which function will you need to invoke from the `model_selection` module?\n\n```python\nfrom sklearn.model_selection import ____\ntrain_data, test_data = train_test_split(data, test_size=0.2)\n```",
+        "options": [
+            [
+                "A",
+                "cross_val_score"
+            ],
+            [
+                "B",
+                "train_test_split"
+            ],
+            [
+                "C",
+                "GridSearchCV"
+            ],
+            [
+                "D",
+                "KFold"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In a world where data is gold, you're tasked with performing a complex data transformation using the Pandas library. What crucial method must you fill in the blank to concatenate two DataFrames, `df1` and `df2`, along the rows?\n\n```python\nresult = pd.___(df1, df2)\n```",
+        "options": [
+            [
+                "A",
+                "merge"
+            ],
+            [
+                "B",
+                "append"
+            ],
+            [
+                "C",
+                "concat"
+            ],
+            [
+                "D",
+                "combine"
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "Imagine you're developing a web application that requires real-time data analysis. You decide to utilize the `asyncio` library for asynchronous programming. What function should you use to schedule a coroutine within the event loop?\n\n```python\nasync def main():\n    await ___.sleep(1)\n\nasyncio.run(main())\n```",
+        "options": [
+            [
+                "A",
+                "wait"
+            ],
+            [
+                "B",
+                "async"
+            ],
+            [
+                "C",
+                "loop"
+            ],
+            [
+                "D",
+                "asyncio"
+            ]
+        ],
+        "answer": "D",
+        "index": 7
+    },
+    {
+        "question": "In the mystical world of text processing, you are using the `nltk` library to analyze sentiment. You have loaded a text corpus, but what method should you invoke to tokenize a sentence into words?\n\n```python\nfrom nltk.tokenize import ____\ntokens = tokenizer(\"The quick brown fox jumps over the lazy dog.\")\n```",
+        "options": [
+            [
+                "A",
+                "word_tokenize"
+            ],
+            [
+                "B",
+                "sent_tokenize"
+            ],
+            [
+                "C",
+                "tokenize"
+            ],
+            [
+                "D",
+                "text_tokenize"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "You are a Python sorcerer crafting a visualization of complex data using the `matplotlib` library. In your code, you have plotted a line graph, but you notice the axes are unlabeled. What method will you use to set the label for the x-axis?\n\n```python\nplt.plot(data)\n___.xlabel('Time (seconds)')\n```",
+        "options": [
+            [
+                "A",
+                "set"
+            ],
+            [
+                "B",
+                "title"
+            ],
+            [
+                "C",
+                "axes"
+            ],
+            [
+                "D",
+                "plt"
+            ]
+        ],
+        "answer": "D",
+        "index": 9
+    },
+    {
+        "question": "Venturing into the depths of machine learning with the `scikit-learn` library, you are about to create a decision tree classifier. To split your dataset into training and testing sets, which function will you need to invoke from the `model_selection` module?\n\n```python\nfrom sklearn.model_selection import ____\ntrain_data, test_data = train_test_split(data, test_size=0.2)\n```",
+        "options": [
+            [
+                "A",
+                "create_train_test_split"
+            ],
+            [
+                "B",
+                "split_data"
+            ],
+            [
+                "C",
+                "train_test_split"
+            ],
+            [
+                "D",
+                "train_and_test"
+            ]
+        ],
+        "answer": "C",
+        "index": 10
+    },
+    {
+        "question": "In the realm of numerical computing, you're harnessing the power of the NumPy library to perform advanced linear algebra. To compute the dot product of two arrays, `array1` and `array2`, which method do you need to fill in the blank?\n\n```python\nresult = np.___(array1, array2)\n```",
+        "options": [
+            [
+                "A",
+                "multiply"
+            ],
+            [
+                "B",
+                "dot"
+            ],
+            [
+                "C",
+                "inner"
+            ],
+            [
+                "D",
+                "cross"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "As a data magician, you are using the `statsmodels` library to fit a statistical model. To add a constant to your input data `X` for the regression model, which function must you complete in the following code?\n\n```python\nimport statsmodels.api as sm\nX_with_const = sm.___(X)\n```",
+        "options": [
+            [
+                "A",
+                "add_constant"
+            ],
+            [
+                "B",
+                "fit"
+            ],
+            [
+                "C",
+                "add_intercept"
+            ],
+            [
+                "D",
+                "add_constant_column"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "In a quest to manipulate images, you're employing the `Pillow` library to modify the brightness of an image `img`. What method should you use to enhance the brightness by a factor of 1.5?\n\n```python\nfrom PIL import ImageEnhance\nenhancer = ImageEnhance.___(img)\nbright_img = enhancer.enhance(1.5)\n```",
+        "options": [
+            [
+                "A",
+                "Brightness"
+            ],
+            [
+                "B",
+                "Contrast"
+            ],
+            [
+                "C",
+                "Color"
+            ],
+            [
+                "D",
+                "Sharpness"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "As you dive into the world of network communications, you are utilizing the `aiohttp` library to make asynchronous HTTP requests. Which method should you fill in to create a session context manager in your code?\n\n```python\nimport aiohttp\nasync with aiohttp.___() as session:\n    async with session.get('http://example.com') as response:\n        html = await response.text()\n```",
+        "options": [
+            [
+                "A",
+                "Session"
+            ],
+            [
+                "B",
+                "ClientSession"
+            ],
+            [
+                "C",
+                "AsyncSession"
+            ],
+            [
+                "D",
+                "RequestSession"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "While exploring the universe of machine learning models, you use the `xgboost` library to apply gradient boosting. To create a DMatrix from your feature set `X` and target `y`, which function must you fill in?\n\n```python\nimport xgboost as xgb\ndtrain = xgb.___(data=X, label=y)\n```",
+        "options": [
+            [
+                "A",
+                "DMatrix"
+            ],
+            [
+                "B",
+                "create_dmatrix"
+            ],
+            [
+                "C",
+                "build_dmatrix"
+            ],
+            [
+                "D",
+                "create_data_matrix"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "As a seasoned data analyst, you're leveraging the `SQLAlchemy` library to perform complex database operations. You need to create a session to interact with the database. What method should you use to establish this session?\n\n```python\nfrom sqlalchemy.orm import ___\nSession = sessionmaker(bind=engine)\nsession = Session()\n```",
+        "options": [
+            [
+                "A",
+                "scoped_session"
+            ],
+            [
+                "B",
+                "create_session"
+            ],
+            [
+                "C",
+                "session_factory"
+            ],
+            [
+                "D",
+                "sessionmaker"
+            ]
+        ],
+        "answer": "D",
+        "index": 16
+    },
+    {
+        "question": "In the realm of web scraping, you are utilizing the `BeautifulSoup` library to parse HTML content. After retrieving the webpage, you need to create a `BeautifulSoup` object. What function should you fill in the blank to achieve this?\n\n```python\nfrom bs4 import ___\nsoup = BeautifulSoup(html_content, 'html.parser')\n```",
+        "options": [
+            [
+                "A",
+                "Soup"
+            ],
+            [
+                "B",
+                "BeautifulSoup"
+            ],
+            [
+                "C",
+                "parse"
+            ],
+            [
+                "D",
+                "HTMLParser"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "As a data scientist exploring the `seaborn` library for statistical data visualization, you want to create a violin plot to visualize the distribution of a dataset. What function do you need to insert to generate this plot?\n\n```python\nimport seaborn as sns\nsns.___(data=df, x='category', y='value')\n```",
+        "options": [
+            [
+                "A",
+                "violinplot"
+            ],
+            [
+                "B",
+                "kdeplot"
+            ],
+            [
+                "C",
+                "boxplot"
+            ],
+            [
+                "D",
+                "distributionplot"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "Venturing into the depths of deep learning with `TensorFlow`, you are tasked with building a neural network. To compile your model with a specified optimizer and loss function, which method should you use to fill in the blank?\n\n```python\nmodel = tf.keras.Sequential([...])\nmodel.___(optimizer='adam', loss='sparse_categorical_crossentropy')\n```",
+        "options": [
+            [
+                "A",
+                "build"
+            ],
+            [
+                "B",
+                "fit"
+            ],
+            [
+                "C",
+                "compile"
+            ],
+            [
+                "D",
+                "initialize"
+            ]
+        ],
+        "answer": "C",
+        "index": 19
+    },
+    {
+        "question": "In the domain of data manipulation, you're engaging with the `Dask` library to handle large datasets efficiently. You need to create a Dask DataFrame from a CSV file. What method must you use to fill in the blank?\n\n```python\nimport dask.dataframe as dd\ndf = dd.___(\u2018data.csv\u2019)\n```",
+        "options": [
+            [
+                "A",
+                "read_csv"
+            ],
+            [
+                "B",
+                "from_csv"
+            ],
+            [
+                "C",
+                "load_csv"
+            ],
+            [
+                "D",
+                "open_csv"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "In the enchanted forests of data visualization, you are using the `plotly` library to create an interactive scatter plot of magical creatures. What crucial method must you fill in the blank to create a scatter plot with your data?\n\n```python\nimport plotly.express as px\nfig = px.___(data_frame=df, x='x_values', y='y_values', title='Magical Creatures')\n```",
+        "options": [
+            [
+                "A",
+                "scatter"
+            ],
+            [
+                "B",
+                "line"
+            ],
+            [
+                "C",
+                "bar"
+            ],
+            [
+                "D",
+                "pie"
+            ]
+        ],
+        "answer": "A",
+        "index": 21
+    },
+    {
+        "question": "In a digital realm where time-series data is king, you're harnessing the power of the `statsmodels` library to analyze seasonal trends. What method should you use to decompose a time series into its trend, seasonal, and residual components?\n\n```python\nimport statsmodels.api as sm\ndecomposition = sm.___(time_series, model='additive')\n```",
+        "options": [
+            [
+                "A",
+                "seasonal_decompose"
+            ],
+            [
+                "B",
+                "time_series_decompose"
+            ],
+            [
+                "C",
+                "decompose_time_series"
+            ],
+            [
+                "D",
+                "trend_seasonal_decompose"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "As a wizard of natural language processing, you are utilizing the `spaCy` library to extract named entities from a mystical text. Which method do you need to call on the processed text object to get the entities?\n\n```python\nimport spacy\nnlp = spacy.load('en_core_web_sm')\ndoc = nlp(\"The dragon flew over the castle.\")\nentities = doc.___ \n```",
+        "options": [
+            [
+                "A",
+                "entities"
+            ],
+            [
+                "B",
+                "get_entities"
+            ],
+            [
+                "C",
+                "extract_entities"
+            ],
+            [
+                "D",
+                "named_entities"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "On your quest through the galaxy of machine learning, you're employing the `LightGBM` library to build a classification model. To create a dataset for the model from your features and target variable, which method do you need to fill in the blank?\n\n```python\nimport lightgbm as lgb\ntrain_data = lgb.___(data=X_train, label=y_train)\n```",
+        "options": [
+            [
+                "A",
+                "Dataset"
+            ],
+            [
+                "B",
+                "create_dataset"
+            ],
+            [
+                "C",
+                "prepare_dataset"
+            ],
+            [
+                "D",
+                "build_dataset"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "In the world of image manipulation, you're using the `OpenCV` library to detect edges in a mystical artifact image. What method should you use to perform the Canny edge detection on your image?\n\n```python\nimport cv2\nedges = cv2.___(image, threshold1=100, threshold2=200)\n```",
+        "options": [
+            [
+                "A",
+                "findContours"
+            ],
+            [
+                "B",
+                "Canny"
+            ],
+            [
+                "C",
+                "edgeDetect"
+            ],
+            [
+                "D",
+                "detectEdges"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

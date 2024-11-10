@@ -1,0 +1,585 @@
+[
+    {
+        "question": "1)\n- **Question**: What is the primary purpose of version control systems like Git?",
+        "options": [
+            [
+                "A",
+                "To manage hardware resources"
+            ],
+            [
+                "B",
+                "To track changes and collaborate on software projects"
+            ],
+            [
+                "C",
+                "To create user interfaces"
+            ],
+            [
+                "D",
+                "To optimize algorithms"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "3)\n- **Question**: Which Python library is commonly used for data manipulation and analysis, particularly for working with structured data?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Matplotlib"
+            ],
+            [
+                "C",
+                "Pandas"
+            ],
+            [
+                "D",
+                "Scikit-learn"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "3)\n- **Question**: In Python, which of the following methods is used to remove whitespace from the beginning and end of a string?",
+        "options": [
+            [
+                "A",
+                "strip()"
+            ],
+            [
+                "B",
+                "trim()"
+            ],
+            [
+                "C",
+                "clear()"
+            ],
+            [
+                "D",
+                "clean()"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "5)\n- **Question**: In the context of graph theory, which specialized Python library would you use to perform complex network analysis, including centrality measures and community detection?",
+        "options": [
+            [
+                "A",
+                "NetworkX"
+            ],
+            [
+                "B",
+                "PyTorch Geometric"
+            ],
+            [
+                "C",
+                "Dask"
+            ],
+            [
+                "D",
+                "TensorFlow"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "5)\n- **Question**: You are tasked with developing a real-time recommendation system. Which of the following libraries would be particularly advantageous for implementing machine learning models that handle streaming data?",
+        "options": [
+            [
+                "A",
+                "TensorFlow"
+            ],
+            [
+                "B",
+                "PySpark"
+            ],
+            [
+                "C",
+                "Scikit-learn"
+            ],
+            [
+                "D",
+                "Flask"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "---\n\n- **Question**: Imagine you are designing a simple task management application. Which of the following data structures would be most efficient for implementing a priority queue to handle task scheduling?",
+        "options": [
+            [
+                "A",
+                "Array"
+            ],
+            [
+                "B",
+                "Linked List"
+            ],
+            [
+                "C",
+                "Binary Heap"
+            ],
+            [
+                "D",
+                "Stack"
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "In Python, which of the following libraries would you utilize for creating interactive visualizations that allow users to explore large datasets effectively?",
+        "options": [
+            [
+                "A",
+                "Matplotlib"
+            ],
+            [
+                "B",
+                "Plotly"
+            ],
+            [
+                "C",
+                "NumPy"
+            ],
+            [
+                "D",
+                "Seaborn"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "You have been given a dataset containing customer purchase history. Which Python library would be best suited for applying a collaborative filtering algorithm to suggest products to users?",
+        "options": [
+            [
+                "A",
+                "Scikit-learn"
+            ],
+            [
+                "B",
+                "Surprise"
+            ],
+            [
+                "C",
+                "TensorFlow"
+            ],
+            [
+                "D",
+                "Keras"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "You are diving into the world of data science and need to perform advanced statistical modeling on a dataset with missing values and outliers. Which library specializes in robust statistical analysis and can handle such complexities?",
+        "options": [
+            [
+                "A",
+                "Statsmodels"
+            ],
+            [
+                "B",
+                "Pandas"
+            ],
+            [
+                "C",
+                "PyMC3"
+            ],
+            [
+                "D",
+                "Scikit-learn"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "In developing a bioinformatics tool, you encounter a need to analyze sequence alignment using dynamic programming. Which lesser-known Python library would you select for specialized algorithms in bioinformatics?",
+        "options": [
+            [
+                "A",
+                "Biopython"
+            ],
+            [
+                "B",
+                "PyBio"
+            ],
+            [
+                "C",
+                "BioPandas"
+            ],
+            [
+                "D",
+                "Bioconda"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "---\n\n- **Question**: You're building an e-commerce platform that requires tracking user behaviors for personalized marketing. Which Python library would be most effective for performing exploratory data analysis (EDA) to uncover patterns in user interactions?",
+        "options": [
+            [
+                "A",
+                "to uncover patterns in user interactions?"
+            ],
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Matplotlib"
+            ],
+            [
+                "C",
+                "Seaborn"
+            ],
+            [
+                "D",
+                "Pandas"
+            ]
+        ],
+        "answer": "D",
+        "index": 11
+    },
+    {
+        "question": "During a team meeting, you encounter a conflict in opinions about the best approach to implement a new feature. As a software engineer, how would you best handle this situation to ensure a collaborative resolution?\n- **Options**:\n  - A) Ignore the conflict and continue with your own idea\n  - B) Present your idea assertively and dismiss others\n  - C) Facilitate a discussion to explore all viewpoints and find common ground",
+        "options": [
+            [
+                "A",
+                "Ignore the conflict and continue with your own idea"
+            ],
+            [
+                "B",
+                "Present your idea assertively and dismiss others"
+            ],
+            [
+                "C",
+                "Facilitate a discussion to explore all viewpoints and find common ground"
+            ],
+            [
+                "D",
+                "Suggest taking a vote without discussing the options"
+            ]
+        ],
+        "answer": "C",
+        "index": 12
+    },
+    {
+        "question": "You need to implement a function that processes data from a CSV file containing thousands of rows. Which Python library would you use to efficiently load and manipulate this dataset, particularly focusing on speed and ease of use?",
+        "options": [
+            [
+                "A",
+                "SQLite"
+            ],
+            [
+                "B",
+                "Dask"
+            ],
+            [
+                "C",
+                "Requests"
+            ],
+            [
+                "D",
+                "BeautifulSoup"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "While developing a machine learning algorithm, you notice that your model overfits the training data. Which technique would you consider implementing to help mitigate this issue?",
+        "options": [
+            [
+                "A",
+                "Increase the number of features used"
+            ],
+            [
+                "B",
+                "Use a more complex model"
+            ],
+            [
+                "C",
+                "Apply regularization techniques like L1 or L2"
+            ],
+            [
+                "D",
+                "Reduce the training dataset size"
+            ]
+        ],
+        "answer": "C",
+        "index": 14
+    },
+    {
+        "question": "You are tasked with creating a web application that visualizes real-time traffic data from multiple sources. Which Python library would you choose for creating dynamic and interactive web-based visualizations?",
+        "options": [
+            [
+                "A",
+                "Flask"
+            ],
+            [
+                "B",
+                "Dash"
+            ],
+            [
+                "C",
+                "Tkinter"
+            ],
+            [
+                "D",
+                "Pygame"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "---\n\n**Difficulty Level**: 2\n\n- **Question**: In a collaborative software development environment, how can you best ensure that all team members are aligned on project goals and deadlines?",
+        "options": [
+            [
+                "A",
+                "Create detailed project documentation and email it to everyone."
+            ],
+            [
+                "B",
+                "Host regular stand-up meetings to discuss progress and roadblocks."
+            ],
+            [
+                "C",
+                "Assign tasks without discussion to avoid wasting time."
+            ],
+            [
+                "D",
+                "Only communicate through chat applications to keep records."
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "You are analyzing time-series data for a stock market prediction model. Which Python library would you find most useful for handling and visualizing time-indexed data?",
+        "options": [
+            [
+                "A",
+                "Matplotlib"
+            ],
+            [
+                "B",
+                "NumPy"
+            ],
+            [
+                "C",
+                "Pandas"
+            ],
+            [
+                "D",
+                "Scikit-learn"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "Imagine you need to implement a recommendation system utilizing a matrix factorization technique. Which lesser-known Python library would offer tools for collaborative filtering and matrix factorization efficiently?",
+        "options": [
+            [
+                "A",
+                "LightFM"
+            ],
+            [
+                "B",
+                "Surprise"
+            ],
+            [
+                "C",
+                "TensorFlow"
+            ],
+            [
+                "D",
+                "Statsmodels"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "In a complex project involving multiple microservices, you need to ensure that service dependencies are properly managed to avoid cascading failures. Which architectural pattern would be most effective to implement for managing inter-service communication?",
+        "options": [
+            [
+                "A",
+                "Monolithic architecture"
+            ],
+            [
+                "B",
+                "Event-driven architecture"
+            ],
+            [
+                "C",
+                "Layered architecture"
+            ],
+            [
+                "D",
+                "Client-server architecture"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "You are tasked with optimizing a Python function that performs complex numerical simulations. Which lesser-known library would you consider using to leverage just-in-time compilation for performance improvements?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Cython"
+            ],
+            [
+                "C",
+                "Numba"
+            ],
+            [
+                "D",
+                "PyPy"
+            ]
+        ],
+        "answer": "C",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Difficulty Level 1**\n\n- **Question**: What is the primary function of a software development life cycle (SDLC)?",
+        "options": [
+            [
+                "C",
+                "?"
+            ],
+            [
+                "A",
+                "To create software without a structured plan"
+            ],
+            [
+                "B",
+                "To ensure systematic planning, development, testing, and maintenance of software"
+            ],
+            [
+                "C",
+                "To perform only the testing phase of software development"
+            ],
+            [
+                "D",
+                "To manage only the deployment of software applications"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "You are tasked with analyzing and manipulating a dataset containing sales information. Which Python library would you likely use to efficiently perform operations such as filtering and aggregating data?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Pandas"
+            ],
+            [
+                "C",
+                "Matplotlib"
+            ],
+            [
+                "D",
+                "Scikit-learn"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "In Python, which of the following libraries is commonly used for creating static, animated, and interactive visualizations in a user-friendly manner?",
+        "options": [
+            [
+                "A",
+                "Seaborn"
+            ],
+            [
+                "B",
+                "Plotly"
+            ],
+            [
+                "C",
+                "TensorFlow"
+            ],
+            [
+                "D",
+                "Django"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "When implementing a machine learning pipeline for natural language processing, which lesser-known Python library would you consider for advanced text processing and feature extraction?",
+        "options": [
+            [
+                "A",
+                "NLTK"
+            ],
+            [
+                "B",
+                "TextBlob"
+            ],
+            [
+                "C",
+                "SpaCy"
+            ],
+            [
+                "D",
+                "Gensim"
+            ]
+        ],
+        "answer": "D",
+        "index": 24
+    },
+    {
+        "question": "You are developing a high-performance computing application that requires parallel processing of large datasets. Which specialized Python library would you use to leverage distributed computing capabilities effectively?",
+        "options": [
+            [
+                "A",
+                "Dask"
+            ],
+            [
+                "B",
+                "Celery"
+            ],
+            [
+                "C",
+                "Ray"
+            ],
+            [
+                "D",
+                "Joblib"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

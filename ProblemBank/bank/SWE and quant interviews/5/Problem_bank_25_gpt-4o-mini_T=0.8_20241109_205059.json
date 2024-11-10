@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a machine learning pipeline using the `pandas` library, which of the following methods efficiently handles missing data by filling it with the mean of each column, while also preserving the DataFrame's index and other relevant attributes?",
+        "options": [
+            [
+                "A",
+                "`df.fillna(df.mean())`"
+            ],
+            [
+                "B",
+                "`df.interpolate(method='linear')`"
+            ],
+            [
+                "C",
+                "`df.apply(lambda x: x.fillna(x.mean()))`"
+            ],
+            [
+                "D",
+                "`df.ffill()`"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "When utilizing the `Dask` library for parallel computing, which of the following statements best describes its primary advantage in handling large datasets?",
+        "options": [
+            [
+                "A",
+                "Dask operates by splitting the data into smaller chunks that are processed in parallel, allowing it to utilize a single CPU core efficiently."
+            ],
+            [
+                "B",
+                "Dask performs all computations in-memory, thus eliminating the need for disk I/O."
+            ],
+            [
+                "C",
+                "Dask is designed to work seamlessly with `pandas`, allowing users to directly convert `pandas` DataFrames to Dask DataFrames with no performance overhead."
+            ],
+            [
+                "D",
+                "Dask employs a lazy evaluation strategy, meaning it builds a task graph for computations and executes them only when results are needed."
+            ]
+        ],
+        "answer": "D",
+        "index": 2
+    },
+    {
+        "question": "In the context of the `statsmodels` library, which of the following options describes a scenario where you would prefer to use the `Generalized Additive Models (GAM)` over traditional linear regression?",
+        "options": [
+            [
+                "A",
+                "When the relationship between the independent variables and the dependent variable is strictly linear and additive."
+            ],
+            [
+                "B",
+                "When you have a non-linear relationship and you want to model it flexibly while still maintaining interpretability."
+            ],
+            [
+                "C",
+                "When there are high multicollinearity issues among the independent variables."
+            ],
+            [
+                "D",
+                "When the response variable is categorical and logistic regression is adequate."
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "In utilizing the `NetworkX` library for network analysis, which of the following methods would be most appropriate to find the nodes with the highest degree centrality in a directed graph?",
+        "options": [
+            [
+                "A",
+                "`nx.degree_centrality(G)`"
+            ],
+            [
+                "B",
+                "`nx.out_degree_centrality(G)`"
+            ],
+            [
+                "C",
+                "`nx.in_degree_centrality(G)`"
+            ],
+            [
+                "D",
+                "`nx.closeness_centrality(G)`"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "When employing the `TensorFlow Probability` library for probabilistic programming, which of the following constructs is specifically designed to create a probabilistic model that can reason about uncertainty in the parameters?",
+        "options": [
+            [
+                "A",
+                "`tfp.distributions`"
+            ],
+            [
+                "B",
+                "`tfp.layers`"
+            ],
+            [
+                "C",
+                "`tfp.MeanField`"
+            ],
+            [
+                "D",
+                "`tfp.experimental.mcmc`"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "---\n\n- **Question**: In the realm of asynchronous programming with Python, which of the following libraries is best suited for building highly concurrent applications and boasts a unique approach to managing callback functions without relying on traditional event loops?",
+        "options": [
+            [
+                "A",
+                "`Twisted` - known for its event-driven networking engine but relies heavily on callbacks."
+            ],
+            [
+                "B",
+                "`asyncio` - provides event loops but doesn't support alternatives to traditional callback mechanisms."
+            ],
+            [
+                "C",
+                "`Trio` - emphasizes structured concurrency and a user-friendly model for handling asynchronous tasks."
+            ],
+            [
+                "D",
+                "`Gevent` - utilizes greenlets which may complicate the understanding of concurrency in Python."
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "When using the `PyTorch` library for deep learning, which of the following statements correctly identifies a key feature of `autograd` that enhances the efficiency of gradient computation in complex neural networks?",
+        "options": [
+            [
+                "A",
+                "It requires manual specification of the forward and backward pass for optimization."
+            ],
+            [
+                "B",
+                "It only supports static computation graphs, limiting dynamic model adaptations."
+            ],
+            [
+                "C",
+                "It computes gradients using a technique called \"reverse mode differentiation\" which efficiently handles large computational graphs."
+            ],
+            [
+                "D",
+                "It automatically optimizes memory usage by discarding gradients after each step."
+            ]
+        ],
+        "answer": "C",
+        "index": 7
+    },
+    {
+        "question": "In terms of data visualization, which of the following Python libraries is specialized for creating complex, interactive visualizations with the ability to build rich web-based interfaces using `HTML` and `JavaScript` under the hood?",
+        "options": [
+            [
+                "A",
+                "`Matplotlib` - excellent for static plots but lacks interactivity."
+            ],
+            [
+                "B",
+                "`Seaborn` - builds on Matplotlib but focuses on statistical data visualization."
+            ],
+            [
+                "C",
+                "`Plotly` - allows for interactive plots but may involve a steeper learning curve due to its syntax."
+            ],
+            [
+                "D",
+                "`Bokeh` - uniquely designed for interactive visualizations that can be embedded in web applications."
+            ]
+        ],
+        "answer": "D",
+        "index": 8
+    },
+    {
+        "question": "When dealing with high-dimensional data in Python, which of the following libraries provides tools for dimensionality reduction, and specifically which technique does it implement that preserves local structures efficiently in non-linear data?",
+        "options": [
+            [
+                "A",
+                "`Scikit-learn` - implements PCA which focuses on global structures."
+            ],
+            [
+                "B",
+                "`UMAP` - a newer library directly targeted at preserving local structures in a manifold learning approach."
+            ],
+            [
+                "C",
+                "`Pandas` - primarily for data manipulation, not dimensionality reduction."
+            ],
+            [
+                "D",
+                "`Scipy` - focuses on basic linear algebra operations without dedicated dimensionality reduction features."
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "In utilizing the `OpenCV` library for image processing, which of the following methods would you employ to enhance image features for better edge detection, particularly in noisy environments?",
+        "options": [
+            [
+                "A",
+                "Directly applying the Sobel filter without preprocessing."
+            ],
+            [
+                "B",
+                "Utilizing Gaussian blurring followed by Canny edge detection for improved results."
+            ],
+            [
+                "C",
+                "Using histogram equalization to enhance the image contrast before filtering."
+            ],
+            [
+                "D",
+                "Applying a median filter to reduce noise without any further edge detection."
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "In the context of software design patterns, which of the following patterns is primarily intended to allow a single instance of a class to be created and provide a global point of access to it, particularly in scenarios where resource management is critical?",
+        "options": [
+            [
+                "A",
+                "Observer Pattern"
+            ],
+            [
+                "B",
+                "Singleton Pattern"
+            ],
+            [
+                "C",
+                "Factory Pattern"
+            ],
+            [
+                "D",
+                "Strategy Pattern"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "When evaluating the time complexity of various sorting algorithms, which of the following sorting algorithms exhibits O(n log n) average time complexity while also maintaining a stable sort, making it particularly suitable for large datasets with many duplicate entries?",
+        "options": [
+            [
+                "A",
+                "Quick Sort"
+            ],
+            [
+                "B",
+                "Merge Sort"
+            ],
+            [
+                "C",
+                "Heap Sort"
+            ],
+            [
+                "D",
+                "Bubble Sort"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "In the domain of system design, which of the following architectural patterns is distinguished by its focus on separating the concerns of data storage, data processing, and user interface, thereby promoting scalability and maintainability in large software applications?",
+        "options": [
+            [
+                "A",
+                "Microservices Architecture"
+            ],
+            [
+                "B",
+                "Model-View-Controller (MVC)"
+            ],
+            [
+                "C",
+                "Layered Architecture"
+            ],
+            [
+                "D",
+                "Event-Driven Architecture"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "In the analysis of algorithms, particularly in graph theory, which of the following algorithms is classified as a greedy algorithm and is specifically designed to find the minimum spanning tree (MST) of a connected, undirected graph efficiently?",
+        "options": [
+            [
+                "A",
+                "Dijkstra\u2019s Algorithm"
+            ],
+            [
+                "B",
+                "Prim\u2019s Algorithm"
+            ],
+            [
+                "C",
+                "Kruskal\u2019s Algorithm"
+            ],
+            [
+                "D",
+                "Bellman-Ford Algorithm"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "In the realm of database management systems, which of the following normal forms is concerned with eliminating transitive dependencies, ensuring that no non-prime attribute is dependent on another non-prime attribute within a relational schema?",
+        "options": [
+            [
+                "A",
+                "First Normal Form (1NF)"
+            ],
+            [
+                "B",
+                "Second Normal Form (2NF)"
+            ],
+            [
+                "C",
+                "Third Normal Form (3NF)"
+            ],
+            [
+                "D",
+                "Boyce-Codd Normal Form (BCNF)"
+            ]
+        ],
+        "answer": "C",
+        "index": 15
+    },
+    {
+        "question": "In the context of Python\u2019s `asyncio` library, which of the following methods is specifically designed to run a coroutine in a specified event loop without blocking the entire program, allowing for the execution of multiple coroutines in a highly concurrent environment?",
+        "options": [
+            [
+                "A",
+                "`asyncio.run_until_complete()`"
+            ],
+            [
+                "B",
+                "`loop.run_in_executor()`"
+            ],
+            [
+                "C",
+                "`asyncio.ensure_future()`"
+            ],
+            [
+                "D",
+                "`loop.create_task()`"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "When implementing a complex machine learning model using the `scikit-learn` library, which of the following techniques is specifically designed to enhance model performance by systematically testing multiple hyperparameter combinations through cross-validation?",
+        "options": [
+            [
+                "A",
+                "RandomizedSearchCV"
+            ],
+            [
+                "B",
+                "GridSearchCV"
+            ],
+            [
+                "C",
+                "CrossValScore"
+            ],
+            [
+                "D",
+                "Hyperband"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "In the context of Python's `multiprocessing` library, which of the following classes is best suited for managing a pool of worker processes and provides a convenient method for parallelizing the execution of a function across multiple input values?",
+        "options": [
+            [
+                "A",
+                "`ProcessQueue`"
+            ],
+            [
+                "B",
+                "`ThreadPool`"
+            ],
+            [
+                "C",
+                "`Pool`"
+            ],
+            [
+                "D",
+                "`Joblib`"
+            ]
+        ],
+        "answer": "C",
+        "index": 18
+    },
+    {
+        "question": "When utilizing the `Pandas` library for time series analysis, which of the following methods is specifically designed to handle missing values by forward filling them, thereby allowing for a seamless continuation of time series data?",
+        "options": [
+            [
+                "A",
+                "`DataFrame.interpolate()`"
+            ],
+            [
+                "B",
+                "`DataFrame.fillna(method='bfill')`"
+            ],
+            [
+                "C",
+                "`DataFrame.fillna(method='ffill')`"
+            ],
+            [
+                "D",
+                "`DataFrame.dropna()`"
+            ]
+        ],
+        "answer": "C",
+        "index": 19
+    },
+    {
+        "question": "In the context of object-oriented programming in Python, which of the following design principles specifically promotes the idea of programming to an interface rather than an implementation, encouraging flexibility and reducing dependencies between components?",
+        "options": [
+            [
+                "A",
+                "Dependency Injection"
+            ],
+            [
+                "B",
+                "Interface Segregation Principle"
+            ],
+            [
+                "C",
+                "Liskov Substitution Principle"
+            ],
+            [
+                "D",
+                "Open/Closed Principle"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    },
+    {
+        "question": "You are tasked with optimizing a machine learning pipeline that processes streaming data in real-time. Which Python library would best facilitate this task, offering built-in features for handling time-series data and real-time processing?",
+        "options": [
+            [
+                "A",
+                "`Pandas`"
+            ],
+            [
+                "B",
+                "`Dask`"
+            ],
+            [
+                "C",
+                "`PySpark`"
+            ],
+            [
+                "D",
+                "`Vaex`"
+            ]
+        ],
+        "answer": "C",
+        "index": 21
+    },
+    {
+        "question": "In a project that requires generating complex visualizations from a large dataset while ensuring interactivity and responsiveness, which of the following libraries would you recommend, particularly for its ability to integrate seamlessly with web technologies?",
+        "options": [
+            [
+                "A",
+                "`Matplotlib`"
+            ],
+            [
+                "B",
+                "`Plotly`"
+            ],
+            [
+                "C",
+                "`Bokeh`"
+            ],
+            [
+                "D",
+                "`Seaborn`"
+            ]
+        ],
+        "answer": "C",
+        "index": 22
+    },
+    {
+        "question": "During a software engineering interview, a candidate is asked to solve a problem using recursion. Which of the following recursive functions would most efficiently compute the nth Fibonacci number without causing a stack overflow for large values of n?",
+        "options": [
+            [
+                "A",
+                "A simple recursive function with no optimizations."
+            ],
+            [
+                "B",
+                "A recursive function with memoization."
+            ],
+            [
+                "C",
+                "A recursive function that calculates Fibonacci numbers using an iterative approach."
+            ],
+            [
+                "D",
+                "A recursive function that utilizes a stack to manage state."
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "In the context of creating a fault-tolerant microservices architecture, which design pattern would you choose to ensure that a service can gracefully handle failures in dependent services while maintaining operational integrity?",
+        "options": [
+            [
+                "A",
+                "Circuit Breaker"
+            ],
+            [
+                "B",
+                "Observer"
+            ],
+            [
+                "C",
+                "Singleton"
+            ],
+            [
+                "D",
+                "Strategy"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "While analyzing a dataset with highly imbalanced classes, which of the following techniques would you implement using the `imbalanced-learn` library to improve the performance of your classification model?",
+        "options": [
+            [
+                "A",
+                "Random Oversampling"
+            ],
+            [
+                "B",
+                "Label Encoding"
+            ],
+            [
+                "C",
+                "Min-Max Scaling"
+            ],
+            [
+                "D",
+                "Principal Component Analysis"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

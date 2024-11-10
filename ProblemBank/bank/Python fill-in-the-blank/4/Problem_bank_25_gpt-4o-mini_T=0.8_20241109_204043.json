@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In the realm of data analysis, you are using the `pandas` library to read a CSV file. However, you want to skip the first row of the CSV file while reading it. Which parameter should you use in the `read_csv` function to achieve this?\n```python\nimport pandas as pd\ndata = pd.read_csv('file.csv', _____=1)\n```",
+        "options": [
+            [
+                "A",
+                "skiprows"
+            ],
+            [
+                "B",
+                "header"
+            ],
+            [
+                "C",
+                "index_col"
+            ],
+            [
+                "D",
+                "droprows"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "While visualizing data with the `matplotlib` library, you want to create a plot with both a title and a grid. Which function call below correctly includes the grid feature?\n```python\nimport matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.title('My Plot')\nplt._____(True)\nplt.show()\n```",
+        "options": [
+            [
+                "A",
+                "grid"
+            ],
+            [
+                "B",
+                "add_grid"
+            ],
+            [
+                "C",
+                "include_grid"
+            ],
+            [
+                "D",
+                "set_grid"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "You're working with the `scikit-learn` library to classify data but want to ensure proper preprocessing. Which of the following should you use to standardize your features before fitting a model?\n```python\nfrom sklearn.preprocessing import _____\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n```",
+        "options": [
+            [
+                "A",
+                "MinMaxScaler"
+            ],
+            [
+                "B",
+                "RobustScaler"
+            ],
+            [
+                "C",
+                "StandardScaler"
+            ],
+            [
+                "D",
+                "Normalizer"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "Utilizing the `requests` library, you want to send a POST request to a specific URL and include JSON data in the request body. Which parameter should you use to include the JSON data in your request?\n```python\nimport requests\nresponse = requests.post('https://api.example.com/data', _____={'key': 'value'})\n```",
+        "options": [
+            [
+                "A",
+                "data"
+            ],
+            [
+                "B",
+                "json"
+            ],
+            [
+                "C",
+                "headers"
+            ],
+            [
+                "D",
+                "payload"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In the context of web scraping using the `BeautifulSoup` library, you want to extract all links from a webpage. Which method should you call to find all anchor tags in your parsed HTML document?\n```python\nfrom bs4 import BeautifulSoup\nsoup = BeautifulSoup(html_doc, 'html.parser')\nlinks = soup.______('a')\n```",
+        "options": [
+            [
+                "A",
+                "find"
+            ],
+            [
+                "B",
+                "select"
+            ],
+            [
+                "C",
+                "find_all"
+            ],
+            [
+                "D",
+                "extract"
+            ]
+        ],
+        "answer": "C",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: While working with the `numpy` library to compute the dot product of two matrices, you realize you need to ensure that both matrices are compatible in dimensions. Which method can you use to reshape a matrix within `numpy` to ensure this compatibility?\n```python\nimport numpy as np\nmatrix = np.array([[1, 2], [3, 4]])\nreshaped_matrix = matrix._____(2, 2)\n```",
+        "options": [
+            [
+                "A",
+                "reshape"
+            ],
+            [
+                "B",
+                "transpose"
+            ],
+            [
+                "C",
+                "resize"
+            ],
+            [
+                "D",
+                "expand_dims"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "In a machine learning project utilizing the `TensorFlow` library, you want to create a dataset that can be efficiently batched. Which function allows you to convert a Tensor into a `tf.data.Dataset` while specifying a batch size?\n```python\nimport tensorflow as tf\ndata = tf.constant([1, 2, 3, 4, 5])\ndataset = tf.data.Dataset._____(data, batch_size=2)\n```",
+        "options": [
+            [
+                "A",
+                "from_tensor_slices"
+            ],
+            [
+                "B",
+                "from_tensor"
+            ],
+            [
+                "C",
+                "from_generator"
+            ],
+            [
+                "D",
+                "from_dataset"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "When using the `seaborn` library to create complex visualizations, you want to draw a violin plot that overlays the KDE on top of the data points. Which parameter should you set to `True` in the `violinplot` function to achieve this?\n```python\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.violinplot(x='day', y='total_bill', data=tips, ____=True)\nplt.show()\n```",
+        "options": [
+            [
+                "A",
+                "inner"
+            ],
+            [
+                "B",
+                "split"
+            ],
+            [
+                "C",
+                "alpha"
+            ],
+            [
+                "D",
+                "draw"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "In the context of image processing using the `PIL` library, you want to load an image from a file and convert it to grayscale for further analysis. Which method should you call on the image object to perform this conversion?\n```python\nfrom PIL import Image\nimage = Image.open('image.jpg')\ngray_image = image._____(mode='L')\n```",
+        "options": [
+            [
+                "A",
+                "convert"
+            ],
+            [
+                "B",
+                "filter"
+            ],
+            [
+                "C",
+                "transform"
+            ],
+            [
+                "D",
+                "modify"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "When working with `Flask` to build a web application, you want to set a route that allows users to submit a form and handles the data as JSON. Which decorator should you use to specify that the route accepts POST requests?\n```python\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.______('submit', methods=['POST'])\ndef submit_form():\n    data = request.json\n    return 'Data received!'\n```",
+        "options": [
+            [
+                "A",
+                "route"
+            ],
+            [
+                "B",
+                "app.route"
+            ],
+            [
+                "C",
+                "app.endpoint"
+            ],
+            [
+                "D",
+                "listen"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "While working with the `numpy` library to compute the dot product of two matrices, you realize you need to ensure that both matrices are compatible in dimensions. Which method can you use to reshape a matrix within `numpy` to ensure this compatibility?\n```python\nimport numpy as np\nmatrix = np.array([[1, 2], [3, 4]])\nreshaped_matrix = matrix._____(2, 2)\n```",
+        "options": [
+            [
+                "A",
+                "reshape"
+            ],
+            [
+                "B",
+                "flatten"
+            ],
+            [
+                "C",
+                "transpose"
+            ],
+            [
+                "D",
+                "expand_dims"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "In a machine learning project utilizing the `TensorFlow` library, you want to create a dataset that can be efficiently batched. Which function allows you to convert a Tensor into a `tf.data.Dataset` while specifying a batch size?\n```python\nimport tensorflow as tf\ndata = tf.constant([1, 2, 3, 4, 5])\ndataset = tf.data.Dataset._____(data, batch_size=2)\n```",
+        "options": [
+            [
+                "A",
+                "from_tensors"
+            ],
+            [
+                "B",
+                "from_tensor_slices"
+            ],
+            [
+                "C",
+                "from_tensor"
+            ],
+            [
+                "D",
+                "from_array"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "When using the `seaborn` library to create complex visualizations, you want to draw a violin plot that overlays the KDE on top of the data points. Which parameter should you set to `True` in the `violinplot` function to achieve this?\n```python\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.violinplot(x='day', y='total_bill', data=tips, ____=True)\nplt.show()\n```",
+        "options": [
+            [
+                "A",
+                "inner"
+            ],
+            [
+                "B",
+                "overlay"
+            ],
+            [
+                "C",
+                "scale"
+            ],
+            [
+                "D",
+                "split"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "In the context of image processing using the `PIL` library, you want to load an image from a file and convert it to grayscale for further analysis. Which method should you call on the image object to perform this conversion?\n```python\nfrom PIL import Image\nimage = Image.open('image.jpg')\ngray_image = image._____(mode='L')\n```",
+        "options": [
+            [
+                "A",
+                "convert"
+            ],
+            [
+                "B",
+                "transform"
+            ],
+            [
+                "C",
+                "change_mode"
+            ],
+            [
+                "D",
+                "modify"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "When working with `Flask` to build a web application, you want to set a route that allows users to submit a form and handles the data as JSON. Which decorator should you use to specify that the route accepts POST requests?\n```python\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.______('submit', methods=['POST'])\ndef submit_form():\n    data = request.json\n    return 'Data received!'\n```",
+        "options": [
+            [
+                "A",
+                "route"
+            ],
+            [
+                "B",
+                "post"
+            ],
+            [
+                "C",
+                "add_url_rule"
+            ],
+            [
+                "D",
+                "endpoint"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "You are working with the `sqlalchemy` library to create a new table in your database. In order to define a column that will auto-increment its values, which type should you use?\n```python\nfrom sqlalchemy import Column, _____, Integer, String\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(_____, primary_key=True)\n    name = Column(String)\n```",
+        "options": [
+            [
+                "A",
+                "Integer"
+            ],
+            [
+                "B",
+                "Sequence"
+            ],
+            [
+                "C",
+                "BigInteger"
+            ],
+            [
+                "D",
+                "Numeric"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "When utilizing the `asyncio` library for asynchronous programming in Python, which function should be used to run a coroutine and block until it completes?\n```python\nimport asyncio\n\nasync def main():\n    print('Hello, World!')\n\n_____(main())\n```",
+        "options": [
+            [
+                "A",
+                "asyncio.run()"
+            ],
+            [
+                "B",
+                "asyncio.execute()"
+            ],
+            [
+                "C",
+                "asyncio.start()"
+            ],
+            [
+                "D",
+                "asyncio.invoke()"
+            ]
+        ],
+        "answer": "A",
+        "index": 17
+    },
+    {
+        "question": "In a project using the `dash` library to create interactive web applications, you want to set up a callback function that updates a graph based on user input. Which decorator is necessary to link the input component to the output graph?\n```python\nfrom dash import Dash, dcc, Output, Input\n\napp = Dash(__name__)\n\n@app._____(Output('graph', 'figure'), Input('input', 'value'))\ndef update_graph(value):\n    # logic to update the graph\n    pass\n```",
+        "options": [
+            [
+                "A",
+                "callback"
+            ],
+            [
+                "B",
+                "app.callback"
+            ],
+            [
+                "C",
+                "link"
+            ],
+            [
+                "D",
+                "set_callback"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "While using the `Pygame` library for game development, you need to set the frame rate for your game loop. Which function should you call to achieve this?\n```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((640, 480))\nclock = pygame.time.Clock()\n_____(60)  # Set the frame rate to 60 frames per second\n```",
+        "options": [
+            [
+                "A",
+                "clock.tick()"
+            ],
+            [
+                "B",
+                "pygame.time()"
+            ],
+            [
+                "C",
+                "clock.set_fps()"
+            ],
+            [
+                "D",
+                "pygame.set_frame_rate()"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "When implementing a machine learning model with the `PyTorch` library, you want to calculate the gradients for your model's parameters after calling the loss function. Which method should you call on your model to reset the gradients before performing the backward pass?\n```python\nimport torch\n\nmodel = MyModel()\nloss = compute_loss(model(input), target)\n_____(model.parameters())\nloss.backward()  # Perform backward pass\n```",
+        "options": [
+            [
+                "A",
+                "model.clear_grad()"
+            ],
+            [
+                "B",
+                "torch.zero_grad()"
+            ],
+            [
+                "C",
+                "model.zero_grad()"
+            ],
+            [
+                "D",
+                "model.reset_grad()"
+            ]
+        ],
+        "answer": "C",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Question 1**: While using the `Flask` library, you want to retrieve a query parameter from a URL. Which method should you use to access this parameter within a route function?\n```python\nfrom flask import Flask, request\napp = Flask(__name__)\n\n@app.route('/search')\ndef search():\n    query = request.______('query')\n    return f'Searching for: {query}'\n```",
+        "options": [
+            [
+                "A",
+                "get_json"
+            ],
+            [
+                "B",
+                "args"
+            ],
+            [
+                "C",
+                "data"
+            ],
+            [
+                "D",
+                "json"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "In the realm of data visualization using `plotly`, you want to create a scatter plot and, in addition to the data points, you want to include a trend line. Which parameter should you set to `True` in the `scatter` function to achieve this?\n```python\nimport plotly.express as px\n\nfig = px.scatter(data_frame=your_data, x='x_column', y='y_column', _____=True)\nfig.show()\n```",
+        "options": [
+            [
+                "A",
+                "trendline"
+            ],
+            [
+                "B",
+                "add_line"
+            ],
+            [
+                "C",
+                "show_trend"
+            ],
+            [
+                "D",
+                "include_regression"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "You are working with the `pytest` library and want to mark a test as expected to fail. Which decorator should you use in your test function to indicate this?\n```python\nimport pytest\n\n@pytest._____\ndef test_failing():\n    assert False, \"This test is supposed to fail\"\n```",
+        "options": [
+            [
+                "A",
+                "mark.xfail"
+            ],
+            [
+                "B",
+                "mark.fail"
+            ],
+            [
+                "C",
+                "mark.expected_failure"
+            ],
+            [
+                "D",
+                "mark.skip"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "While utilizing the `beautifulsoup4` library, you want to find all the paragraphs in an HTML document that contain a specific class. Which method should you use to filter the paragraphs accordingly?\n```python\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html_doc, 'html.parser')\nparagraphs = soup.find_all('p', class_=_____)\n```",
+        "options": [
+            [
+                "A",
+                "'my_class'"
+            ],
+            [
+                "B",
+                "class_name"
+            ],
+            [
+                "C",
+                "'class'"
+            ],
+            [
+                "D",
+                "'class_'"
+            ]
+        ],
+        "answer": "D",
+        "index": 24
+    },
+    {
+        "question": "In a scientific computing project using the `scipy` library, you want to perform an optimization to minimize a function. Which function should you use for an unbounded optimization problem?\n```python\nfrom scipy.optimize import _____\n\nresult = minimize(your_function, initial_guess)\n```",
+        "options": [
+            [
+                "A",
+                "minimize_scalar"
+            ],
+            [
+                "B",
+                "minimize"
+            ],
+            [
+                "C",
+                "optimize"
+            ],
+            [
+                "D",
+                "linprog"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

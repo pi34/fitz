@@ -1,0 +1,117 @@
+[
+    {
+        "question": "In a certain group \\( G \\), it is known that for every element \\( g \\in G \\), \\( g^3 = e \\) where \\( e \\) is the identity element. What can be concluded about the structure of the group \\( G \\)?",
+        "options": [
+            [
+                "A",
+                "The group \\( G \\) is cyclic of order 3."
+            ],
+            [
+                "B",
+                "The group \\( G \\) is abelian."
+            ],
+            [
+                "C",
+                "The group \\( G \\) is a finite group with all elements being of order 3."
+            ],
+            [
+                "D",
+                "The group \\( G \\) must be the trivial group."
+            ]
+        ],
+        "answer": "C",
+        "index": 1
+    },
+    {
+        "question": "Let \\( R \\) be a ring with unity and non-zero elements \\( a, b \\in R \\) such that \\( ab = 0 \\). If \\( R \\) is an integral domain, which of the following statements must hold true?",
+        "options": [
+            [
+                "A",
+                "At least one of \\( a \\) or \\( b \\) must be zero."
+            ],
+            [
+                "B",
+                "The ring \\( R \\) contains a zero divisor."
+            ],
+            [
+                "C",
+                "The elements \\( a \\) and \\( b \\) are both units in \\( R \\)."
+            ],
+            [
+                "D",
+                "The ring \\( R \\) is commutative."
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "Consider the polynomial \\( f(x) = x^4 + 1 \\) over the field \\( \\mathbb{F}_5 \\). Which of the following statements is true regarding the roots of \\( f(x) \\)?",
+        "options": [
+            [
+                "A",
+                "\\( f(x) \\) has exactly 2 distinct roots in \\( \\mathbb{F}_5 \\)."
+            ],
+            [
+                "B",
+                "\\( f(x) \\) has no roots in \\( \\mathbb{F}_5 \\)."
+            ],
+            [
+                "C",
+                "\\( f(x) \\) is irreducible over \\( \\mathbb{F}_5 \\)."
+            ],
+            [
+                "D",
+                "\\( f(x) \\) can be factored into two quadratic polynomials over \\( \\mathbb{F}_5 \\)."
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "In the context of group theory, if \\( G \\) is a non-abelian group of order 60, which of the following must be true based on the Sylow theorems?",
+        "options": [
+            [
+                "A",
+                "\\( G \\) has a normal Sylow 5-subgroup."
+            ],
+            [
+                "B",
+                "The number of Sylow 3-subgroups is a divisor of 20."
+            ],
+            [
+                "C",
+                "\\( G \\) has a unique Sylow 2-subgroup."
+            ],
+            [
+                "D",
+                "\\( G \\) must have a subgroup of order 15."
+            ]
+        ],
+        "answer": "D",
+        "index": 4
+    },
+    {
+        "question": "Let \\( V \\) be a vector space over a field \\( F \\) and \\( T: V \\to V \\) a linear transformation such that \\( T^2 = 0 \\) (the zero transformation). Which of the following statements about the eigenvalues of \\( T \\) is correct?",
+        "options": [
+            [
+                "A",
+                "The only eigenvalue of \\( T \\) is 0."
+            ],
+            [
+                "B",
+                "\\( T \\) has an eigenvalue of 1."
+            ],
+            [
+                "C",
+                "\\( T \\) can have both positive and negative eigenvalues."
+            ],
+            [
+                "D",
+                "The eigenvalues of \\( T \\) must be distinct."
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    }
+]

@@ -99,7 +99,7 @@ class QuestionGenerator:
             try:
                 q = re.search(question_pattern, question, flags=re.DOTALL | re.IGNORECASE).group(1).strip()
                 options = re.findall(options_pattern, question, flags=re.DOTALL)
-                options = [(a, b.strip()) for a, b in options]
+                options = [(a, b.strip()) for a, b in options][-4:] # keep only the last 4 ABCD options (sometimes options will select from the question statement)
                 answer = re.search(answer_pattern, question, flags=re.IGNORECASE).group(1).strip()
                 parsed_questions.append({
                     "question": q,

@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a binary search tree (BST), you are tasked with deleting the node containing the value 15. The node has two children with values 10 and 20. What is the time complexity of this deletion operation, considering the tree is balanced?",
+        "options": [
+            [
+                "A",
+                "O(log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(log n + k) where k is the number of nodes to be re-balanced"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "You are implementing a priority queue using a binary heap. If the heap is implemented via the `heapq` library in Python, what is the time complexity of inserting a new element followed by extracting the minimum element?",
+        "options": [
+            [
+                "A",
+                "O(log n) for both operations"
+            ],
+            [
+                "B",
+                "O(n) for insertion and O(log n) for extraction"
+            ],
+            [
+                "C",
+                "O(log n) for insertion and O(n) for extraction"
+            ],
+            [
+                "D",
+                "O(1) for both operations"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "Consider a scenario where a company needs to find the k-th largest element in an unsorted list of employee salaries. If you utilize the `nlargest` function from the `heapq` module, what will be the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(k log n)"
+            ],
+            [
+                "C",
+                "O(n log k)"
+            ],
+            [
+                "D",
+                "O(k)"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "A developer is working with a directed acyclic graph (DAG) using the `networkx` library to find the longest path from node A to node B. If the nodes are represented as a list and edges as pairs, what is the time complexity of this algorithm when using the topological sort approach?",
+        "options": [
+            [
+                "A",
+                "O(V + E)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E log V)"
+            ],
+            [
+                "D",
+                "O(V^3)"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "You are analyzing the memory consumption of an algorithm that uses a hash table for storing results of computations to avoid redundant calculations. If the hash table has a load factor of 0.7 and you are storing n elements, what is the expected time complexity for a lookup operation?",
+        "options": [
+            [
+                "A",
+                "O(1) on average"
+            ],
+            [
+                "B",
+                "O(n) in the worst case"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1) in the worst case"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "You are implementing a dynamic programming solution to find the longest common subsequence (LCS) of two strings, `str1` and `str2`, using a 2D array for memoization. What is the time and space complexity of this algorithm in terms of the lengths of the two strings, m and n?",
+        "options": [
+            [
+                "A",
+                "O(m * n) time and O(m * n) space"
+            ],
+            [
+                "B",
+                "O(m + n) time and O(m + n) space"
+            ],
+            [
+                "C",
+                "O(m * n) time and O(min(m, n)) space"
+            ],
+            [
+                "D",
+                "O(m + n) time and O(1) space"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "You are tasked with implementing a depth-first search (DFS) on a graph using an adjacency list representation. If the graph has `V` vertices and `E` edges, what is the overall time complexity of performing a DFS traversal?",
+        "options": [
+            [
+                "A",
+                "O(V^2)"
+            ],
+            [
+                "B",
+                "O(E + V)"
+            ],
+            [
+                "C",
+                "O(V log V)"
+            ],
+            [
+                "D",
+                "O(E log E)"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "Suppose you are using the `collections.deque` class to implement a sliding window maximum algorithm over a list of integers. If the window size is `k`, what is the amortized time complexity for processing all elements of the list?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n * k)"
+            ],
+            [
+                "C",
+                "O(n log k)"
+            ],
+            [
+                "D",
+                "O(k)"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "When using the `pandas` library to perform a groupby operation on a large DataFrame, if you need to calculate the mean of a specific column grouped by another column, what is the time complexity assuming the DataFrame has `n` rows?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n^3)"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "You are designing a system to handle real-time streaming data using a balanced binary search tree (BST). If the system supports insertion of new data and querying for the median at any point, what is the time complexity for both operations when using a self-balancing BST like `AVL` or `Red-Black Tree`?",
+        "options": [
+            [
+                "A",
+                "O(log n) for both insert and median query"
+            ],
+            [
+                "B",
+                "O(n) for insertion and O(log n) for median query"
+            ],
+            [
+                "C",
+                "O(log n) for insertion and O(n) for median query"
+            ],
+            [
+                "D",
+                "O(n log n) for both operations"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "In a scenario where you have an array of integers sorted in ascending order, you need to implement a function that will search for a specific integer using a binary search approach. However, if the integer is not present in the array, your function must also return the index at which it could be inserted while maintaining sorted order. What is the time complexity of this operation using the `bisect` library in Python?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "You are given a large dataset represented as a linked list and tasked with reversing it using recursion. Considering the nature of stack space required for the recursive calls, what is the space complexity of your solution, assuming the linked list has `n` nodes?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "Imagine you are implementing a graph traversal algorithm using a breadth-first search (BFS) on a sparse graph with `V` vertices and `E` edges. If you utilize the adjacency list representation, what is the time complexity of your BFS implementation?",
+        "options": [
+            [
+                "A",
+                "O(V + E)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E)"
+            ],
+            [
+                "D",
+                "O(V log V)"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "You are tasked with finding the minimum spanning tree (MST) of a graph using Prim's algorithm implemented with a priority queue through the `heapq` library. If the graph has `V` vertices and `E` edges, what is the time complexity of finding the MST in this context?",
+        "options": [
+            [
+                "A",
+                "O(E log V)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E + V log V)"
+            ],
+            [
+                "D",
+                "O(V log V)"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "A team of developers is implementing a cache mechanism using a Least Recently Used (LRU) algorithm. They decide to utilize Python\u2019s `OrderedDict` to maintain the order of items. If the cache can hold a maximum of `k` items, what is the time complexity for both insertion and deletion operations in this implementation?",
+        "options": [
+            [
+                "A",
+                "O(k)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(log k)"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "In a fantastical library where each book is represented as a node in a linked list, a librarian seeks to find the middle book quickly. If the librarian employs the \"Tortoise and Hare\" algorithm to find the middle element, what is the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "A quirky wizard is using the `sortedcontainers` library in Python to maintain a collection of magical scrolls that need to be sorted at all times. If the wizard inserts a new scroll into this sorted collection, what is the expected time complexity of this insertion operation?",
+        "options": [
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "In a pixelated world, an artist uses the `PIL` (Pillow) library to process a gigantic image represented as a 2D array of pixels. If the artist wants to apply a filter that requires examining each pixel and its 8 neighbors, what is the time complexity of applying this filter to an image with dimensions `m x n`?",
+        "options": [
+            [
+                "A",
+                "O(m * n)"
+            ],
+            [
+                "B",
+                "O(m * n log n)"
+            ],
+            [
+                "C",
+                "O(m + n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "A clever programmer is devising a method to find the shortest path in a maze represented as a grid using the `queue` module for implementing BFS. Assuming the maze has `R` rows and `C` columns, what is the time complexity of this algorithm?",
+        "options": [
+            [
+                "A",
+                "O(R * C)"
+            ],
+            [
+                "B",
+                "O(R + C)"
+            ],
+            [
+                "C",
+                "O(R^2 + C^2)"
+            ],
+            [
+                "D",
+                "O(R * log C)"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "Imagine a scenario in a futuristic city where drones are used to deliver packages. The city's delivery routes are represented as a graph, and the drones must find the best path using Dijkstra's algorithm with a priority queue implemented via the `heapq` library. If the graph has `V` vertices and `E` edges, what is the time complexity of finding the shortest delivery route?",
+        "options": [
+            [
+                "A",
+                "O(E + V log V)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E log V)"
+            ],
+            [
+                "D",
+                "O(V + E)"
+            ]
+        ],
+        "answer": "C",
+        "index": 20
+    },
+    {
+        "question": "In a competitive programming contest, you are tasked with finding the median of a dynamic list of numbers. You decide to utilize two heaps: a max heap for the lower half and a min heap for the upper half of the list. If you perform insertions and median retrievals, what are the time complexities for each of these operations?",
+        "options": [
+            [
+                "A",
+                "Insertion: O(log n), Median retrieval: O(1)"
+            ],
+            [
+                "B",
+                "Insertion: O(n), Median retrieval: O(log n)"
+            ],
+            [
+                "C",
+                "Insertion: O(1), Median retrieval: O(n)"
+            ],
+            [
+                "D",
+                "Insertion: O(log n), Median retrieval: O(n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 21
+    },
+    {
+        "question": "You are implementing a data structure that supports both insertions and deletions while always maintaining a sorted order of elements using a balanced tree, such as a Treap. If you perform `n` insertions and `n` deletions, what will be the worst-case time complexity for maintaining this sorted order?",
+        "options": [
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "In a computer graphics application, a user wants to quickly retrieve and modify pixel values from a large image represented as a 2D array. If you implement this using a segment tree to support both range queries and point updates, what is the space complexity of this segment tree?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(4n)"
+            ]
+        ],
+        "answer": "D",
+        "index": 23
+    },
+    {
+        "question": "A researcher is analyzing a large dataset of genomic sequences represented as strings. To find the longest repeating substring efficiently, she decides to employ a suffix array followed by a longest common prefix (LCP) array. What is the time complexity for building the suffix array?",
+        "options": [
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log^2 n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "In a unique scenario where you are using a bloom filter to probabilistically determine membership in a set of `n` items while allowing for false positives, what is the expected time complexity for both insertion and membership testing operations?",
+        "options": [
+            [
+                "A",
+                "Insertion: O(1), Membership test: O(n)"
+            ],
+            [
+                "B",
+                "Insertion: O(n), Membership test: O(1)"
+            ],
+            [
+                "C",
+                "Insertion: O(1), Membership test: O(1)"
+            ],
+            [
+                "D",
+                "Insertion: O(log n), Membership test: O(log n)"
+            ]
+        ],
+        "answer": "C",
+        "index": 25
+    }
+]

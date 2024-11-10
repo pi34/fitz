@@ -1,0 +1,462 @@
+[
+    {
+        "question": "Given the following Python code snippet that uses NumPy, which of the following statements about its time complexity is correct?  \n  ```python\n  import numpy as np\n  a = np.random.rand(1000)\n  b = np.random.rand(1000)\n  c = np.dot(a, b)\n  ```  \n  What is the time complexity of the `np.dot()` operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "If you have a Pandas DataFrame with 1,000,000 rows and you perform the operation `df['column'].value_counts()`, what is the expected time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "Consider the following code snippet which implements a binary search algorithm in Python. What is the Big-O notation of the space complexity of this function?  \n  ```python\n  def binary_search(arr, target):\n      left, right = 0, len(arr) - 1\n      while left <= right:\n          mid = (left + right) // 2\n          if arr[mid] == target:\n              return mid\n          elif arr[mid] < target:\n              left = mid + 1\n          else:\n              right = mid - 1\n      return -1\n  ```",
+        "options": [
+            [
+                "A",
+                "O(log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "In the context of Big-O notation, which of the following statements about the memory complexity of a depth-first search (DFS) algorithm on a binary tree is correct? Assume the tree is perfectly balanced.",
+        "options": [
+            [
+                "A",
+                "O(h), where h is the height of the tree"
+            ],
+            [
+                "B",
+                "O(n), where n is the number of nodes"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "You are analyzing the performance of a custom Python function that sorts a list of integers using the `sorted()` method. If the list has `n` elements, what is the Big-O time complexity of this sorting operation in the average case?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In a time-traveling scenario, you have a list of historical events represented as a linked list, and you want to find a specific event. If the linked list has `n` events, what is the worst-case time complexity for searching through this list?",
+        "options": [
+            [
+                "A",
+                "O(1) - because you can jump to any event directly."
+            ],
+            [
+                "B",
+                "O(n) - since you may have to traverse the entire list in the worst case."
+            ],
+            [
+                "C",
+                "O(log n) - if you split the list into two halves and search in each."
+            ],
+            [
+                "D",
+                "O(n^2) - due to the potential need to search multiple times through the list."
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "Imagine a library system where each book is indexed in a binary search tree (BST). If you insert `m` books and then perform a search for a book, what is the time complexity of the search operation in the average case, assuming the tree remains balanced?",
+        "options": [
+            [
+                "A",
+                "O(m) - because you might have to look at all the books."
+            ],
+            [
+                "B",
+                "O(log m) - since you can halve the search space with each comparison."
+            ],
+            [
+                "C",
+                "O(m log m) - due to multiple insertions before the search."
+            ],
+            [
+                "D",
+                "O(1) - because you can access the book directly using its index."
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "You are tasked with evaluating a function that computes the Fibonacci sequence using recursion. Given the following code snippet, what is the time complexity in terms of the input `n`?\n```python\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n```",
+        "options": [
+            [
+                "A",
+                "O(n) - since it only makes a linear number of calls."
+            ],
+            [
+                "B",
+                "O(2^n) - as each call generates two more calls in the tree structure."
+            ],
+            [
+                "C",
+                "O(n log n) - due to the depth of recursion and merging results."
+            ],
+            [
+                "D",
+                "O(n^2) - because of the nested nature of the recursive calls."
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "In a futuristic AI-driven game, you have an array of player scores that need to be sorted using a merge sort algorithm. If the array has `k` scores, what is the space complexity of the merge sort algorithm?",
+        "options": [
+            [
+                "A",
+                "O(1) - as it sorts in place without using extra memory."
+            ],
+            [
+                "B",
+                "O(k) - since it requires additional space for merging the arrays."
+            ],
+            [
+                "C",
+                "O(log k) - because it only needs space for the recursive stack."
+            ],
+            [
+                "D",
+                "O(k^2) - due to potential temporary storage for every element."
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "You are analyzing a function that calculates the factorial of a number using an iterative approach. Given the following code snippet, what is the time complexity of this function?\n```python\ndef factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+        "options": [
+            [
+                "A",
+                "O(n) - since it iterates through all numbers up to `n`."
+            ],
+            [
+                "B",
+                "O(1) - as it only performs a single multiplication."
+            ],
+            [
+                "C",
+                "O(log n) - because it reduces the number of multiplications."
+            ],
+            [
+                "D",
+                "O(n^2) - due to performing multiple calculations for each iteration."
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "In a scenario where you have a large dataset represented as a hash table, which of the following statements about the average-case time complexity for searching for a non-existent key is correct?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "Given the following Java code snippet that implements a bubble sort algorithm, what is the worst-case time complexity of this sorting method?\n  ```java\n  void bubbleSort(int[] arr) {\n      int n = arr.length;\n      for (int i = 0; i < n - 1; i++) {\n          for (int j = 0; j < n - i - 1; j++) {\n              if (arr[j] > arr[j + 1]) {\n                  // swap arr[j] and arr[j+1]\n                  int temp = arr[j];\n                  arr[j] = arr[j + 1];\n                  arr[j + 1] = temp;\n              }\n          }\n      }\n  }\n  ```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n^3)"
+            ]
+        ],
+        "answer": "C",
+        "index": 12
+    },
+    {
+        "question": "In a world where you need to index a massive dataset of user profiles, you decide to use a B-tree. If you perform `p` insertions and then `q` searches, what is the overall time complexity for these operations, assuming the B-tree remains balanced?",
+        "options": [
+            [
+                "A",
+                "O(p + q)"
+            ],
+            [
+                "B",
+                "O(p log n + q log n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(p^2 + q^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "You are optimizing a function that calculates the length of a string recursively. Given the following Python code, what is the time complexity of the `length_of_string` function?\n  ```python\n  def length_of_string(s):\n      if s == \"\":\n          return 0\n      return 1 + length_of_string(s[1:])\n  ```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "You are analyzing a real-time system that processes customer transactions using a queue data structure. If the system handles `t` transactions and each transaction requires a constant time operation to enqueue and dequeue, what is the total time complexity for processing all transactions?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(t)"
+            ],
+            [
+                "C",
+                "O(t log t)"
+            ],
+            [
+                "D",
+                "O(t^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "You are developing a game that requires you to find the shortest path in a weighted graph representing a maze. If you use Dijkstra\u2019s algorithm with a priority queue implemented using a binary heap, what is the time complexity of finding the shortest path from a single source to all other nodes?",
+        "options": [
+            [
+                "A",
+                "O(V^2) where V is the number of vertices"
+            ],
+            [
+                "B",
+                "O(E + V log V) where E is the number of edges"
+            ],
+            [
+                "C",
+                "O(E log V) where E is the number of edges"
+            ],
+            [
+                "D",
+                "O(V log E) where E is the number of edges"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "Given the following Python code snippet that uses a stack to reverse a string, what is the overall space complexity of the function taking into account the input size `n`?\n  ```python\n  def reverse_string(s):\n      stack = []\n      for char in s:\n          stack.append(char)\n      reversed_str = ''\n      while stack:\n          reversed_str += stack.pop()\n      return reversed_str\n  ```",
+        "options": [
+            [
+                "A",
+                "O(n) for the stack only"
+            ],
+            [
+                "B",
+                "O(1) since the stack does not affect space"
+            ],
+            [
+                "C",
+                "O(n) for both the stack and the reversed string"
+            ],
+            [
+                "D",
+                "O(n^2) due to string concatenation"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "In a scenario where you need to merge two sorted lists into a single sorted list in Python, what is the time complexity of the merging process?",
+        "options": [
+            [
+                "A",
+                "O(n) where n is the total number of elements in both lists"
+            ],
+            [
+                "B",
+                "O(log n) as you are using a binary search method"
+            ],
+            [
+                "C",
+                "O(n^2) due to nested loops"
+            ],
+            [
+                "D",
+                "O(1) since you are just appending elements"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "Suppose you are designing a system that maintains a collection of unique user IDs using a set data structure. If you are inserting `m` user IDs and then perform a membership test on `n` user IDs, what is the overall time complexity for these operations?",
+        "options": [
+            [
+                "A",
+                "O(m + n)"
+            ],
+            [
+                "B",
+                "O(m * n)"
+            ],
+            [
+                "C",
+                "O(m log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "Given the following Python function that calculates the number of distinct ways to climb a staircase with `n` steps, where you can take 1 or 2 steps at a time, what is the time complexity of this implementation?\n  ```python\n  def climb_stairs(n):\n      if n <= 1:\n          return 1\n      return climb_stairs(n - 1) + climb_stairs(n - 2)\n  ```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(2^n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    }
+]

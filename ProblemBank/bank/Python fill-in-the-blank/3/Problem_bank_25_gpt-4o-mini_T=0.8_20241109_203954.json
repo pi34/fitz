@@ -1,0 +1,577 @@
+[
+    {
+        "question": "---\n\n**Question 1**:  \nIn Python, which function from the `math` library can be used to round a number towards positive infinity? Fill in the blank: `import math`  \n`result = math.___(-2.3)`  \nWhat will `result` be?",
+        "options": [
+            [
+                "A",
+                "ceil"
+            ],
+            [
+                "B",
+                "floor"
+            ],
+            [
+                "C",
+                "round"
+            ],
+            [
+                "D",
+                "trunc"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "When using the `pandas` library, which method can be utilized to read a CSV file into a DataFrame? Fill in the blank:  \n`import pandas as pd`  \n`df = pd.___('data.csv')`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "load_csv"
+            ],
+            [
+                "B",
+                "read_csv"
+            ],
+            [
+                "C",
+                "import_csv"
+            ],
+            [
+                "D",
+                "parse_csv"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "In Python, which built-in function can be used to create a new list from an existing iterable by applying a function to each of its items? Fill in the blank:  \n`new_list = list(___(x * 2 for x in range(5)))`  \nWhat fits in the blank?",
+        "options": [
+            [
+                "A",
+                "map"
+            ],
+            [
+                "B",
+                "filter"
+            ],
+            [
+                "C",
+                "zip"
+            ],
+            [
+                "D",
+                "reduce"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "To plot a simple line graph using the `matplotlib.pyplot` library, which of the following commands is needed to display the plot after creating it? Fill in the blank:  \n`import matplotlib.pyplot as plt`  \n`plt.plot([1, 2, 3], [4, 5, 6])`  \n`___`  \nWhat should be placed in the blank?",
+        "options": [
+            [
+                "A",
+                "plt.show()"
+            ],
+            [
+                "B",
+                "plt.display()"
+            ],
+            [
+                "C",
+                "plt.render()"
+            ],
+            [
+                "D",
+                "plt.output()"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "In Python, which method from the `json` library is used to convert a Python object into a JSON string? Fill in the blank:  \n`import json`  \n`json_string = json.___({'name': 'Alice', 'age': 30})`  \nWhat is the correct term to fill the gap?",
+        "options": [
+            [
+                "A",
+                "load"
+            ],
+            [
+                "B",
+                "dump"
+            ],
+            [
+                "C",
+                "encode"
+            ],
+            [
+                "D",
+                "stringify"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In Python, which function from the `random` library can be used to generate a random integer within a specified range? Fill in the blank:  \n`import random`  \n`num = random.___(-10, 10)`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "randrange"
+            ],
+            [
+                "B",
+                "randint"
+            ],
+            [
+                "C",
+                "randomize"
+            ],
+            [
+                "D",
+                "pick"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "In Python, which method from the `datetime` module is used to get the current date and time? Fill in the blank:  \n`from datetime import ___`  \n`now = ___.now()`  \nWhat should be inserted in the blanks?",
+        "options": [
+            [
+                "A",
+                "date"
+            ],
+            [
+                "B",
+                "datetime"
+            ],
+            [
+                "C",
+                "time"
+            ],
+            [
+                "D",
+                "timestamp"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "When using the `requests` library, which function is called to send a GET request to a specified URL? Fill in the blank:  \n`import requests`  \n`response = requests.___('https://api.example.com/data')`  \nWhat fits in the blank?",
+        "options": [
+            [
+                "A",
+                "fetch"
+            ],
+            [
+                "B",
+                "get"
+            ],
+            [
+                "C",
+                "request"
+            ],
+            [
+                "D",
+                "retrieve"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "In the context of `numpy`, which function is used to create an array of evenly spaced values within a specified interval? Fill in the blank:  \n`import numpy as np`  \n`array = np.___([0, 10], num=5)`  \nWhat should be placed in the blank?",
+        "options": [
+            [
+                "A",
+                "linspace"
+            ],
+            [
+                "B",
+                "arange"
+            ],
+            [
+                "C",
+                "evenly"
+            ],
+            [
+                "D",
+                "space"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "Which method from the `itertools` library can be utilized to create combinations of a specific length from a list? Fill in the blank:  \n`import itertools`  \n`combinations = list(itertools.___([1, 2, 3, 4], 2))`  \nWhat should fill the blank?",
+        "options": [
+            [
+                "A",
+                "permutations"
+            ],
+            [
+                "B",
+                "combinations"
+            ],
+            [
+                "C",
+                "group"
+            ],
+            [
+                "D",
+                "choose"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "Which function from the `re` library is used to find all occurrences of a pattern in a string? Fill in the blank:  \n`import re`  \n`matches = re.___('pattern', 'sample string')`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "search"
+            ],
+            [
+                "B",
+                "findall"
+            ],
+            [
+                "C",
+                "match"
+            ],
+            [
+                "D",
+                "substitute"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "In the context of the `pandas` library, which method is used to drop rows with NaN values in a DataFrame? Fill in the blank:  \n`import pandas as pd`  \n`cleaned_df = df.___()`  \nWhat fits in the blank?",
+        "options": [
+            [
+                "A",
+                "dropna"
+            ],
+            [
+                "B",
+                "remove_na"
+            ],
+            [
+                "C",
+                "drop_duplicates"
+            ],
+            [
+                "D",
+                "fillna"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "Which function from the `functools` module is used to create a function that remembers the results of expensive function calls? Fill in the blank:  \n`from functools import ___`  \n`@lru_cache`  \n`def expensive_function(x):`  \n`    return x ** 2`  \nWhat should be inserted in the blank?",
+        "options": [
+            [
+                "A",
+                "memoize"
+            ],
+            [
+                "B",
+                "lru_cache"
+            ],
+            [
+                "C",
+                "cache"
+            ],
+            [
+                "D",
+                "remembered"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "What method from the `os` module allows you to change the current working directory? Fill in the blank:  \n`import os`  \n`os.___('/path/to/directory')`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "change_dir"
+            ],
+            [
+                "B",
+                "setcwd"
+            ],
+            [
+                "C",
+                "chdir"
+            ],
+            [
+                "D",
+                "rename"
+            ]
+        ],
+        "answer": "C",
+        "index": 14
+    },
+    {
+        "question": "Which function from the `itertools` library can be used to create an infinite iterator that returns elements from the provided iterable until a sentinel value is reached? Fill in the blank:  \n`import itertools`  \n`iterator = itertools.___('A', 'B', 'C', sentinel='D')`  \nWhat should fill the blank?",
+        "options": [
+            [
+                "A",
+                "cycle"
+            ],
+            [
+                "B",
+                "takewhile"
+            ],
+            [
+                "C",
+                "count"
+            ],
+            [
+                "D",
+                "takeuntil"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "---\n\n**Question 1**:  \nIn Python, which function from the `collections` module is used to create a dictionary that automatically initializes missing keys with a default value? Fill in the blank:  \n`from collections import ___`  \n`my_dict = ___(int)`  \nWhat should replace the blanks?",
+        "options": [
+            [
+                "A",
+                "defaultdict"
+            ],
+            [
+                "B",
+                "Counter"
+            ],
+            [
+                "C",
+                "OrderedDict"
+            ],
+            [
+                "D",
+                "ChainMap"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "To read a JSON file into a Python dictionary using the `json` library, which function should be used? Fill in the blank:  \n`import json`  \n`with open('data.json') as f: data = json.___ (f)`  \nWhat fits in the blank?",
+        "options": [
+            [
+                "A",
+                "load"
+            ],
+            [
+                "B",
+                "read"
+            ],
+            [
+                "C",
+                "parse"
+            ],
+            [
+                "D",
+                "convert"
+            ]
+        ],
+        "answer": "A",
+        "index": 17
+    },
+    {
+        "question": "In the context of the `matplotlib` library, which method is used to save a plot to a file? Fill in the blank:  \n`import matplotlib.pyplot as plt`  \n`plt.plot([1, 2, 3], [4, 5, 6])`  \n`plt.___('my_plot.png')`  \nWhat should be placed in the blank?",
+        "options": [
+            [
+                "A",
+                "save"
+            ],
+            [
+                "B",
+                "savefig"
+            ],
+            [
+                "C",
+                "write"
+            ],
+            [
+                "D",
+                "export"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "When utilizing the `pandas` library, which method is used to group data by a specific column and calculate the mean for each group? Fill in the blank:  \n`import pandas as pd`  \n`grouped_data = df.___('column_name').mean()`  \nWhat should fill the blank?",
+        "options": [
+            [
+                "A",
+                "group"
+            ],
+            [
+                "B",
+                "groupby"
+            ],
+            [
+                "C",
+                "aggregate"
+            ],
+            [
+                "D",
+                "combine"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "In Python, which method from the `os` module is used to retrieve the current working directory? Fill in the blank:  \n`import os`  \n`current_directory = os.___()`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "getcwd"
+            ],
+            [
+                "B",
+                "chdir"
+            ],
+            [
+                "C",
+                "listdir"
+            ],
+            [
+                "D",
+                "environ"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "In Python, which function from the `statistics` module is used to calculate the median of a dataset? Fill in the blank:  \n`import statistics`  \n`median_value = statistics.___([1, 3, 3, 6, 7, 8, 9])`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "mean"
+            ],
+            [
+                "B",
+                "median"
+            ],
+            [
+                "C",
+                "mode"
+            ],
+            [
+                "D",
+                "stdev"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "To concatenate two strings in Python, which operator is typically used? Fill in the blank:  \n`str1 = \"Hello, \"`  \n`str2 = \"World!\"`  \n`result = str1 ___ str2`  \nWhat should fill the blank?",
+        "options": [
+            [
+                "A",
+                "+"
+            ],
+            [
+                "B",
+                "&"
+            ],
+            [
+                "C",
+                "^"
+            ],
+            [
+                "D",
+                "*"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "In the context of the `os` module, which function can be used to create a new directory? Fill in the blank:  \n`import os`  \n`os.___('new_directory')`  \nWhat should be placed in the blank?",
+        "options": [
+            [
+                "A",
+                "create"
+            ],
+            [
+                "B",
+                "mkdir"
+            ],
+            [
+                "C",
+                "newdir"
+            ],
+            [
+                "D",
+                "add"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "Which function from the `re` library is utilized to replace occurrences of a pattern in a string? Fill in the blank:  \n`import re`  \n`new_string = re.___('old_value', 'new_value', 'sample string')`  \nWhat should replace the blank?",
+        "options": [
+            [
+                "A",
+                "sub"
+            ],
+            [
+                "B",
+                "findall"
+            ],
+            [
+                "C",
+                "split"
+            ],
+            [
+                "D",
+                "match"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "To compute the dot product of two arrays using the `numpy` library, which function should be used? Fill in the blank:  \n`import numpy as np`  \n`dot_product = np.___(array1, array2)`  \nWhat fits in the blank?",
+        "options": [
+            [
+                "A",
+                "inner"
+            ],
+            [
+                "B",
+                "multiply"
+            ],
+            [
+                "C",
+                "dot"
+            ],
+            [
+                "D",
+                "cross"
+            ]
+        ],
+        "answer": "C",
+        "index": 25
+    }
+]

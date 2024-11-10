@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a software development team, which of the following practices best encourages open communication and collaboration among team members?",
+        "options": [
+            [
+                "A",
+                "Daily stand-up meetings"
+            ],
+            [
+                "B",
+                "Individual progress reports"
+            ],
+            [
+                "C",
+                "Use of email for all communication"
+            ],
+            [
+                "D",
+                "Regularly scheduled performance reviews"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "You are tasked with optimizing a Python function that computes the Fibonacci sequence. Which Python library would provide the most efficient way to achieve memoization in your function?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "functools"
+            ],
+            [
+                "C",
+                "math"
+            ],
+            [
+                "D",
+                "itertools"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "During a quantitative interview, you are asked to analyze the performance of a binary search algorithm. If the algorithm is implemented correctly, what is the time complexity of the binary search in the worst case?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "You are using the `pandas` library to manipulate a DataFrame. If you want to filter rows based on a condition in a column, which of the following methods would be the most appropriate?",
+        "options": [
+            [
+                "A",
+                "DataFrame.filter()"
+            ],
+            [
+                "B",
+                "DataFrame.query()"
+            ],
+            [
+                "C",
+                "DataFrame.apply()"
+            ],
+            [
+                "D",
+                "DataFrame.map()"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In a scenario where you need to perform complex mathematical computations involving non-linear optimization, which Python library would you use that is specifically designed for this purpose?",
+        "options": [
+            [
+                "A",
+                "SciPy"
+            ],
+            [
+                "B",
+                "NumPy"
+            ],
+            [
+                "C",
+                "SymPy"
+            ],
+            [
+                "D",
+                "matplotlib"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "In a software project, you notice a team member consistently struggles with meeting deadlines. What would be the most constructive way to address this issue?",
+        "options": [
+            [
+                "A",
+                "Ignore the problem and hope it resolves itself over time."
+            ],
+            [
+                "B",
+                "Confront the team member publicly during a meeting to address their lack of performance."
+            ],
+            [
+                "C",
+                "Schedule a private one-on-one discussion to understand their challenges and offer support."
+            ],
+            [
+                "D",
+                "Report the issue to your manager without discussing it with the team member first."
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "You are asked to implement a function that checks if a given string is a palindrome. Which of the following Python code snippets correctly performs this task?",
+        "options": [
+            [
+                "A",
+                "`def is_palindrome(s): return s == s[::-1]`"
+            ],
+            [
+                "B",
+                "`def is_palindrome(s): return s.lower() == s.lower()[::-1]`"
+            ],
+            [
+                "C",
+                "`def is_palindrome(s): return ''.join(reversed(s)) == s`"
+            ],
+            [
+                "D",
+                "`def is_palindrome(s): return s == ''.join(s)`"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "During a technical interview, you are asked to explain the difference between a stack and a queue. Which statement accurately reflects their core differences?",
+        "options": [
+            [
+                "A",
+                "A stack follows the FIFO principle while a queue follows the LIFO principle."
+            ],
+            [
+                "B",
+                "Both a stack and a queue follow the LIFO principle."
+            ],
+            [
+                "C",
+                "A stack follows the LIFO principle while a queue follows the FIFO principle."
+            ],
+            [
+                "D",
+                "There is no difference; both are used for similar purposes."
+            ]
+        ],
+        "answer": "C",
+        "index": 8
+    },
+    {
+        "question": "In Agile software development, what is the primary purpose of a retrospective meeting?",
+        "options": [
+            [
+                "A",
+                "To assign new tasks for the upcoming sprint."
+            ],
+            [
+                "B",
+                "To celebrate project milestones."
+            ],
+            [
+                "C",
+                "To reflect on the past sprint and identify areas for improvement."
+            ],
+            [
+                "D",
+                "To finalize project documentation."
+            ]
+        ],
+        "answer": "C",
+        "index": 9
+    },
+    {
+        "question": "You are conducting a technical interview where the candidate is required to solve a problem using dynamic programming. Which of the following scenarios is best suited for a dynamic programming approach?",
+        "options": [
+            [
+                "A",
+                "Calculating the factorial of a number."
+            ],
+            [
+                "B",
+                "Finding the shortest path in a weighted graph."
+            ],
+            [
+                "C",
+                "Solving the knapsack problem with given weights and values."
+            ],
+            [
+                "D",
+                "Verifying if a number is prime."
+            ]
+        ],
+        "answer": "C",
+        "index": 10
+    },
+    {
+        "question": "In a team setting, how should feedback be delivered to promote a positive and productive work environment?",
+        "options": [
+            [
+                "A",
+                "Ignoring the issues and focusing only on positive aspects"
+            ],
+            [
+                "B",
+                "Providing feedback in a public forum to ensure everyone hears it"
+            ],
+            [
+                "C",
+                "Offering constructive criticism privately and focusing on solutions"
+            ],
+            [
+                "D",
+                "Delegating feedback responsibilities to other team members"
+            ]
+        ],
+        "answer": "C",
+        "index": 11
+    },
+    {
+        "question": "If you want to analyze the time series data in Python, which library would be the most suitable for handling and visualizing this type of data?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Matplotlib"
+            ],
+            [
+                "C",
+                "SciPy"
+            ],
+            [
+                "D",
+                "Pandas"
+            ]
+        ],
+        "answer": "D",
+        "index": 12
+    },
+    {
+        "question": "When discussing the importance of version control in software development, which statement best summarizes its role?",
+        "options": [
+            [
+                "A",
+                "It is primarily for storing code backups."
+            ],
+            [
+                "B",
+                "It facilitates collaboration and tracking changes across team members."
+            ],
+            [
+                "C",
+                "It is only necessary for large projects."
+            ],
+            [
+                "D",
+                "It is an optional process that can be skipped."
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "In Python, which of the following methods would you use to merge two dictionaries into a single dictionary efficiently?",
+        "options": [
+            [
+                "A",
+                "dict.update()"
+            ],
+            [
+                "B",
+                "dict.merge()"
+            ],
+            [
+                "C",
+                "{**d1, **d2}"
+            ],
+            [
+                "D",
+                "d3 = d1 + d2"
+            ]
+        ],
+        "answer": "C",
+        "index": 14
+    },
+    {
+        "question": "During a quantitative interview, you are asked to analyze a dataset for correlation. Which Python library would you use to compute the correlation coefficient effectively?",
+        "options": [
+            [
+                "A",
+                "NumPy"
+            ],
+            [
+                "B",
+                "Matplotlib"
+            ],
+            [
+                "C",
+                "Pandas"
+            ],
+            [
+                "D",
+                "Scikit-learn"
+            ]
+        ],
+        "answer": "C",
+        "index": 15
+    },
+    {
+        "question": "---\n\n- **Question**: In the realm of software architecture, which design pattern allows for the creation of objects without specifying the exact class of the object that will be created, promoting flexibility and scalability?",
+        "options": [
+            [
+                "A",
+                "Singleton Pattern"
+            ],
+            [
+                "B",
+                "Factory Pattern"
+            ],
+            [
+                "C",
+                "Observer Pattern"
+            ],
+            [
+                "D",
+                "Command Pattern"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "When using the `numpy` library to perform operations on large datasets, which function would you employ to efficiently compute the mean of an array while ignoring any NaN values?",
+        "options": [
+            [
+                "A",
+                "numpy.mean()"
+            ],
+            [
+                "B",
+                "numpy.nanmean()"
+            ],
+            [
+                "C",
+                "numpy.average()"
+            ],
+            [
+                "D",
+                "numpy.median()"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "During a behavioral interview, you are asked to reflect on a time you faced a challenging project. Which response best exemplifies a growth mindset and resilience in overcoming obstacles?",
+        "options": [
+            [
+                "A",
+                "I gave up when faced with difficulties, as it was too overwhelming."
+            ],
+            [
+                "B",
+                "I sought help from my colleagues and collaborated to find solutions."
+            ],
+            [
+                "C",
+                "I blamed external factors for the project's challenges."
+            ],
+            [
+                "D",
+                "I completed the project without learning anything from the experience."
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "As you prepare for a quantitative interview, you\u2019re given a dataset containing sales information. Which Python library would be the most suitable for performing advanced statistical analysis and modeling on this dataset?",
+        "options": [
+            [
+                "A",
+                "seaborn"
+            ],
+            [
+                "B",
+                "scikit-learn"
+            ],
+            [
+                "C",
+                "statsmodels"
+            ],
+            [
+                "D",
+                "matplotlib"
+            ]
+        ],
+        "answer": "C",
+        "index": 19
+    },
+    {
+        "question": "In a software development context, which Agile principle best emphasizes that the most efficient and effective method of conveying information to and within a development team is face-to-face conversation?",
+        "options": [
+            [
+                "A",
+                "Working software is the primary measure of progress."
+            ],
+            [
+                "B",
+                "The best architectures, requirements, and designs emerge from self-organizing teams."
+            ],
+            [
+                "C",
+                "The most efficient and effective method of conveying information is face-to-face conversation."
+            ],
+            [
+                "D",
+                "Continuous attention to technical excellence enhances agility."
+            ]
+        ],
+        "answer": "C",
+        "index": 20
+    },
+    {
+        "question": "In an object-oriented programming scenario, which of the following principles emphasizes the idea of hiding the internal state of an object and requiring all interaction to be performed through an object's methods?",
+        "options": [
+            [
+                "A",
+                "Inheritance"
+            ],
+            [
+                "B",
+                "Encapsulation"
+            ],
+            [
+                "C",
+                "Polymorphism"
+            ],
+            [
+                "D",
+                "Abstraction"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "You are analyzing a large dataset containing customer reviews using Python. Which library would you use to perform sentiment analysis effectively?",
+        "options": [
+            [
+                "A",
+                "seaborn"
+            ],
+            [
+                "B",
+                "nltk"
+            ],
+            [
+                "C",
+                "scikit-learn"
+            ],
+            [
+                "D",
+                "matplotlib"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "In a behavioral interview, you\u2019re asked how you handle tight deadlines. Which of the following responses best demonstrates effective time management skills?",
+        "options": [
+            [
+                "A",
+                "I often work late hours to meet deadlines."
+            ],
+            [
+                "B",
+                "I prioritize tasks and break larger projects into manageable parts."
+            ],
+            [
+                "C",
+                "I avoid taking on responsibility to prevent stress."
+            ],
+            [
+                "D",
+                "I wait until the last minute to start working on a project."
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "When working on a web application, which of the following libraries would you use for making HTTP requests in Python?",
+        "options": [
+            [
+                "A",
+                "Beautiful Soup"
+            ],
+            [
+                "B",
+                "Flask"
+            ],
+            [
+                "C",
+                "Requests"
+            ],
+            [
+                "D",
+                "Django"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "You are conducting a quantitative analysis on a dataset containing financial transactions. Which Python library would you use to perform regression analysis on this dataset?",
+        "options": [
+            [
+                "A",
+                "pandas"
+            ],
+            [
+                "B",
+                "statsmodels"
+            ],
+            [
+                "C",
+                "NumPy"
+            ],
+            [
+                "D",
+                "SciPy"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

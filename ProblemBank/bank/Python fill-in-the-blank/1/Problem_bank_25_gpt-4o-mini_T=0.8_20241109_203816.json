@@ -1,0 +1,577 @@
+[
+    {
+        "question": "What keyword is used to define a function in Python?  \n```python\ndef _____(name):\n    print(\"Hello, \" + name)\n```",
+        "options": [
+            [
+                "A",
+                "function"
+            ],
+            [
+                "B",
+                "def"
+            ],
+            [
+                "C",
+                "define"
+            ],
+            [
+                "D",
+                "func"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Which library function is used to create an array in NumPy?  \n```python\nimport numpy as np\narr = np._____([1, 2, 3, 4])\n```",
+        "options": [
+            [
+                "A",
+                "list"
+            ],
+            [
+                "B",
+                "array"
+            ],
+            [
+                "C",
+                "create_array"
+            ],
+            [
+                "D",
+                "make_array"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "What operator is used to find the remainder of a division in Python?  \n```python\nresult = 10 _____ 3\n```",
+        "options": [
+            [
+                "A",
+                "//"
+            ],
+            [
+                "B",
+                "/"
+            ],
+            [
+                "C",
+                "%"
+            ],
+            [
+                "D",
+                "**"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "Which function is used to read a CSV file in the Pandas library?  \n```python\nimport pandas as pd\ndata = pd._____(\"data.csv\")\n```",
+        "options": [
+            [
+                "A",
+                "load_csv"
+            ],
+            [
+                "B",
+                "read_csv"
+            ],
+            [
+                "C",
+                "open_csv"
+            ],
+            [
+                "D",
+                "import_csv"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In the SciPy library, which function is used to compute the Fourier Transform of a signal?  \n```python\nfrom scipy._____ import fft\ntransformed_signal = fft(signal)\n```",
+        "options": [
+            [
+                "A",
+                "fftpack"
+            ],
+            [
+                "B",
+                "signal"
+            ],
+            [
+                "C",
+                "fourier"
+            ],
+            [
+                "D",
+                "transform"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "1)\n**Question**: What is the keyword used to create a class in Python?  \n```python\nclass _____:\n    def __init__(self, name):\n        self.name = name\n```",
+        "options": [
+            [
+                "A",
+                "function"
+            ],
+            [
+                "B",
+                "class"
+            ],
+            [
+                "C",
+                "define"
+            ],
+            [
+                "D",
+                "object"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "3)\n**Question**: Which method is used to add an element to a list in Python?  \n```python\nmy_list = [1, 2, 3]\nmy_list._____(4)\n```",
+        "options": [
+            [
+                "A",
+                "append"
+            ],
+            [
+                "B",
+                "add"
+            ],
+            [
+                "C",
+                "insert"
+            ],
+            [
+                "D",
+                "push"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "4)\n**Question**: In the Matplotlib library, which function is used to create a scatter plot?  \n```python\nimport matplotlib.pyplot as plt\nplt._____(x, y)\n```",
+        "options": [
+            [
+                "A",
+                "plot"
+            ],
+            [
+                "B",
+                "scatter"
+            ],
+            [
+                "C",
+                "show"
+            ],
+            [
+                "D",
+                "display"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "5)\n**Question**: In the TensorFlow library, which function is used to create a constant tensor?  \n```python\nimport tensorflow as tf\nmy_tensor = tf._____([[1, 2], [3, 4]])\n```",
+        "options": [
+            [
+                "A",
+                "variable"
+            ],
+            [
+                "B",
+                "constant"
+            ],
+            [
+                "C",
+                "tensor"
+            ],
+            [
+                "D",
+                "create"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "5)\n**Question**: Which function from the Seaborn library is used to create a box plot?  \n```python\nimport seaborn as sns\nsns._____(data=my_data, x='Category', y='Value')\n```",
+        "options": [
+            [
+                "A",
+                "boxplot"
+            ],
+            [
+                "B",
+                "plot_box"
+            ],
+            [
+                "C",
+                "draw_box"
+            ],
+            [
+                "D",
+                "box"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "What keyword is used to define a loop that iterates over a sequence in Python?  \n```python\nfor _____ in range(5):\n    print(i)\n```",
+        "options": [
+            [
+                "A",
+                "item"
+            ],
+            [
+                "B",
+                "i"
+            ],
+            [
+                "C",
+                "num"
+            ],
+            [
+                "D",
+                "index"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "In the Requests library, which function is used to send a GET request to a specified URL?  \n```python\nimport requests\nresponse = requests._____(\"https://api.example.com/data\")\n```",
+        "options": [
+            [
+                "A",
+                "post"
+            ],
+            [
+                "B",
+                "fetch"
+            ],
+            [
+                "C",
+                "get"
+            ],
+            [
+                "D",
+                "request"
+            ]
+        ],
+        "answer": "C",
+        "index": 12
+    },
+    {
+        "question": "In the Pandas library, which function is used to group data by a specific column?  \n```python\nimport pandas as pd\ngrouped_data = df._____(by='column_name')\n```",
+        "options": [
+            [
+                "A",
+                "groupby"
+            ],
+            [
+                "B",
+                "aggregate"
+            ],
+            [
+                "C",
+                "combine"
+            ],
+            [
+                "D",
+                "split"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "In the PyTorch library, which method is used to enable the gradient calculation for a tensor?  \n```python\nimport torch\nx = torch.tensor([1.0, 2.0], requires_grad=_____ )\n```",
+        "options": [
+            [
+                "A",
+                "True"
+            ],
+            [
+                "B",
+                "Calculate"
+            ],
+            [
+                "C",
+                "Grad"
+            ],
+            [
+                "D",
+                "Enabled"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "In the scikit-learn library, which function is used for performing polynomial feature expansion?  \n```python\nfrom sklearn.preprocessing import _____\npoly = PolynomialFeatures(degree=2)\n```",
+        "options": [
+            [
+                "A",
+                "PolyFeatures"
+            ],
+            [
+                "B",
+                "PolynomialFeatures"
+            ],
+            [
+                "C",
+                "FeaturePolynomial"
+            ],
+            [
+                "D",
+                "PolynomialExpansion"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "What is the keyword used to define a conditional statement in Python?  \n```python\nif _____(x > 10):\n    print(\"x is greater than 10\")\n```",
+        "options": [
+            [
+                "A",
+                "while"
+            ],
+            [
+                "B",
+                "for"
+            ],
+            [
+                "C",
+                "if"
+            ],
+            [
+                "D",
+                "switch"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "In the Requests library, which method is used to send a POST request?  \n```python\nimport requests\nresponse = requests._____(\"https://api.example.com/data\", json={\"key\": \"value\"})\n```",
+        "options": [
+            [
+                "A",
+                "get"
+            ],
+            [
+                "B",
+                "post"
+            ],
+            [
+                "C",
+                "send"
+            ],
+            [
+                "D",
+                "request"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "What function is used to concatenate two DataFrames in the Pandas library?  \n```python\nimport pandas as pd\nresult = pd._____(df1, df2)\n```",
+        "options": [
+            [
+                "A",
+                "combine"
+            ],
+            [
+                "B",
+                "concat"
+            ],
+            [
+                "C",
+                "merge"
+            ],
+            [
+                "D",
+                "append"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "In the NumPy library, which function is used to compute the mean of an array?  \n```python\nimport numpy as np\nmean_value = np._____(my_array)\n```",
+        "options": [
+            [
+                "A",
+                "average"
+            ],
+            [
+                "B",
+                "mean"
+            ],
+            [
+                "C",
+                "sum"
+            ],
+            [
+                "D",
+                "median"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "In the Flask framework, which method is used to define a route for a web page?  \n```python\nfrom flask import Flask\napp = Flask(__name__)\n\n@app._____('/home')\ndef home():\n    return \"Welcome to the home page!\"\n```",
+        "options": [
+            [
+                "A",
+                "route"
+            ],
+            [
+                "B",
+                "endpoint"
+            ],
+            [
+                "C",
+                "path"
+            ],
+            [
+                "D",
+                "define"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "1)\n**Question**: What is the keyword used to define a class in Python?  \n```python\nclass _____:\n    def __init__(self, name):\n        self.name = name\n```",
+        "options": [
+            [
+                "A",
+                "function"
+            ],
+            [
+                "B",
+                "class"
+            ],
+            [
+                "C",
+                "object"
+            ],
+            [
+                "D",
+                "def"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "Which method is used to remove an item from a dictionary in Python?  \n```python\nmy_dict = {'a': 1, 'b': 2}\nmy_dict._____('a')\n```",
+        "options": [
+            [
+                "A",
+                "delete"
+            ],
+            [
+                "B",
+                "pop"
+            ],
+            [
+                "C",
+                "remove"
+            ],
+            [
+                "D",
+                "discard"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "In the Seaborn library, which function is used to create a heatmap?  \n```python\nimport seaborn as sns\nsns._____(data=my_data)\n```",
+        "options": [
+            [
+                "A",
+                "heatmap"
+            ],
+            [
+                "B",
+                "map"
+            ],
+            [
+                "C",
+                "plot_heat"
+            ],
+            [
+                "D",
+                "draw_heatmap"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "In the NumPy library, which function is used to compute the standard deviation of an array?  \n```python\nimport numpy as np\nstd_dev = np._____(my_array)\n```",
+        "options": [
+            [
+                "A",
+                "variance"
+            ],
+            [
+                "B",
+                "std"
+            ],
+            [
+                "C",
+                "average"
+            ],
+            [
+                "D",
+                "stdev"
+            ]
+        ],
+        "answer": "B",
+        "index": 24
+    },
+    {
+        "question": "In the TensorFlow library, which operation is used to perform matrix multiplication?  \n```python\nimport tensorflow as tf\nresult = tf._____([[1, 2], [3, 4]], [[5, 6], [7, 8]])\n```",
+        "options": [
+            [
+                "A",
+                "multiply"
+            ],
+            [
+                "B",
+                "matmul"
+            ],
+            [
+                "C",
+                "dot"
+            ],
+            [
+                "D",
+                "matrix_product"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

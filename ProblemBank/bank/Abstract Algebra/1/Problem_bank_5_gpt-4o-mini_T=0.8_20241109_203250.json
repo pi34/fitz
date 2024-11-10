@@ -1,0 +1,117 @@
+[
+    {
+        "question": "Which of the following sets forms a group under the operation of multiplication?",
+        "options": [
+            [
+                "A",
+                "The set of all integers"
+            ],
+            [
+                "B",
+                "The set of non-zero rational numbers"
+            ],
+            [
+                "C",
+                "The set of natural numbers"
+            ],
+            [
+                "D",
+                "The set of even integers"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "In the context of group theory, which of the following properties must hold for a subgroup \\(H\\) of a group \\(G\\)?",
+        "options": [
+            [
+                "A",
+                "\\(G\\) must be finite."
+            ],
+            [
+                "B",
+                "\\(H\\) must contain the identity element of \\(G\\)."
+            ],
+            [
+                "C",
+                "Every element of \\(H\\) must be an element of \\(G\\) and \\(H\\) must have a non-empty intersection with \\(G\\)."
+            ],
+            [
+                "D",
+                "\\(H\\) must be equal to \\(G\\)."
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "Which of the following is an example of a normal subgroup?",
+        "options": [
+            [
+                "A",
+                "The group of integers under addition"
+            ],
+            [
+                "B",
+                "The group of rotations of a square"
+            ],
+            [
+                "C",
+                "The group of permutations of three elements"
+            ],
+            [
+                "D",
+                "The group of all even integers under addition"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "What is the order of the group \\(S_3\\), the symmetric group on three elements?",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "6"
+            ],
+            [
+                "C",
+                "9"
+            ],
+            [
+                "D",
+                "12"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In ring theory, which property distinguishes a field from a ring?",
+        "options": [
+            [
+                "A",
+                "A field has a multiplicative identity and every non-zero element has a multiplicative inverse."
+            ],
+            [
+                "B",
+                "A ring must contain zero."
+            ],
+            [
+                "C",
+                "A ring does not require commutativity."
+            ],
+            [
+                "D",
+                "A field must contain at least two elements."
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    }
+]

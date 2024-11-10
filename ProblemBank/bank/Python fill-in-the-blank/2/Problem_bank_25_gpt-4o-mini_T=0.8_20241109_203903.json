@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In the context of data manipulation with pandas, what line should be added to the following code snippet to read a CSV file named 'data.csv' into a DataFrame?\n  ```python\n  import pandas as pd\n  df = _____('data.csv')\n  ```",
+        "options": [
+            [
+                "A",
+                "pd.load_csv"
+            ],
+            [
+                "B",
+                "pd.read_csv"
+            ],
+            [
+                "C",
+                "pd.open_csv"
+            ],
+            [
+                "D",
+                "pd.csv_read"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "When working with the popular NumPy library, which line is required to create a 1D array of integers from 0 to 9 in the following code snippet?\n  ```python\n  import numpy as np\n  arr = np._____ (10)\n  ```",
+        "options": [
+            [
+                "A",
+                "create_array"
+            ],
+            [
+                "B",
+                "array"
+            ],
+            [
+                "C",
+                "linspace"
+            ],
+            [
+                "D",
+                "arange"
+            ]
+        ],
+        "answer": "D",
+        "index": 2
+    },
+    {
+        "question": "To plot a simple line graph using the matplotlib library, which line needs to be included in the following code snippet for displaying the created plot?\n  ```python\n  import matplotlib.pyplot as plt\n  plt.plot([1, 2, 3], [4, 5, 6])\n  _____\n  ```",
+        "options": [
+            [
+                "A",
+                "plt.show_graph()"
+            ],
+            [
+                "B",
+                "plt.render()"
+            ],
+            [
+                "C",
+                "plt.show()"
+            ],
+            [
+                "D",
+                "plt.display()"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "In order to filter rows in a DataFrame based on a condition using pandas, which function should be used in the following code snippet?\n  ```python\n  import pandas as pd\n  df = pd.DataFrame({'A': [1, 2, 3, 4]})\n  filtered_df = df[_____]\n  ```",
+        "options": [
+            [
+                "A",
+                "df.A > 2"
+            ],
+            [
+                "B",
+                "df.filter(A > 2)"
+            ],
+            [
+                "C",
+                "df.where(A > 2)"
+            ],
+            [
+                "D",
+                "df.select(A > 2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "To generate random numbers from a uniform distribution using the NumPy library, which method should complete the following code snippet?\n  ```python\n  import numpy as np\n  random_numbers = np._____ (low=0, high=10, size=5)\n  ```",
+        "options": [
+            [
+                "A",
+                "random.uniform"
+            ],
+            [
+                "B",
+                "random.randint"
+            ],
+            [
+                "C",
+                "random.random"
+            ],
+            [
+                "D",
+                "random.sample"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: In order to define a function in Python that takes a parameter and returns its square, which line should be added to the following code snippet?\n```python\ndef square(_____):\n    return x * x\n```",
+        "options": [
+            [
+                "A",
+                "x"
+            ],
+            [
+                "B",
+                "num"
+            ],
+            [
+                "C",
+                "value"
+            ],
+            [
+                "D",
+                "self"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "To read a JSON file named 'data.json' into a Python dictionary using the json module, what line should be added to the following code snippet?\n```python\nimport json\nwith open('data.json') as f:\n    data = json._____(f)\n```",
+        "options": [
+            [
+                "A",
+                "load"
+            ],
+            [
+                "B",
+                "loads"
+            ],
+            [
+                "C",
+                "read"
+            ],
+            [
+                "D",
+                "parse"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "In order to create a class named `Dog` with an attribute `name`, which line should be added to the following code snippet?\n```python\nclass Dog:\n    def __init__(_____):\n        self.name = \"Buddy\"\n```",
+        "options": [
+            [
+                "A",
+                "self, name"
+            ],
+            [
+                "B",
+                "self"
+            ],
+            [
+                "C",
+                "name"
+            ],
+            [
+                "D",
+                "self, breed"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "To generate a list of squares for all even numbers from 0 to 10 using a list comprehension, which line should complete the following code snippet?\n```python\nsquares = [x**2 for x in range(11) if x % 2 == _____]\n```",
+        "options": [
+            [
+                "A",
+                "0"
+            ],
+            [
+                "B",
+                "1"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "To handle exceptions in Python using a try-except block, which line should be added to the following code snippet to catch a ValueError?\n```python\ntry:\n    value = int(\"abc\")\nexcept _____:\n    print(\"A ValueError occurred.\")\n```",
+        "options": [
+            [
+                "A",
+                "Exception"
+            ],
+            [
+                "B",
+                "ValueError"
+            ],
+            [
+                "C",
+                "TypeError"
+            ],
+            [
+                "D",
+                "IOError"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "To define a function in Python that takes a parameter and returns its square, which line should be added to the following code snippet?\n```python\ndef square(_____):\n    return x * x\n```",
+        "options": [
+            [
+                "A",
+                "x"
+            ],
+            [
+                "B",
+                "value"
+            ],
+            [
+                "C",
+                "num"
+            ],
+            [
+                "D",
+                "param"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "To read a JSON file named 'data.json' into a Python dictionary using the json module, what line should be added to the following code snippet?\n```python\nimport json\nwith open('data.json') as f:\n    data = json._____(f)\n```",
+        "options": [
+            [
+                "A",
+                "load"
+            ],
+            [
+                "B",
+                "loads"
+            ],
+            [
+                "C",
+                "dump"
+            ],
+            [
+                "D",
+                "fetch"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "In order to create a class named `Dog` with an attribute `name`, which line should be added to the following code snippet?\n```python\nclass Dog:\n    def __init__(_____):\n        self.name = \"Buddy\"\n```",
+        "options": [
+            [
+                "A",
+                "self"
+            ],
+            [
+                "B",
+                "name"
+            ],
+            [
+                "C",
+                "dog_name"
+            ],
+            [
+                "D",
+                "pet"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "To generate a list of squares for all even numbers from 0 to 10 using a list comprehension, which line should complete the following code snippet?\n```python\nsquares = [x**2 for x in range(11) if x % 2 == _____]\n```",
+        "options": [
+            [
+                "A",
+                "0"
+            ],
+            [
+                "B",
+                "1"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "True"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "To handle exceptions in Python using a try-except block, which line should be added to the following code snippet to catch a ValueError?\n```python\ntry:\n    value = int(\"abc\")\nexcept _____:\n    print(\"A ValueError occurred.\")\n```",
+        "options": [
+            [
+                "A",
+                "Exception"
+            ],
+            [
+                "B",
+                "ValueError"
+            ],
+            [
+                "C",
+                "IOError"
+            ],
+            [
+                "D",
+                "TypeError"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "In order to define a function in Python that takes a parameter and returns its square, which line should be added to the following code snippet?\n```python\ndef square(_____):\n    return x * x\n```",
+        "options": [
+            [
+                "A",
+                "x"
+            ],
+            [
+                "B",
+                "value"
+            ],
+            [
+                "C",
+                "num"
+            ],
+            [
+                "D",
+                "n"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "To read a JSON file named 'data.json' into a Python dictionary using the json module, what line should be added to the following code snippet?\n```python\nimport json\nwith open('data.json') as f:\n    data = json._____(f)\n```",
+        "options": [
+            [
+                "A",
+                "read"
+            ],
+            [
+                "B",
+                "load"
+            ],
+            [
+                "C",
+                "loads"
+            ],
+            [
+                "D",
+                "parse"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "In order to create a class named `Dog` with an attribute `name`, which line should be added to the following code snippet?\n```python\nclass Dog:\n    def __init__(_____):\n        self.name = \"Buddy\"\n```",
+        "options": [
+            [
+                "A",
+                "self"
+            ],
+            [
+                "B",
+                "cls"
+            ],
+            [
+                "C",
+                "name"
+            ],
+            [
+                "D",
+                "dog"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "To generate a list of squares for all even numbers from 0 to 10 using a list comprehension, which line should complete the following code snippet?\n```python\nsquares = [x**2 for x in range(11) if x % 2 == _____]\n```",
+        "options": [
+            [
+                "A",
+                "0"
+            ],
+            [
+                "B",
+                "1"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "To handle exceptions in Python using a try-except block, which line should be added to the following code snippet to catch a ValueError?\n```python\ntry:\n    value = int(\"abc\")\nexcept _____:\n    print(\"A ValueError occurred.\")\n```",
+        "options": [
+            [
+                "A",
+                "Exception"
+            ],
+            [
+                "B",
+                "ValueError"
+            ],
+            [
+                "C",
+                "TypeError"
+            ],
+            [
+                "D",
+                "KeyError"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Question 1**: In order to define a function in Python that takes a parameter `x` and returns its square, which line should be added to the following code snippet?\n```python\ndef square(_____):\n    return x * x\n```",
+        "options": [
+            [
+                "A",
+                "x"
+            ],
+            [
+                "B",
+                "y"
+            ],
+            [
+                "C",
+                "value"
+            ],
+            [
+                "D",
+                "param"
+            ]
+        ],
+        "answer": "A",
+        "index": 21
+    },
+    {
+        "question": "To read a JSON file named 'data.json' into a Python dictionary using the `json` module, what line should be added to the following code snippet?\n```python\nimport json\nwith open('data.json') as f:\n    data = json._____(f)\n```",
+        "options": [
+            [
+                "A",
+                "load"
+            ],
+            [
+                "B",
+                "read"
+            ],
+            [
+                "C",
+                "parse"
+            ],
+            [
+                "D",
+                "import"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "In order to create a class named `Dog` with an attribute `name`, which line should be added to the following code snippet?\n```python\nclass Dog:\n    def __init__(_____):\n        self.name = \"Buddy\"\n```",
+        "options": [
+            [
+                "A",
+                "self"
+            ],
+            [
+                "B",
+                "dog"
+            ],
+            [
+                "C",
+                "name"
+            ],
+            [
+                "D",
+                "parameter"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "To generate a list of squares for all even numbers from 0 to 10 using a list comprehension, which line should complete the following code snippet?\n```python\nsquares = [x**2 for x in range(11) if x % 2 == _____]\n```",
+        "options": [
+            [
+                "A",
+                "0"
+            ],
+            [
+                "B",
+                "1"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "To handle exceptions in Python using a try-except block, which line should be added to the following code snippet to catch a `ValueError`?\n```python\ntry:\n    value = int(\"abc\")\nexcept _____:\n    print(\"A ValueError occurred.\")\n```",
+        "options": [
+            [
+                "A",
+                "TypeError"
+            ],
+            [
+                "B",
+                "ValueError"
+            ],
+            [
+                "C",
+                "Exception"
+            ],
+            [
+                "D",
+                "KeyError"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

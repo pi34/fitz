@@ -1,0 +1,593 @@
+[
+    {
+        "question": "1)  \n- **Question**: What is the time complexity of accessing an element in an array by its index?",
+        "options": [
+            [
+                "A",
+                ", emphasizing Big-O notation and relevant concepts. Each question is tailored to a specific difficulty level."
+            ],
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "3)  \n- **Question**: You are using Python's `collections.deque` to implement a queue. What is the worst-case time complexity for adding an element to the back of the deque?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "3)  \n- **Question**: Consider the following Python code snippet that uses the `bisect` module to maintain a sorted list. What is the time complexity of inserting an element into the list while keeping it sorted?  \n  ```python\n  import bisect\n\n  sorted_list = [1, 3, 4, 7]\n  bisect.insort(sorted_list, 5)\n  ```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "5)  \n- **Question**: You are using the `pandas` library to handle a large dataset in a DataFrame and you need to perform an average computation on a column after grouping by another column. What is the time complexity of the operation, assuming the DataFrame has `n` rows?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n^2 log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "5)  \n- **Question**: Given the following code snippet using the `networkx` library to compute the shortest path in a graph, what is the time complexity of Dijkstra's algorithm when implemented using a priority queue?  \n  ```python\n  import networkx as nx\n\n  G = nx.Graph()\n  G.add_weighted_edges_from([(1, 2, 1), (1, 3, 4), (2, 3, 2)])\n  shortest_path = nx.dijkstra_path(G, source=1, target=3)\n  ```",
+        "options": [
+            [
+                "A",
+                "O(V + E)"
+            ],
+            [
+                "B",
+                "O(E log V)"
+            ],
+            [
+                "C",
+                "O(V^2)"
+            ],
+            [
+                "D",
+                "O(E^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "You have a list of integers and you want to find the maximum value. Which of the following algorithms would yield the best time complexity for this operation?",
+        "options": [
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "In Python, you are using the `set` data structure to store unique elements. What is the average time complexity for checking if an element exists in this set?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "C",
+        "index": 7
+    },
+    {
+        "question": "Consider the following Python code snippet that utilizes the `heapq` library to maintain a priority queue. What is the time complexity for removing the smallest element from the heap?\n\n```python\nimport heapq\n\nmin_heap = [1, 3, 5, 7]\nheapq.heapify(min_heap)  # Transform list into a heap\nsmallest = heapq.heappop(min_heap)\n```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "You are working with the `sortedcontainers` library and you need to find the index of a specific element in a `SortedList`. What is the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "Given the following code snippet that uses the `pytorch` library to perform matrix multiplication on two large tensors, what is the time complexity of the matrix multiplication operation assuming the dimensions of the matrices are m x n and n x p?\n\n```python\nimport torch\n\nA = torch.rand(m, n)\nB = torch.rand(n, p)\nC = torch.mm(A, B)\n```",
+        "options": [
+            [
+                "B",
+                "```"
+            ],
+            [
+                "A",
+                "O(m * n * p)"
+            ],
+            [
+                "B",
+                "O(n * log n)"
+            ],
+            [
+                "C",
+                "O(m + n + p)"
+            ],
+            [
+                "D",
+                "O(m^2 * p)"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "1. **Question**: In a single linked list, what is the time complexity to insert an element at the beginning of the list?",
+        "options": [
+            [
+                "A",
+                "with an emphasis on Big-O notation:"
+            ],
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "You are using Python's `numpy` library to perform element-wise addition of two large arrays. If both arrays have a size of `n`, what is the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "Consider the following Python code snippet using the `collections.Counter` to count the frequency of elements in a list. What is the time complexity of this operation when the list contains `n` elements?\n   ```python\n   from collections import Counter\n\n   data = [1, 2, 2, 3, 3, 3]\n   frequency = Counter(data)\n   ```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(2^n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "Given the following code snippet using the `pandas` library to merge two DataFrames with `n` rows each, what is the time complexity of the merge operation?\n   ```python\n   import pandas as pd\n\n   df1 = pd.DataFrame({'key': [1, 2, 3], 'value': ['A', 'B', 'C']})\n   df2 = pd.DataFrame({'key': [1, 2, 3], 'value': ['D', 'E', 'F']})\n   merged_df = pd.merge(df1, df2, on='key')\n   ```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n^3)"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "In a balanced binary search tree (BST), what is the time complexity of searching for an element in the worst-case scenario? Assume the tree has `n` nodes.",
+        "options": [
+            [
+                "A",
+                "O(log n)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "---\n\n**Question 1**: Given an unsorted list of `n` integers, what is the average time complexity of using the built-in `sort()` method in Python to sort the list?",
+        "options": [
+            [
+                "A",
+                ", exploring Big-O notation and various libraries:"
+            ],
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "You are using a hash table to store employee IDs and their names. What is the average time complexity for retrieving a name given the employee ID, assuming there are `n` employees in the table?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "Consider the following Python code snippet that uses the `sortedcontainers` library to maintain a sorted list. What is the time complexity of removing an element from the `SortedList`?\n\n```python\nfrom sortedcontainers import SortedList\n\nsorted_list = SortedList([1, 2, 3, 4, 5])\nsorted_list.remove(3)\n```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "C",
+        "index": 18
+    },
+    {
+        "question": "Given the following Python code snippet that uses the `numpy` library to compute the inverse of a square matrix, what is the time complexity of this operation for a matrix of size `n x n`?\n\n```python\nimport numpy as np\n\nmatrix = np.random.rand(n, n)\ninverse_matrix = np.linalg.inv(matrix)\n```",
+        "options": [
+            [
+                "A",
+                "O(n^2)"
+            ],
+            [
+                "B",
+                "O(n^3)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(n^4)"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "You are implementing a custom graph traversal algorithm using the `Graph` class from the `graph-tool` library. If you perform a depth-first search (DFS) on a graph with `n` vertices and `m` edges, what is the time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(n + m)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(m log n)"
+            ],
+            [
+                "D",
+                "O(n log m)"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "You have a list of integers and you want to sort it using Python's built-in `sorted()` function. What is the average time complexity of this sorting operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "Imagine you are designing a cache system using a Python dictionary. If you want to check if a key exists in the dictionary, what is the average time complexity of this operation?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "Consider the following Python code snippet that uses the `heapq` library to implement a max-heap. What is the time complexity to insert a new element into the max-heap?\n  ```python\n  import heapq\n\n  max_heap = [3, 5, 1, 8]\n  heapq._heapify_max(max_heap)\n  heapq.heappush(max_heap, 7)\n  ```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "You are using the `scipy` library to perform a sparse matrix multiplication. Given two sparse matrices with `nnz` non-zero entries, what is the time complexity of this matrix multiplication operation?",
+        "options": [
+            [
+                "A",
+                "O(nnz)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(nnz log nnz)"
+            ],
+            [
+                "D",
+                "O(n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "You are working with a binary tree represented as a linked structure, and you want to find the height of the tree recursively. If the tree has `n` nodes, what is the time complexity of this operation in the worst-case scenario?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

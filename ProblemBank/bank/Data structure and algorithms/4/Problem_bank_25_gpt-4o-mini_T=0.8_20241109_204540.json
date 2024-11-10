@@ -1,0 +1,577 @@
+[
+    {
+        "question": "You are tasked with building a recommendation system that uses collaborative filtering. The algorithm you choose has a time complexity of O(n^2) when calculating similarity scores. If the number of users doubles, what is the worst-case time complexity for the new scenario?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(n^3)"
+            ],
+            [
+                "D",
+                "O(2n^2)"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Consider the following Python code snippet using the `collections.deque` to implement a queue. What is the time complexity of the `append` and `popleft` operations in this implementation?\n  ```python\n  from collections import deque\n\n  queue = deque()\n  queue.append('a')\n  first_element = queue.popleft()\n  ```",
+        "options": [
+            [
+                "A",
+                "O(1) for both operations"
+            ],
+            [
+                "B",
+                "O(n) for `append`, O(1) for `popleft`"
+            ],
+            [
+                "C",
+                "O(1) for `append`, O(n) for `popleft`"
+            ],
+            [
+                "D",
+                "O(n) for both operations"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "You are implementing a binary search tree (BST) to store integers. What is the worst-case time complexity for searching an element in an unbalanced BST, and under which scenario does this occur?",
+        "options": [
+            [
+                "A",
+                "O(log n), when the tree is balanced"
+            ],
+            [
+                "B",
+                "O(n), when the tree is completely unbalanced (forming a linked list)"
+            ],
+            [
+                "C",
+                "O(n log n), in all cases"
+            ],
+            [
+                "D",
+                "O(1), if the element is the root"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "You are developing a web crawler that must follow links on a page. If you implement a breadth-first search (BFS) using a queue to keep track of URLs, what is the space complexity of this algorithm in the worst case, assuming each page has a constant maximum number of links?",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(b^d), where b is the branching factor and d is the depth of the search"
+            ],
+            [
+                "C",
+                "O(n), where n is the total number of pages crawled"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "You are given a list of integers and need to find two numbers that add up to a target sum efficiently. If you choose to use a hash table for this purpose, what is the expected time complexity for this algorithm?\n  ```python\n  def find_pair(nums, target):\n      seen = {}\n      for num in nums:\n          complement = target - num\n          if complement in seen:\n              return (num, complement)\n          seen[num] = True\n  ```",
+        "options": [
+            [
+                "A",
+                "O(n^2)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1) for space"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "You are given a list of `n` integers and need to find the longest increasing subsequence (LIS) using dynamic programming. The naive implementation has a time complexity of O(n^2). If you optimize it using a combination of binary search and a dynamic array, what is the resulting time complexity of the optimized algorithm?",
+        "options": [
+            [
+                "A",
+                "O(n log n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "Consider the following code snippet that uses the `heapq` library to implement a priority queue. What is the time complexity of inserting an element into the heap?\n\n```python\nimport heapq\n\npq = []\nheapq.heappush(pq, (1, 'task1'))\n```",
+        "options": [
+            [
+                "A",
+                "O(1)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "You have a binary tree that is heavily skewed to the left, resulting in a linear structure. What is the time complexity of performing a depth-first search (DFS) traversal on this binary tree, and how much space does it require in the worst case?",
+        "options": [
+            [
+                "A",
+                "Time: O(n), Space: O(1)"
+            ],
+            [
+                "B",
+                "Time: O(n), Space: O(n)"
+            ],
+            [
+                "C",
+                "Time: O(log n), Space: O(log n)"
+            ],
+            [
+                "D",
+                "Time: O(1), Space: O(n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "Suppose you're using a self-balancing AVL tree to store integer keys. When you perform a search operation, what is the worst-case time complexity for this operation, and what characteristic of the AVL tree ensures this complexity?",
+        "options": [
+            [
+                "A",
+                "O(log n), because the tree maintains balance"
+            ],
+            [
+                "B",
+                "O(n), because the tree can be unbalanced"
+            ],
+            [
+                "C",
+                "O(1), because it's a binary search operation"
+            ],
+            [
+                "D",
+                "O(log n), because it traverses all nodes"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "Given the following Python function that implements a merge sort algorithm, what is the total space complexity of this algorithm, including the auxiliary space used for merging?\n\n```python\ndef merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n\n        merge_sort(L)\n        merge_sort(R)\n\n        i = j = k = 0\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(1)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "You are tasked with analyzing the efficiency of a function that reverses a linked list. The naive implementation iterates through the list, temporarily using a stack to hold the nodes. If the linked list has `n` nodes, what is the overall time complexity for this operation?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "Consider the following Python function that flattens a nested list. What is the time complexity of this algorithm in the worst case, assuming the nested list can contain `n` elements?\n\n```python\ndef flatten(nested_list):\n    flattened = []\n    for item in nested_list:\n        if isinstance(item, list):\n            flattened.extend(flatten(item))\n        else:\n            flattened.append(item)\n    return flattened\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(2^n)"
+            ],
+            [
+                "D",
+                "O(n log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "Imagine you are analyzing the performance of a breadth-first search (BFS) algorithm implemented with an adjacency list representation of a graph. If the graph has `V` vertices and `E` edges, what is the worst-case time complexity of this BFS algorithm?",
+        "options": [
+            [
+                "A",
+                "O(V + E)"
+            ],
+            [
+                "B",
+                "O(V^2)"
+            ],
+            [
+                "C",
+                "O(E)"
+            ],
+            [
+                "D",
+                "O(V log V)"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "You are given a sorted array of `n` integers and need to implement a binary search to find a specific target value. If the array is represented as a Python list, what is the time complexity for this search algorithm?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(log n)"
+            ],
+            [
+                "C",
+                "O(n log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "Consider the following code snippet that uses a hash set to check if there are any duplicates in an array of integers. What is the expected time complexity of this algorithm?\n\n```python\ndef has_duplicates(nums):\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return True\n        seen.add(num)\n    return False\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "---\n\n- **Question**: You are developing a text auto-completion feature using a Trie (prefix tree). If you store `n` words in the Trie and each word has an average length of `m`, what is the worst-case time complexity for inserting a new word into the Trie?",
+        "options": [
+            [
+                "A",
+                "O(m)"
+            ],
+            [
+                "B",
+                "O(n)"
+            ],
+            [
+                "C",
+                "O(n * m)"
+            ],
+            [
+                "D",
+                "O(m * log n)"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "You are analyzing a custom algorithm that performs a sequential search on a linked list of `n` elements. If you modify the linked list to be doubly linked and implement the search algorithm using two pointers (one from the head and one from the tail), what is the time complexity of finding an element in the worst case?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n/2)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 17
+    },
+    {
+        "question": "In a scenario where you use the `numpy` library to perform matrix multiplication on two `n x n` matrices, what is the time complexity of this operation if you utilize the standard algorithm without any optimizations?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(n^3)"
+            ],
+            [
+                "D",
+                "O(n^4)"
+            ]
+        ],
+        "answer": "C",
+        "index": 18
+    },
+    {
+        "question": "Consider the following code snippet that utilizes the `pandas` library to merge two DataFrames based on a common key. What is the expected time complexity of the merge operation if both DataFrames contain `n` rows?\n\n```python\nimport pandas as pd\n\ndf1 = pd.DataFrame({'key': range(n), 'value': range(n)})\ndf2 = pd.DataFrame({'key': range(n), 'value': range(n)})\nmerged_df = pd.merge(df1, df2, on='key')\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n^2)"
+            ],
+            [
+                "D",
+                "O(n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "You are implementing a graph traversal algorithm that uses depth-first search (DFS) on a graph represented as an adjacency matrix. If the graph contains `V` vertices, what is the space complexity of the algorithm in the worst case, considering the stack space used for recursion?",
+        "options": [
+            [
+                "A",
+                "O(V)"
+            ],
+            [
+                "B",
+                "O(E)"
+            ],
+            [
+                "C",
+                "O(V + E)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "In a scenario where you implement a quicksort algorithm, the pivot is chosen randomly each time. If you have an array of `n` unique elements, what is the expected time complexity of the quicksort algorithm in the average case?",
+        "options": [
+            [
+                "A",
+                "O(n^2)"
+            ],
+            [
+                "B",
+                "O(n log n)"
+            ],
+            [
+                "C",
+                "O(n)"
+            ],
+            [
+                "D",
+                "O(log n)"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "You are tasked with implementing a depth-first search (DFS) on a graph that is represented using an adjacency list. If the graph has `V` vertices and `E` edges, what is the space complexity of the DFS algorithm in the worst case?",
+        "options": [
+            [
+                "A",
+                "O(V)"
+            ],
+            [
+                "B",
+                "O(E)"
+            ],
+            [
+                "C",
+                "O(V + E)"
+            ],
+            [
+                "D",
+                "O(V^2)"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "Consider the following Python function that checks for the existence of a loop in a linked list using Floyd's Cycle-Finding Algorithm (also known as the tortoise and hare approach). What is the time complexity of this algorithm?\n\n```python\ndef has_cycle(head):\n    slow = head\n    fast = head\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n        if slow == fast:\n            return True\n    return False\n```",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(n^2)"
+            ],
+            [
+                "C",
+                "O(log n)"
+            ],
+            [
+                "D",
+                "O(1)"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "You are implementing a hash table that uses chaining to handle collisions. If you have `n` keys stored in the hash table and `m` buckets, what is the expected time complexity for searching for a key in the hash table?",
+        "options": [
+            [
+                "A",
+                "O(n)"
+            ],
+            [
+                "B",
+                "O(1)"
+            ],
+            [
+                "C",
+                "O(n/m)"
+            ],
+            [
+                "D",
+                "O(m)"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "Consider the following code snippet that implements Dijkstra's algorithm for finding the shortest path in a graph using a priority queue. What is the time complexity of this implementation assuming you use a binary heap for the priority queue?\n\n```python\nimport heapq\n\ndef dijkstra(graph, start):\n    queue = []\n    heapq.heappush(queue, (0, start))\n    distances = {vertex: float('infinity') for vertex in graph}\n    distances[start] = 0\n\n    while queue:\n        current_distance, current_vertex = heapq.heappop(queue)\n\n        for neighbor, weight in graph[current_vertex].items():\n            distance = current_distance + weight\n\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                heapq.heappush(queue, (distance, neighbor))\n    return distances\n```",
+        "options": [
+            [
+                "A",
+                "O(V^2)"
+            ],
+            [
+                "B",
+                "O(E log V)"
+            ],
+            [
+                "C",
+                "O(V + E)"
+            ],
+            [
+                "D",
+                "O(V log E)"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

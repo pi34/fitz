@@ -1,0 +1,117 @@
+[
+    {
+        "question": "(Difficulty Level 1)\n**Question**: Which of the following sets with the operation of addition forms a group?",
+        "options": [
+            [
+                "A",
+                "The set of all integers \\( \\mathbb{Z} \\)"
+            ],
+            [
+                "B",
+                "The set of natural numbers \\( \\mathbb{N} \\)"
+            ],
+            [
+                "C",
+                "The set of positive integers \\( \\mathbb{Z}^+ \\)"
+            ],
+            [
+                "D",
+                "The set of even integers \\( 2\\mathbb{Z} \\)"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "(Difficulty Level 3)\n**Question**: If \\( G \\) is a finite group and \\( |G| = 60 \\), which of the following cannot be the order of an element in \\( G \\)?",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "10"
+            ],
+            [
+                "C",
+                "12"
+            ],
+            [
+                "D",
+                "25"
+            ]
+        ],
+        "answer": "D",
+        "index": 2
+    },
+    {
+        "question": "(Difficulty Level 3)\n**Question**: Consider the ring \\( \\mathbb{Z}/12\\mathbb{Z} \\). Which of the following elements has a multiplicative inverse?",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "(Difficulty Level 5)\n**Question**: In the context of group theory, consider a group \\( G \\) that is both abelian and has a nontrivial center. If the center \\( Z(G) \\) is of order 5, what can we conclude about the possible structure of \\( G \\)?",
+        "options": [
+            [
+                "A",
+                "\\( G \\) must be cyclic of order 25."
+            ],
+            [
+                "B",
+                "\\( G \\) could be a direct product of \\( Z(G) \\) and another group of order 12."
+            ],
+            [
+                "C",
+                "\\( G \\) is guaranteed to have a normal subgroup of order 5."
+            ],
+            [
+                "D",
+                "\\( G \\) must be a simple group."
+            ]
+        ],
+        "answer": "C",
+        "index": 4
+    },
+    {
+        "question": "(Difficulty Level 5)\n**Question**: Let \\( R \\) be a ring with unity, and let \\( I \\) be a non-trivial ideal of \\( R \\). If \\( R/I \\) is a field, which of the following statements must be true?",
+        "options": [
+            [
+                "A",
+                "\\( I \\) is a maximal ideal of \\( R \\)."
+            ],
+            [
+                "B",
+                "\\( I \\) is a prime ideal of \\( R \\)."
+            ],
+            [
+                "C",
+                "\\( R \\) is a commutative ring."
+            ],
+            [
+                "D",
+                "Every element of \\( I \\) is a zero-divisor."
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    }
+]
