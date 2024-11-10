@@ -41,6 +41,9 @@ function preload() {
     this.load.audio('die', 'static/assets/chicken_die_2.mp3');
     this.load.audio('hit', 'static/assets/hit_marker.mp3');
     this.load.audio('hurt', 'static/assets/take_damage.mp3');
+    this.load.audio('gameOver', 'static/assets/game_over.mp3');
+    this.load.audio('pew', 'static/assets/pew.mp3');
+    this.load.audio('regen', 'static/assets/regen.mp3');
 }
 
 function create() {
@@ -50,6 +53,7 @@ function create() {
         if (healthText) {
             healthText.setText('Health: ' + player.health);
         }
+        this.regenSound.play();
     });
 
     // Calculate scale factor based on game size
@@ -77,7 +81,7 @@ function create() {
     healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#fff' });
     scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#fff' });
 
-    
+
 
     // Spawn enemies periodically
     this.time.addEvent({
@@ -91,6 +95,9 @@ function create() {
     this.dieSound = this.sound.add('die');
     this.hitSound = this.sound.add('hit');
     this.hurtSound = this.sound.add('hurt');
+    this.gameOverSound = this.sound.add('gameOver');
+    this.pewSound = this.sound.add('pew');
+    this.regenSound = this.sound.add('regen');
 }
 
 function update() {
@@ -123,6 +130,7 @@ function update() {
         if (nearestEnemy) {
             fireProjectile.call(this, nearestEnemy);
             lastFired = time + 100; // Fire rate: 2 shots per second
+            this.pewSound.play();
         }
     }
 
@@ -152,9 +160,9 @@ function spawnEnemy() {
 
 function fireProjectile(enemy) {
     const angle = Phaser.Math.Angle.Between(player.x, player.y, enemy.x, enemy.y);
-    
+
     const projectile = this.add.sprite(player.x, player.y, currentProjectileType);
-    
+
     // Different sizes and effects based on projectile type
     switch(currentProjectileType) {
         case 'basic':
@@ -174,12 +182,12 @@ function fireProjectile(enemy) {
 
     this.physics.add.existing(projectile);
     projectiles.add(projectile);
-    
+
     // Different speeds based on projectile type
     let speed = 300;
     if (currentProjectileType === 'laser') speed = 400;
     if (currentProjectileType === 'plasma') speed = 500;
-    
+
     this.physics.moveTo(projectile, enemy.x, enemy.y, speed);
 
     // Destroy projectile after 2 seconds
@@ -194,7 +202,7 @@ function hitEnemy(projectile, enemy) {
     if (projectile && !projectile.destroyed) {
         projectile.destroy();
     }
-    
+
     // Different damage based on projectile type
     let damage = 10;
     switch(currentProjectileType) {
@@ -205,10 +213,10 @@ function hitEnemy(projectile, enemy) {
             damage = 30;
             break;
     }
-    
+
     enemy.health -= damage;
     this.hitSound.play();
-    
+
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
@@ -227,6 +235,7 @@ function hitPlayer(player, enemy) {
 
     if (player.health <= 0) {
         gameOver = true;
+        this.gameOverSound.play();
         this.add.text(config.width/2, config.height/2, 'Game Over', {
             fontSize: '64px',
             fill: '#fff'
