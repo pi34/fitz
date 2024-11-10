@@ -4,6 +4,7 @@ import re
 from datetime import datetime
 from openai import AsyncOpenAI
 from question_config import API_KEY, MCQ_PROMPT, MUTATION_PROMPT
+from pathlib import Path
 
 MAX_QUESTIONS_PER_PROMPT = 5
 TOTAL = 25
@@ -25,11 +26,13 @@ class QuestionGenerator:
         self.question_type = question_type
         self.mutate = mutate
         self.difficulty = difficulty
-        self.save_file = f"Problem_bank_{topic.replace(' ', '-')}_{total}_{MODEL}_T={TEMPERATURE}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        self.save_file = f"Problem_bank_{total}_{MODEL}_T={TEMPERATURE}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        self.save_path = Path("bank") / self.topic / str(self.difficulty) / Path(self.save_file)
 
         self.problem_bank = []
 
-        with open(self.save_file, "w", encoding="utf8") as f:
+        self.save_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(self.save_path, "w", encoding="utf8") as f:
             print(f"Created file {self.save_file}")
             f.write("[]") # init empty list
 
@@ -41,7 +44,7 @@ class QuestionGenerator:
             prompt = MCQ_PROMPT.format(topic=topic, n=n, topic_context=topic_context)
         if self.mutate:
             prompt = await self.mutate_prompt(prompt)
-            print(prompt)
+            # print(prompt)
         if INCLUDE_QUESTION_HISTORY:
             question_history = "- \n".join([i["question"] for i in self.problem_bank])
             question_history = "\n\n**Question history** (do not repeat the same questions): \n" + question_history
@@ -113,7 +116,7 @@ class QuestionGenerator:
 
 
     def append_to_file(self, new_data: [dict]) -> None:
-        with open(self.save_file, 'r', encoding="utf8") as f:
+        with open(self.save_path, 'r', encoding="utf8") as f:
             data = json.load(f)
 
         for i in range(len(new_data)):
@@ -121,7 +124,7 @@ class QuestionGenerator:
 
         data.extend(new_data)
 
-        with open(self.save_file, 'w') as file:
+        with open(self.save_path, 'w') as file:
             json.dump(data, file, indent=4)
 
 

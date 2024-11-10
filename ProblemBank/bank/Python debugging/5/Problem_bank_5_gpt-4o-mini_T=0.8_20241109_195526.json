@@ -1,0 +1,117 @@
+[
+    {
+        "question": "In a whimsical game called \"Fluffy Bunny Adventure,\" a player collects carrots. Identify the line where the error occurs that prevents the bunny from counting the carrots correctly. \n\n```python\n1  def count_carrots(carrot_list):\n2      total_carrots = 0\n3      for carrot in carrot_list:\n4          total_carrots += 1\n5          print(\"Bunny found a carrot! Total now: \" + total_carrots)\n6      return total_carrots\n7  \n8  carrot_basket = [1, 2, 3, 4]\n9  count_carrots(carrot_basket)\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "In a quirky chatbot, there's a bug that prevents the bot from returning a proper greeting. Can you find the line number with the mistake?\n\n```python\n1  def greet_user(name):\n2      message = \"Hello, \" + name\n3      if name == \"\":\n4          return \"Hello, stranger!\"\n5      print(message)\n6  \n7  greet_user(\"\")\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "A data analysis script is meant to sum a list of numbers but instead returns a mystery output. Locate the line that contains the bug.\n\n```python\n1  def sum_numbers(numbers):\n2      total = 0\n3      for number in numbers:\n4          total += number\n5      print(\"The total is: \" + str(total))\n6  \n7  num_list = [1, 2, \"three\", 4]\n8  sum_numbers(num_list)\n```",
+        "options": [
+            [
+                "A",
+                "7"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "In a quirky fairy tale program, a spell should be cast but fails due to an error. Can you spot which line has the issue?\n\n```python\n1  def cast_spell(spell):\n2      if spell == \"abracadabra\":\n3          print(\"The spell is cast!\")\n4      else\n5          print(\"Nothing happened.\")\n6  \n7  cast_spell(\"hocus pocus\")\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "In an enchanted forest simulation, a function to track the number of magical creatures is not working correctly. Find the line number where the mistake is.\n\n```python\n1  def track_creatures(creature_list):\n2      count = 0\n3      for creature in creature_list:\n4          count + 1\n5      return \"Total creatures: \" + str(count)\n6  \n7  creatures = [\"unicorn\", \"dragon\", \"fairy\"]\n8  print(track_creatures(creatures))\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    }
+]
