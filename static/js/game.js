@@ -44,6 +44,7 @@ function preload() {
     this.load.audio('gameOver', 'static/assets/game_over.mp3');
     this.load.audio('pew', 'static/assets/pew.mp3');
     this.load.audio('regen', 'static/assets/regen.mp3');
+    this.load.audio('powerUp', 'static/assets/power_up.mp3');
 }
 
 function create() {
@@ -57,9 +58,12 @@ function create() {
     });
 
     socket.on('upgrade_projectile', () => {
+
         if (currentProjectileType === 'basic') {
+            this.powerUpSound.play();
             currentProjectileType = 'laser';
         } else if (currentProjectileType === 'laser') {
+            this.powerUpSound.play();
             currentProjectileType = 'plasma'
 ;        }
     })
@@ -107,6 +111,7 @@ function create() {
     this.gameOverSound = this.sound.add('gameOver');
     this.pewSound = this.sound.add('pew');
     this.regenSound = this.sound.add('regen');
+    this.powerUpSound = this.sound.add('powerUp');
 }
 
 function update() {
