@@ -24,7 +24,11 @@ let enemies;
 let projectiles;
 let healthText;
 let scoreText;
+let powerText;
 let level = 0;
+let powerUpLevel = 0;
+let powerUpTime = 0;
+let fireRateMultiplier = 0;
 let score = 0;
 let gameOver = false;
 let lastFired = 0;
@@ -58,18 +62,14 @@ function create() {
         if (healthText) {
             healthText.setText('Health: ' + player.health);
         }
-        this.regenSound.play();
+        if (data['score'] > 0) this.regenSound.play();
     });
 
     socket.on('upgrade_projectile', () => {
+        this.powerUpSound.play();
+        powerUpLevel += 1
+        powerUpTime = this.time.now;
 
-        if (currentProjectileType === 'basic') {
-            this.powerUpSound.play();
-            currentProjectileType = 'laser';
-        } else if (currentProjectileType === 'laser') {
-            this.powerUpSound.play();
-            currentProjectileType = 'plasma'
-;        }
     })
 
     // Calculate scale factor based on game size
@@ -99,6 +99,7 @@ function create() {
     // Add UI
     healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#fff' });
     scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#fff' });
+    powerText = this.add.text(16, 100, 'Power Level: 0', { fontSize: '32px', fill: '#fff' });
 
 
 
@@ -151,7 +152,7 @@ function update() {
     const time = this.time.now;
     if (time > lastFired) {
         fireProjectile.call(this, this.input.mousePointer);
-        lastFired = time + 100; 
+        lastFired = time + 100 - 20*fireRateMultiplier;
     }
     let pointerX = this.input.activePointer.x;
     let pointerY = this.input.activePointer.y;
@@ -174,6 +175,26 @@ function update() {
         }
         this.physics.moveToObject(enemy, player, base_speed + 50*level);
     });
+
+    const curTime = this.time.now;
+    if (curTime > powerUpTime + 1000*10) {
+        powerUpTime = curTime
+        powerUpLevel--;
+        powerUpLevel = Math.max(0, powerUpLevel);
+    }
+    powerText.setText('Power Level: ' + powerUpLevel);
+
+
+    const levelsPerWeapon = 3;
+    let weaponNum = Math.floor(powerUpLevel / levelsPerWeapon);
+    fireRateMultiplier = powerUpLevel - levelsPerWeapon*weaponNum;
+    if (weaponNum === 0) currentProjectileType = 'basic';
+    else if (weaponNum === 1) {
+        currentProjectileType = 'laser';
+    }
+    else if (weaponNum >= 2) {
+        currentProjectileType = 'plasma';
+    }
 }
 
 function spawnEnemy(x=null, y=null, enemyType=null) {
@@ -257,7 +278,7 @@ function fireProjectile(enemy) {
     this.physics.moveTo(projectile, enemy.x, enemy.y, speed);
 
     // Destroy projectile after 2 seconds
-    this.time.delayedCall(2000, () => {
+    this.time.delayedCall(4000, () => {
         if (projectile && !projectile.destroyed) {
             projectile.destroy();
         }
