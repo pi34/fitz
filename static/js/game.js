@@ -24,6 +24,11 @@ let enemies;
 let projectiles;
 let healthText;
 let scoreText;
+let powerText;
+let level = 0;
+let powerUpLevel = 0;
+let powerUpTime = 0;
+let fireRateMultiplier = 0;
 let score = 0;
 let gameOver = false;
 let lastFired = 0;
@@ -34,6 +39,9 @@ function preload() {
     // Load all game assets
     this.load.image('player', 'static/assets/player.png');
     this.load.image('enemy', 'static/assets/enemy.png');
+    this.load.image('bigEnemy', 'static/assets/bigEnemy.png');
+    this.load.image('eggEnemy', 'static/assets/eggEnemy.png');
+    this.load.image('stalkerEnemy', 'static/assets/stalkerEnemy.png');
     this.load.image('basic', 'static/assets/basic-projectile.png');
     this.load.image('laser', 'static/assets/laser-projectile.png');
     this.load.image('plasma', 'static/assets/plasma-projectile.png');
@@ -54,18 +62,14 @@ function create() {
         if (healthText) {
             healthText.setText('Health: ' + player.health);
         }
-        this.regenSound.play();
+        if (data['score'] > 0) this.regenSound.play();
     });
 
     socket.on('upgrade_projectile', () => {
+        this.powerUpSound.play();
+        powerUpLevel += 1
+        powerUpTime = this.time.now;
 
-        if (currentProjectileType === 'basic') {
-            this.powerUpSound.play();
-            currentProjectileType = 'laser';
-        } else if (currentProjectileType === 'laser') {
-            this.powerUpSound.play();
-            currentProjectileType = 'plasma'
-;        }
     })
 
     // Calculate scale factor based on game size
@@ -81,6 +85,8 @@ function create() {
     this.physics.add.existing(player);
     player.body.setCollideWorldBounds(true);
     player.health = 100;
+    player.facingAngle = 0; // Initialize facing angle
+
 
     // Create groups for enemies and projectiles
     enemies = this.physics.add.group();
@@ -93,12 +99,13 @@ function create() {
     // Add UI
     healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#fff' });
     scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#fff' });
+    powerText = this.add.text(16, 100, 'Power Level: 0', { fontSize: '32px', fill: '#fff' });
 
 
 
     // Spawn enemies periodically
     this.time.addEvent({
-        delay: 400,
+        delay: 750 - 500*level,
         callback: spawnEnemy,
         callbackScope: this,
         loop: true
@@ -123,7 +130,7 @@ function update() {
     this.aKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     this.dKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    const speed = 200;
+    const speed = 200 + 100*level;
 
     if (cursors.left.isDown || this.aKey.isDown) {
         player.body.setVelocityX(-speed);
@@ -145,32 +152,97 @@ function update() {
     const time = this.time.now;
     if (time > lastFired) {
         fireProjectile.call(this, this.input.mousePointer);
-        lastFired = time + 100; 
+        lastFired = time + 100 - 20*fireRateMultiplier;
     }
+    let pointerX = this.input.activePointer.x;
+    let pointerY = this.input.activePointer.y;
+    let povAngle = Phaser.Math.Angle.Between(player.x, player.y, pointerX, pointerY) / Math.PI * 180;
 
+
+    // console.log(povAngle);
     // Update enemies to follow player
     enemies.getChildren().forEach(enemy => {
-        this.physics.moveToObject(enemy, player, 100);
+        let enemyType = enemy["texture"]["key"]
+
+        let enemyAngle = Phaser.Math.Angle.Between(player.x, player.y, enemy.x, enemy.y) / Math.PI * 180;
+        let diffAngle = Math.abs(povAngle - enemyAngle)
+
+        let base_speed = 75
+        if (enemyType === "bigEnemy") base_speed *= 0.5
+        else if (enemyType === "eggEnemy") base_speed *= 0.75
+        else if (enemyType === "stalkerEnemy") {
+            base_speed *= diffAngle > 75 ? 2.5 : 0;
+        }
+        this.physics.moveToObject(enemy, player, base_speed + 50*level);
     });
+
+    const curTime = this.time.now;
+    if (curTime > powerUpTime + 1000*10) {
+        powerUpTime = curTime
+        powerUpLevel--;
+        powerUpLevel = Math.max(0, powerUpLevel);
+    }
+    powerText.setText('Power Level: ' + powerUpLevel);
+
+
+    const levelsPerWeapon = 3;
+    let weaponNum = Math.floor(powerUpLevel / levelsPerWeapon);
+    fireRateMultiplier = powerUpLevel - levelsPerWeapon*weaponNum;
+    if (weaponNum === 0) currentProjectileType = 'basic';
+    else if (weaponNum === 1) {
+        currentProjectileType = 'laser';
+    }
+    else if (weaponNum >= 2) {
+        currentProjectileType = 'plasma';
+    }
 }
 
-function spawnEnemy() {
+function spawnEnemy(x=null, y=null, enemyType=null) {
     // Spawn enemy at random edge of screen
     if (gameOver) return
-    let x, y;
-    if (Math.random() < 0.5) {
-        x = Math.random() < 0.5 ? 0 : config.width;
-        y = Math.random() * config.height;
-    } else {
-        x = Math.random() * config.width;
-        y = Math.random() < 0.5 ? 0 : config.height;
+    if (x && y) {
+
+    }
+    else
+    {
+        let dist;
+        do {
+            x = Math.random() * config.width;
+            y = Math.random() * config.height;
+            dist = Math.sqrt((x - player.x)**2+(y - player.y)**2);
+        }
+        while (dist / config.height < 0.5);
+    }
+    if (enemyType) {
+
+    }
+    else {
+        enemyType = "enemy";
+        enemyType = Math.random() < 0.1 + 0.2*level ? "bigEnemy" : enemyType
+        enemyType = Math.random() < 0.1 + 0.2*level ? "stalkerEnemy" : enemyType
+        enemyType = Math.random() < 0.1 + 0.2*level ? "eggEnemy" : enemyType
     }
 
-    const enemy = this.add.sprite(x, y, 'enemy');
-    enemy.setDisplaySize(48, 60); // Set enemy size
+    const enemy = this.add.sprite(x, y, enemyType);
+    if (enemyType === "enemy") {
+        enemy.setDisplaySize(48, 60); // Set enemy size
+        enemy.health = 30
+    }
+    else if (enemyType === "bigEnemy") {
+        let scale = 2;
+        enemy.setDisplaySize(48 * scale, 60 * scale); // Set enemy size
+        enemy.health = 120
+    }
+    else if (enemyType === "stalkerEnemy") {
+        enemy.setDisplaySize(40, 60); // Set enemy size
+        enemy.health = 20
+    }
+    else if (enemyType === "eggEnemy") {
+        enemy.setDisplaySize(80, 80); // Set enemy size
+        enemy.health = 60
+    }
     this.physics.add.existing(enemy);
     enemies.add(enemy);
-    enemy.health = 30;
 }
 
 function fireProjectile(enemy) {
@@ -206,7 +278,7 @@ function fireProjectile(enemy) {
     this.physics.moveTo(projectile, enemy.x, enemy.y, speed);
 
     // Destroy projectile after 2 seconds
-    this.time.delayedCall(2000, () => {
+    this.time.delayedCall(4000, () => {
         if (projectile && !projectile.destroyed) {
             projectile.destroy();
         }
@@ -235,8 +307,18 @@ function hitEnemy(projectile, enemy) {
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
+        level += 0.02
         scoreText.setText('Score: ' + score);
         this.dieSound.play();
+
+        let enemyType = enemy["texture"]["key"]
+        if (enemyType === "eggEnemy") {
+            for (let i = 0; i < 5; i ++) {
+                let x = enemy.x + 100*(Math.random() - 0.5);
+                let y = enemy.y + 100*(Math.random() - 0.5);
+                spawnEnemy.call(this, x, y, "enemy");
+            }
+        }
     }
 
 
@@ -247,6 +329,7 @@ function hitPlayer(player, enemy) {
     player.health -= 10;
     healthText.setText('Health: ' + player.health);
     this.hurtSound.play();
+    level = 0;
 
     if (player.health <= 0) {
         gameOver = true;

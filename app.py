@@ -58,4 +58,4 @@ def handle_answer(data):
             emit('upgrade_projectile', broadcast=True)
 
 if __name__ == '__main__':
-    socketio.run(app, port=8000, host='10.29.28.91', debug=True)
+    socketio.run(app, port=8000, host='localhost', debug=True)
