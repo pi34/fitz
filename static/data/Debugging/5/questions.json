@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a whimsical land of enchanted forests, a young wizard is trying to summon a spell using Python's `random` module. However, a mischievous sprite has sneaked in a bug. Identify the line where the error occurs in the following code snippet:\n\n```python\n1  import random\n2  spells = [\"fireball\", \"lightning bolt\", \"invisibility\"]\n3  def cast_spell():\n4      spell_choice = random.choice(spells)\n5      print(\"Casting: \" + spell_choice)\n6      if spell_choice = \"fireball\":  # This line is magical, but wrong!\n7          print(\"Boom!\")\n8      elif spell_choice == \"lightning bolt\":\n9          print(\"Zap!\")\n10     else:\n11         print(\"You vanish!\")\n12 \n13  cast_spell()\n```",
+        "options": [
+            [
+                "A",
+                "Line 5"
+            ],
+            [
+                "B",
+                "Line 6"
+            ],
+            [
+                "C",
+                "Line 7"
+            ],
+            [
+                "D",
+                "Line 8"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "A curious cat named Whiskers is attempting to count the number of mice in various rooms using a list comprehension. However, an enchantment has caused chaos in the code. Locate the bug within this snippet:\n\n```python\n1  rooms = [\"kitchen\", \"living room\", \"basement\"]\n2  mice_count = [len(room) for room in rooms if room == \"kitchen\" or room == \"living room\" or room.count(\"mice\") > 0]\n3  total_mice = sum(mice_count)\n4  print(\"Total mice found: \" + total_mice)  # This line casts a spell of confusion!\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 1"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "In a realm where time-traveling clocks malfunction, a programmer is trying to calculate the time difference using the `datetime` library. However, a time warp introduces an error. Pinpoint the line that holds the error in this code:\n\n```python\n1  from datetime import datetime, timedelta\n2  now = datetime.now()\n3  future_time = now + timedelta(hours=5)\n4  print(\"Time in five hours: \" + future_time.strftime(\"%Y-%m-%d %H:%M:%S\"))\n5  if future_time > now:\n6      print(\"It\u2019s time travel!\")\n7  else:\n8      print(\"Just regular time.\")\n```",
+        "options": [
+            [
+                "A",
+                "Line 4"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "A poet is attempting to create a rhyme generator using the `nltk` library, but a sneaky bug has crept in amongst the verses. Identify the problematic line in the following snippet:\n\n```python\n1  import nltk\n2  words = [\"moon\", \"June\", \"spoon\", \"balloon\"]\n3  def generate_rhyme(word):\n4      return [w for w in words if w.endswith(word)]  # The word is missing something here!\n5  \n6  rhyme = generate_rhyme(\"oon\")\n7  print(\"Rhymes with 'oon': \" + rhyme)\n```",
+        "options": [
+            [
+                "A",
+                "Line 3"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 5"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "A scientist in a curious lab is trying to capture the essence of fractions using Python's `fractions` module. Unfortunately, a bug is hiding within the calculations. Find the line number where the error resides in this code:\n\n```python\n1  from fractions import Fraction\n2  def add_fractions(a, b):\n3      return a + b  # This line is adding them without fractions!\n4  \n5  f1 = Fraction(1, 3)\n6  f2 = Fraction(2, 3)\n7  result = add_fractions(f1, f2)\n8  print(\"Total: \" + str(result))\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In the whimsical land of enchanted forests, a young wizard is trying to summon a spell using Python's `random` module. However, a mischievous sprite has sneaked in a bug. Identify the line where the error occurs in the following code snippet:\n```python\n1  import random\n2  spells = [\"fireball\", \"lightning bolt\", \"invisibility\"]\n3  def cast_spell():\n4      spell_choice = random.choice(spells)\n5      print(\"Casting: \" + spell_choice)\n6      if spell_choice = \"fireball\":  # This line is magical, but wrong!\n7          print(\"Boom!\")\n8      elif spell_choice == \"lightning bolt\":\n9          print(\"Zap!\")\n10     else:\n11         print(\"You vanish!\")\n12 \n13  cast_spell()\n```",
+        "options": [
+            [
+                "A",
+                "6"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "A curious cat named Whiskers is attempting to count the number of mice in various rooms using a list comprehension. However, an enchantment has caused chaos in the code. Locate the bug within this snippet:\n```python\n1  rooms = [\"kitchen\", \"living room\", \"basement\"]\n2  mice_count = [len(room) for room in rooms if room == \"kitchen\" or room == \"living room\" or room.count(\"mice\") > 0]\n3  total_mice = sum(mice_count)\n4  print(\"Total mice found: \" + total_mice)  # This line casts a spell of confusion!\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "C",
+        "index": 7
+    },
+    {
+        "question": "In a realm where time-traveling clocks malfunction, a programmer is trying to calculate the time difference using the `datetime` library. However, a time warp introduces an error. Pinpoint the line that holds the error in this code:\n```python\n1  from datetime import datetime, timedelta\n2  now = datetime.now()\n3  future_time = now + timedelta(hours=5)\n4  print(\"Time in five hours: \" + future_time.strftime(\"%Y-%m-%d %H:%M:%S\"))\n5  if future_time > now:\n6      print(\"It\u2019s time travel!\")\n7  else:\n8      print(\"Just regular time.\")\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "8"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "A poet is attempting to create a rhyme generator using the `nltk` library, but a sneaky bug has crept in amongst the verses. Identify the problematic line in the following snippet:\n```python\n1  import nltk\n2  words = [\"moon\", \"June\", \"spoon\", \"balloon\"]\n3  def generate_rhyme(word):\n4      return [w for w in words if w.endswith(word)]  # The word is missing something here!\n5  \n6  rhyme = generate_rhyme(\"oon\")\n7  print(\"Rhymes with 'oon': \" + rhyme)\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "1"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "2"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "A scientist in a curious lab is trying to capture the essence of fractions using Python's `fractions` module. Unfortunately, a bug is hiding within the calculations. Find the line number where the error resides in this code:\n```python\n1  from fractions import Fraction\n2  def add_fractions(a, b):\n3      return a + b  # This line is adding them without fractions!\n4  \n5  f1 = Fraction(1, 3)\n6  f2 = Fraction(2, 3)\n7  result = add_fractions(f1, f2)\n8  print(\"Total: \" + str(result))\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "A time traveler is trying to log the duration of his journeys using Python's `time` library, but a critical mistake is hidden within his code. Can you find the line that contains the error?\n\n```python\n1  import time\n2  start_time = time.time()\n3  time.sleep(3)\n4  elapsed_time = time.time() - start_time\n5  print(\"Elapsed time: \" + elapsed_time + \" seconds\")  # A miscalculation in the time continuum!\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "In the land of data scientists, a wizard is trying to merge datasets with pandas. Unfortunately, a rogue typo has caused chaos in his code. Identify the line with the bug:\n\n```python\n1  import pandas as pd\n2  df1 = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\n3  df2 = pd.DataFrame({'A': [5, 6], 'C': [7, 8]})\n4  result = pd.merge(df1, df2, on='A', how='inner')\n5  print(result)  # A line of code that is missing its magic touch!\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "2"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "In a futuristic lab, a researcher is attempting to plot data using matplotlib, but a syntax error has disrupted his flow. Find the line where the error occurs:\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title('Data Plot')\n6  plt.show(plt)  # The show must go on, but not like this!\n```",
+        "options": [
+            [
+                "A",
+                "6"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "A brave knight is coding to calculate the factorial of a number using recursion, but an error has crept into the logic. Can you spot the line that is incorrect?\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      else:\n5          return n * factorial(n - 1) + 1  # A misstep on the path to clarity!\n6  \n7  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "---\n\n**Question 1**: In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "A time traveler is trying to log the duration of his journeys using Python's `time` library, but a critical mistake is hidden within his code. Can you find the line that contains the error?\n\n```python\n1  import time\n2  start_time = time.time()\n3  time.sleep(3)\n4  elapsed_time = time.time() - start_time\n5  print(\"Elapsed time: \" + elapsed_time + \" seconds\")  # A miscalculation in the time continuum!\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "In the land of data scientists, a wizard is trying to merge datasets with pandas. Unfortunately, a rogue typo has caused chaos in his code. Identify the line with the bug:\n\n```python\n1  import pandas as pd\n2  df1 = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\n3  df2 = pd.DataFrame({'A': [5, 6], 'C': [7, 8]})\n4  result = pd.merge(df1, df2, on='A', how='inner')\n5  print(result)  # A line of code that is missing its magic touch!\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "B",
+        "index": 18
+    },
+    {
+        "question": "In a futuristic lab, a researcher is attempting to plot data using matplotlib, but a syntax error has disrupted his flow. Find the line where the error occurs:\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title('Data Plot')\n6  plt.show(plt)  # The show must go on, but not like this!\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "D",
+        "index": 19
+    },
+    {
+        "question": "A brave knight is coding to calculate the factorial of a number using recursion, but an error has crept into the logic. Can you spot the line that is incorrect?\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      else:\n5          return n * factorial(n - 1) + 1  # A misstep on the path to clarity!\n6  \n7  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Question 1**: In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
+        "options": [
+            [
+                "A",
+                "Line 4"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "A time traveler is trying to log the duration of his journeys using Python's `time` library, but a critical mistake is hidden within his code. Can you find the line that contains the error?\n\n```python\n1  import time\n2  start_time = time.time()\n3  time.sleep(3)\n4  elapsed_time = time.time() - start_time\n5  print(\"Elapsed time: \" + elapsed_time + \" seconds\")  # A miscalculation in the time continuum!\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "D",
+        "index": 22
+    },
+    {
+        "question": "In the land of data scientists, a wizard is trying to merge datasets with pandas. Unfortunately, a rogue typo has caused chaos in his code. Identify the line with the bug:\n\n```python\n1  import pandas as pd\n2  df1 = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})\n3  df2 = pd.DataFrame({'A': [5, 6], 'C': [7, 8]})\n4  result = pd.merge(df1, df2, on='A', how='inner')\n5  print(result)  # A line of code that is missing its magic touch!\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "In a futuristic lab, a researcher is attempting to plot data using matplotlib, but a syntax error has disrupted his flow. Find the line where the error occurs:\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title('Data Plot')\n6  plt.show(plt)  # The show must go on, but not like this!\n```",
+        "options": [
+            [
+                "A",
+                "Line 4"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 2"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "A brave knight is coding to calculate the factorial of a number using recursion, but an error has crept into the logic. Can you spot the line that is incorrect?\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      else:\n5          return n * factorial(n - 1) + 1  # A misstep on the path to clarity!\n6  \n7  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 2"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]
