@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a data analysis project, you are using the `pandas` library to calculate the average of a specified column in a DataFrame. However, you encounter an error in the following code snippet. Identify the line number with the bug.\n\n```python\n1. import pandas as pd\n2. data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 'thirty']}\n3. df = pd.DataFrame(data)\n4. average_age = df['Age'].mean()\n5. print(\"The average age is:\", average_age)\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "While attempting to scrape data from a website using `BeautifulSoup`, you run into a problem with the following code. Which line contains the bug that prevents the code from executing as intended?\n\n```python\n1. from bs4 import BeautifulSoup\n2. import requests\n3. response = requests.get('http://example.com')\n4. soup = BeautifulSoup(response.text, 'lxml')\n5. title = soup.find('title').text\n6. print(\"Page title is:\", title)\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "You're implementing a function to calculate the factorial of a number using recursion, but you encounter an error. Locate the line that contains the mistake.\n\n```python\n1. def factorial(n):\n2.     if n == 1:\n3.         return 1\n4.     else:\n5.         return n * factorial(n)  # Bug is here\n6. \n7. print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "1"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "In a machine learning project, you are trying to split your dataset into features and labels using `scikit-learn`, but an error occurs. Where is the mistake in the following code?\n\n```python\n1. import numpy as np\n2. from sklearn.model_selection import train_test_split\n3. X = np.array([[1, 2], [3, 4], [5, 6]])\n4. y = np.array([1, 0, 1])\n5. X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state='seed')\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "C",
+        "index": 4
+    },
+    {
+        "question": "In a script meant to read a JSON file and print its content, you run into a bug. Identify the line with the error.\n\n```python\n1. import json\n2. with open('data.json', 'r') as file:\n3.     data = json.load(file)\n4. print(\"Data loaded:\", data)\n5. print(\"Data type:\", type(data))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: While working with the `matplotlib` library, you attempt to plot a simple line graph, but the code throws an error. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. x = [1, 2, 3, 4]\n3. y = [10, 20, 30]\n4. plt.plot(x, y)\n5. plt.title(\"Line Graph\")\n6. plt.show()\n```",
+        "options": [
+            [
+                "A",
+                "Line 3"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 1"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "You are using the `requests` library to fetch data from an API, but an exception is raised. Identify the line with the issue.\n\n```python\n1. import requests\n2. url = 'https://api.example.com/data'\n3. response = requests.get(url)\n4. data = response.json()\n5. print(\"Data retrieved:\", data)\n6. if response.status_code != 200:\n```",
+        "options": [
+            [
+                "A",
+                "Line 5"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 2"
+            ]
+        ],
+        "answer": "C",
+        "index": 7
+    },
+    {
+        "question": "In an attempt to manipulate data with `numpy`, you encounter a type error. Which line of code is causing the problem?\n\n```python\n1. import numpy as np\n2. arr = np.array([1, 2, 3])\n3. arr[0] = \"text\"  # Bug is here\n4. print(arr)\n5. print(\"Array type:\", arr.dtype)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 5"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "D",
+        "index": 8
+    },
+    {
+        "question": "You are trying to use the `datetime` module to format a date, but you get an error message. Locate the line that has the flaw.\n\n```python\n1. from datetime import datetime\n2. current_time = datetime.now()\n3. formatted_time = current_time.format(\"%Y-%m-%d %H:%M\")  # Bug is here\n4. print(\"Current time:\", formatted_time)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 1"
+            ]
+        ],
+        "answer": "C",
+        "index": 9
+    },
+    {
+        "question": "While working with `flask` to create a simple web application, you run into a problem with your route definition. Which line has the error?\n\n```python\n1. from flask import Flask\n2. app = Flask(__name__)\n3. @app.route('/home')\n4. def home():\n5.     return \"Welcome to the homepage\"\n6. app.run(port=5000, debug=True)\n7. if __name__ == '__main__':  # Bug is here\n```",
+        "options": [
+            [
+                "A",
+                "Line 5"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "D",
+        "index": 10
+    },
+    {
+        "question": "In a magical library, a wizard is trying to conjure a bar chart with the `matplotlib` library, but an error pops up when he runs his spell. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. categories = ['Wands', 'Potions', 'Scrolls']\n3. values = [5, 15]  # Bug is here\n4. plt.bar(categories, values)\n5. plt.title(\"Magical Item Distribution\")\n6. plt.show()\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "A brave knight is using Python to calculate the distance between two points in a mystical realm, but he encounters an issue with his code. Identify the line that has the bug.\n\n```python\n1. import math\n2. def calculate_distance(x1, y1, x2, y2):\n3.     return math.sqrt((x2 - x1)^2 + (y2 - y1)^2)  # Bug is here\n4. \n5. print(calculate_distance(1, 2, 4, 6))\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "A digital alchemist is attempting to combine ingredients in a potion recipe using a Python list, but a strange error disrupts his concoction. Which line contains the bug?\n\n```python\n1. ingredients = ['Dragon Blood', 'Unicorn Hair', 'Phoenix Feather']\n2. for ingredient in ingredients:\n3.     print(ingredients[ingredient])  # Bug is here\n4. print(\"Potion complete!\")\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "A time traveler is trying to log his adventures with the `datetime` module, but an error halts his time machine's operations. Identify the line that has the error.\n\n```python\n1. from datetime import datetime\n2. now = datetime.now()\n3. log_entry = \"Time of travel: \" + now.strftime(\"%Y-%m-%d %H:%M\")  # Bug is here\n4. print(log_entry)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "A quirky robot is programmed to count the number of magical creatures but encounters a glitch in its counting system. Which line of code is incorrect?\n\n```python\n1. creatures = ['Dragon', 'Elf', 'Dwarf', 'Goblin']\n2. def count_creatures(creatures_list):\n3.     return len(creatures_list) + \" magical creatures counted!\"  # Bug is here\n4. \n5. print(count_creatures(creatures))\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    },
+    {
+        "question": "While working with the `matplotlib` library, you attempt to plot a simple line graph, but the code throws an error. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. x = [1, 2, 3, 4]\n3. y = [10, 20, 30]\n4. plt.plot(x, y)\n5. plt.title(\"Line Graph\")\n6. plt.show()\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "You are using the `requests` library to fetch data from an API, but an exception is raised. Identify the line with the issue.\n\n```python\n1. import requests\n2. url = 'https://api.example.com/data'\n3. response = requests.get(url)\n4. data = response.json()\n5. print(\"Data retrieved:\", data)\n6. if response.status_code != 200:\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "D",
+        "index": 17
+    },
+    {
+        "question": "In an attempt to manipulate data with `numpy`, you encounter a type error. Which line of code is causing the problem?\n\n```python\n1. import numpy as np\n2. arr = np.array([1, 2, 3])\n3. arr[0] = \"text\"  # Bug is here\n4. print(arr)\n5. print(\"Array type:\", arr.dtype)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "C",
+        "index": 18
+    },
+    {
+        "question": "You are trying to use the `datetime` module to format a date, but you get an error message. Locate the line that has the flaw.\n\n```python\n1. from datetime import datetime\n2. current_time = datetime.now()\n3. formatted_time = current_time.format(\"%Y-%m-%d %H:%M\")  # Bug is here\n4. print(\"Current time:\", formatted_time)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "C",
+        "index": 19
+    },
+    {
+        "question": "While working with `flask` to create a simple web application, you run into a problem with your route definition. Which line has the error?\n\n```python\n1. from flask import Flask\n2. app = Flask(__name__)\n3. @app.route('/home')\n4. def home():\n5.     return \"Welcome to the homepage\"\n6. app.run(port=5000, debug=True)\n7. if __name__ == '__main__':  # Bug is here\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "D",
+        "index": 20
+    },
+    {
+        "question": "A game developer is trying to update the score of a player, but the code fails to execute. Identify the line with the bug.\n\n```python\n1. player_score = 0\n2. def update_score(points):\n3.     player_score += points  # Bug is here\n4.     return player_score\n5. print(update_score(10))\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "C",
+        "index": 21
+    },
+    {
+        "question": "In a data visualization script, a data scientist is attempting to create a histogram using `matplotlib`, but an error is thrown. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. data = [1, 2, 2, 3, 3, 3]\n3. plt.hist(data, bins=3)\n4. plt.xlabel('Value')\n5. plt.ylabel('Frequency')\n6. plt.show(plt)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 5"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "D",
+        "index": 22
+    },
+    {
+        "question": "A novice programmer is trying to concatenate strings with an integer in a messaging application, but the program fails. Pinpoint the line that causes the issue.\n\n```python\n1. message_count = 5\n2. message = \"You have \" + message_count + \" new messages.\"  # Bug is here\n3. print(message)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "None of the above"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "A web developer is working on an input form validation using Flask and runs into a problem. Which line has the error?\n\n```python\n1. from flask import Flask, request\n2. app = Flask(__name__)\n3. @app.route('/submit', methods=['POST'])\n4. def submit():\n5.     username = request.form['username']\n6.     return f'Hello, {username}'  # Bug is here\n7. app.run(debug=True)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "An aspiring developer is trying to sort a list of numbers, but encounters a TypeError. Identify the line that contains the mistake.\n\n```python\n1. numbers = [5, 3, '2', 8]\n2. numbers.sort()  # Bug is here\n3. print(numbers)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "None of the above"
+            ]
+        ],
+        "answer": "B",
+        "index": 25
+    }
+]

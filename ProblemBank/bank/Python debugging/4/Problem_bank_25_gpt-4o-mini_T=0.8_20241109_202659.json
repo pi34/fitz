@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a fantasy game, you are tasked with calculating the total damage dealt by a character's special abilities. The following code is intended to sum the damage values, but it contains a bug that prevents it from running correctly.\n\n```python\n1. def total_damage(abilities):\n2.     damage = 0\n3.     for ability in abilities:\n4.         damage += ability['damage']\n5.     return damage\n6. \n7. abilities = [{'name': 'Fireball', 'damage': 30}, {'name': 'Frostbolt', 'damage': '15'}, {'name': 'Lightning', 'damage': 25}]\n8. print(total_damage(abilities))\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "7"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "A scientist is analyzing data from an experiment using the `pandas` library. Below is a snippet of code aimed at filtering out rows with an invalid measurement. However, it throws an error due to a mistake in the filtering condition.\n\n```python\n1. import pandas as pd\n2. \n3. data = {'measurement': [1.2, None, 2.4, 'invalid', 5.1], 'label': ['A', 'B', 'C', 'D', 'E']}\n4. df = pd.DataFrame(data)\n5. valid_data = df[df['measurement'] > 0]\n6. print(valid_data)\n7. \n8. df['measurement'] = pd.to_numeric(df['measurement'], errors='ignore')\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "8"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "A web scraper is designed to extract titles from a list of webpages. However, it fails to do so due to an overlooked error in the code.\n\n```python\n1. import requests\n2. from bs4 import BeautifulSoup\n3. \n4. def get_titles(urls):\n5.     titles = []\n6.     for url in urls:\n7.         response = requests.get(url)\n8.         soup = BeautifulSoup(response.text, 'html.parser')\n9.         titles.append(soup.title)\n10.     return titles\n11. \n12. urls = ['http://example.com', 'http://example2.com']\n13. print(get_titles(urls))\n```",
+        "options": [
+            [
+                "A",
+                "9"
+            ],
+            [
+                "B",
+                "11"
+            ],
+            [
+                "C",
+                "1"
+            ],
+            [
+                "D",
+                "8"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "In a machine learning model, a developer is attempting to preprocess features using the `numpy` library. The code snippet provided is meant to normalize the data, but it has a bug that produces incorrect outputs.\n\n```python\n1. import numpy as np\n2. \n3. def normalize_data(data):\n4.     return (data - np.mean(data)) / np.std(data)\n5. \n6. input_data = np.array([[1, 2], [3, 4], [5, 6]])\n7. print(normalize_data(input_data))\n```",
+        "options": [
+            [
+                "A",
+                "6"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "A coding enthusiast is experimenting with a custom exception handling mechanism. The following code snippet is meant to handle division errors, but there's a bug that causes it to fail.\n\n```python\n1. class DivisionError(Exception):\n2.     pass\n3. \n4. def safe_divide(x, y):\n5.     try:\n6.         return x / y\n7.     except ZeroDivisionError as e:\n8.         raise DivisionError(\"Attempted to divide by zero\")\n9. \n10. print(safe_divide(10, 0))\n```",
+        "options": [
+            [
+                "A",
+                "8"
+            ],
+            [
+                "B",
+                "9"
+            ],
+            [
+                "C",
+                "6"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "D",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: In a mysterious forest, a wizard attempts to calculate the heights of enchanted trees using magical data. However, the spell falters due to a curious bug in the code.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "8"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "A time-traveling historian is cataloging events but accidentally encounters an error when filtering out future dates. Help them identify the mistake in this code.\n\n**Sample Code**:\n```python\n1: from datetime import datetime\n2: \n3: events = [{'event': 'Renaissance', 'date': '1500-01-01'}, {'event': 'Industrial Revolution', 'date': '1800-01-01'}, {'event': 'Future Event', 'date': '3000-01-01'}]\n4: valid_events = [event for event in events if event['date'] < datetime.now().date()]\n5: print(valid_events)\n6: \n7: for event in valid_events:\n8:     print(event['event'])\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "An alien mathematician is trying to calculate the area of various celestial shapes but mistakenly encounters an error in the code below.\n\n**Sample Code**:\n```python\n1: def calculate_area(radius):\n2:     if radius <= 0:\n3:         return \"Invalid radius\"\n4:     area = 3.14 * radius * radius\n5:     return area\n6: \n7: radii = [5, -3, 0, 7]\n8: for r in radii:\n9:     print(\"Area:\", calculate_area(r))\n10: print(\"Completed calculations.\")\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "9"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "A curious coder is experimenting with string manipulation but finds themselves ensnared by a bug in their code that confuses the output of their magical incantations.\n\n**Sample Code**:\n```python\n1: def reverse_string(s):\n2:     return s[::-1]\n3: \n4: phrases = ['abracadabra', 'hocus pocus', 'open sesame', 42]\n5: reversed_phrases = [reverse_string(phrase) for phrase in phrases if isinstance(phrase, str)]\n6: print(reversed_phrases)\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "6"
+            ],
+            [
+                "D",
+                "3"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "A brave adventurer is trying to track the treasures collected on his quests. However, due to an error in the treasure management script, he is unable to access the total value of his loot.\n\n**Sample Code**:\n```python\n1: treasures = [{'name': 'Gold', 'value': 100}, {'name': 'Silver', 'value': '50'}, {'name': 'Emerald', 'value': 300}]\n2: total_value = sum(treasure['value'] for treasure in treasures)\n3: print(\"Total value of treasures:\", total_value)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "In a mysterious forest, a wizard attempts to calculate the heights of enchanted trees using magical data. However, the spell falters due to a curious bug in the code.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "8"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "C",
+        "index": 11
+    },
+    {
+        "question": "A time-traveling historian is cataloging events but accidentally encounters an error when filtering out future dates. Help them identify the mistake in this code.\n\n**Sample Code**:\n```python\n1: from datetime import datetime\n2: \n3: events = [{'event': 'Renaissance', 'date': '1500-01-01'}, {'event': 'Industrial Revolution', 'date': '1800-01-01'}, {'event': 'Future Event', 'date': '3000-01-01'}]\n4: valid_events = [event for event in events if event['date'] < datetime.now().date()]\n5: print(valid_events)\n6: \n7: for event in valid_events:\n8:     print(event['event'])\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "An alien mathematician is trying to calculate the area of various celestial shapes but mistakenly encounters an error in the code below.\n\n**Sample Code**:\n```python\n1: def calculate_area(radius):\n2:     if radius <= 0:\n3:         return \"Invalid radius\"\n4:     area = 3.14 * radius * radius\n5:     return area\n6: \n7: radii = [5, -3, 0, 7]\n8: for r in radii:\n9:     print(\"Area:\", calculate_area(r))\n10: print(\"Completed calculations.\")\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "8"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "A curious coder is experimenting with string manipulation but finds themselves ensnared by a bug in their code that confuses the output of their magical incantations.\n\n**Sample Code**:\n```python\n1: def reverse_string(s):\n2:     return s[::-1]\n3: \n4: phrases = ['abracadabra', 'hocus pocus', 'open sesame', 42]\n5: reversed_phrases = [reverse_string(phrase) for phrase in phrases if isinstance(phrase, str)]\n6: print(reversed_phrases)\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "1"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "A brave adventurer is trying to track the treasures collected on his quests. However, due to an error in the treasure management script, he is unable to access the total value of his loot.\n\n**Sample Code**:\n```python\n1: treasures = [{'name': 'Gold', 'value': 100}, {'name': 'Silver', 'value': '50'}, {'name': 'Emerald', 'value': 300}]\n2: total_value = sum(treasure['value'] for treasure in treasures)\n3: print(\"Total value of treasures:\", total_value)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "In a mystical realm, a wizard seeks to find the average height of magical trees. However, there is a bug in the code that prevents it from calculating the value correctly.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
+        "options": [
+            [
+                "A",
+                "Line 4"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 6"
+            ],
+            [
+                "D",
+                "Line 8"
+            ]
+        ],
+        "answer": "B",
+        "index": 16
+    },
+    {
+        "question": "A time-traveling historian attempts to catalog historical events but encounters an issue when filtering out dates from the future. Can you spot the error in the code?\n\n**Sample Code**:\n```python\n1: from datetime import datetime\n2: \n3: events = [{'event': 'Renaissance', 'date': '1500-01-01'}, {'event': 'Industrial Revolution', 'date': '1800-01-01'}, {'event': 'Future Event', 'date': '3000-01-01'}]\n4: valid_events = [event for event in events if event['date'] < datetime.now().date()]\n5: print(valid_events)\n6: \n7: for event in valid_events:\n8:     print(event['event'])\n```",
+        "options": [
+            [
+                "A",
+                "Line 3"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 5"
+            ],
+            [
+                "D",
+                "Line 7"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "An alien mathematician is trying to compute the area of celestial circles. However, a bug in the code is causing it to miscalculate the areas. Can you identify where the problem lies?\n\n**Sample Code**:\n```python\n1: def calculate_area(radius):\n2:     if radius <= 0:\n3:         return \"Invalid radius\"\n4:     area = 3.14 * radius * radius\n5:     return area\n6: \n7: radii = [5, -3, 0, 7]\n8: for r in radii:\n9:     print(\"Area:\", calculate_area(r))\n10: print(\"Completed calculations.\")\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 9"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "A curious coder is trying to reverse a list of magical phrases, but they've encountered an issue due to a bug in their code. Can you help them find the line with the error?\n\n**Sample Code**:\n```python\n1: def reverse_string(s):\n2:     return s[::-1]\n3: \n4: phrases = ['abracadabra', 'hocus pocus', 'open sesame', 42]\n5: reversed_phrases = [reverse_string(phrase) for phrase in phrases if isinstance(phrase, str)]\n6: print(reversed_phrases)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 5"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "An adventurous treasure hunter is trying to sum up the value of his loot, but a sneaky bug has crept into his code. Can you identify the flaw?\n\n**Sample Code**:\n```python\n1: treasures = [{'name': 'Gold', 'value': 100}, {'name': 'Silver', 'value': '50'}, {'name': 'Emerald', 'value': 300}]\n2: total_value = sum(treasure['value'] for treasure in treasures)\n3: print(\"Total value of treasures:\", total_value)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "None"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "In a mystical realm, a wizard seeks to find the average height of magical trees. However, there is a bug in the code that prevents it from calculating the value correctly.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "8"
+            ],
+            [
+                "D",
+                "9"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "A time-traveling historian attempts to catalog historical events but encounters an issue when filtering out dates from the future. Can you spot the error in the code?\n\n**Sample Code**:\n```python\n1: from datetime import datetime\n2: \n3: events = [{'event': 'Renaissance', 'date': '1500-01-01'}, {'event': 'Industrial Revolution', 'date': '1800-01-01'}, {'event': 'Future Event', 'date': '3000-01-01'}]\n4: valid_events = [event for event in events if event['date'] < datetime.now().date()]\n5: print(valid_events)\n6: \n7: for event in valid_events:\n8:     print(event['event'])\n```",
+        "options": [
+            [
+                "A",
+                "3"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "An alien mathematician is trying to compute the area of celestial circles. However, a bug in the code is causing it to miscalculate the areas. Can you identify where the problem lies?\n\n**Sample Code**:\n```python\n1: def calculate_area(radius):\n2:     if radius <= 0:\n3:         return \"Invalid radius\"\n4:     area = 3.14 * radius * radius\n5:     return area\n6: \n7: radii = [5, -3, 0, 7]\n8: for r in radii:\n9:     print(\"Area:\", calculate_area(r))\n10: print(\"Completed calculations.\")\n```",
+        "options": [
+            [
+                "A",
+                "2"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "7"
+            ],
+            [
+                "D",
+                "9"
+            ]
+        ],
+        "answer": "C",
+        "index": 23
+    },
+    {
+        "question": "A curious coder is trying to reverse a list of magical phrases, but they've encountered an issue due to a bug in their code. Can you help them find the line with the error?\n\n**Sample Code**:\n```python\n1: def reverse_string(s):\n2:     return s[::-1]\n3: \n4: phrases = ['abracadabra', 'hocus pocus', 'open sesame', 42]\n5: reversed_phrases = [reverse_string(phrase) for phrase in phrases if isinstance(phrase, str)]\n6: print(reversed_phrases)\n```",
+        "options": [
+            [
+                "A",
+                "4"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "An adventurous treasure hunter is trying to sum up the value of his loot, but a sneaky bug has crept into his code. Can you identify the flaw?\n\n**Sample Code**:\n```python\n1: treasures = [{'name': 'Gold', 'value': 100}, {'name': 'Silver', 'value': '50'}, {'name': 'Emerald', 'value': 300}]\n2: total_value = sum(treasure['value'] for treasure in treasures)\n3: print(\"Total value of treasures:\", total_value)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

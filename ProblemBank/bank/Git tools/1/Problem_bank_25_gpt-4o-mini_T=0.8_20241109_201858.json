@@ -1,0 +1,577 @@
+[
+    {
+        "question": "While embarking on a coding adventure, you discover a treasure chest labeled \"Git.\" Inside, you find a scroll detailing basic commands. Which command would you use to create a new branch named \"feature-branch\" to develop your next great idea?",
+        "options": [
+            [
+                "A",
+                "`git checkout feature-branch`"
+            ],
+            [
+                "B",
+                "`git create branch feature-branch`"
+            ],
+            [
+                "C",
+                "`git branch feature-branch`"
+            ],
+            [
+                "D",
+                "`git new branch feature-branch`"
+            ]
+        ],
+        "answer": "C",
+        "index": 1
+    },
+    {
+        "question": "You're collaborating on a group project using Git and Python, and you want to ensure your team's work is synced properly. Which widely-used Python library would you employ to automate Git operations and streamline collaboration through scripts?",
+        "options": [
+            [
+                "A",
+                "`GitPython`"
+            ],
+            [
+                "B",
+                "`PyGitHub`"
+            ],
+            [
+                "C",
+                "`Dulwich`"
+            ],
+            [
+                "D",
+                "`Pygit2`"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "Imagine you're a time traveler in a code repository, needing to check out a specific commit from a distant branch. Which command would you run to switch to the commit with the ID \"abcd1234\" without losing your current progress?",
+        "options": [
+            [
+                "A",
+                "`git checkout abcd1234`"
+            ],
+            [
+                "B",
+                "`git checkout -b abcd1234`"
+            ],
+            [
+                "C",
+                "`git switch abcd1234`"
+            ],
+            [
+                "D",
+                "`git reset --hard abcd1234`"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "You are a code sorcerer, experimenting with a rare Python library that transforms version control workflows. This library allows you to create a virtual file system for managing repositories effectively. What is the name of this library, known for its specialized capabilities with Git repositories?",
+        "options": [
+            [
+                "A",
+                "`Pystache`"
+            ],
+            [
+                "B",
+                "`gitfs`"
+            ],
+            [
+                "C",
+                "`pygit2`"
+            ],
+            [
+                "D",
+                "`dulwich`"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In a mystical land of data science, you need to analyze the commit history of an enormous project. You decide to wield a powerful tool that leverages advanced metrics of Git repositories, including lines added and deleted across branches. Which specialized Python library do you summon for this task?",
+        "options": [
+            [
+                "A",
+                "`gitstats`"
+            ],
+            [
+                "B",
+                "`gitinspector`"
+            ],
+            [
+                "C",
+                "`Gource`"
+            ],
+            [
+                "D",
+                "`Repository`"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1 (Difficulty Level: 1)**:  \nWhat does the command `git init` accomplish in a Git repository?",
+        "options": [
+            [
+                "A",
+                "It initializes a new Git repository."
+            ],
+            [
+                "B",
+                "It stages all changes for the next commit."
+            ],
+            [
+                "C",
+                "It merges two branches."
+            ],
+            [
+                "D",
+                "It installs Git on your system."
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "3)**:  \nIn a collaborative project, you need to pull the latest changes from the remote repository while also merging them with your local changes. Which command should you use?",
+        "options": [
+            [
+                "A",
+                "`git fetch`"
+            ],
+            [
+                "B",
+                "`git pull`"
+            ],
+            [
+                "C",
+                "`git merge`"
+            ],
+            [
+                "D",
+                "`git clone`"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "5)**:  \nYou encounter a situation where you need to revert to a previous state of your repository but want to keep all subsequent changes in the history. Which Git command will allow you to do this effectively?",
+        "options": [
+            [
+                "A",
+                "`git reset`"
+            ],
+            [
+                "B",
+                "`git revert`"
+            ],
+            [
+                "C",
+                "`git checkout`"
+            ],
+            [
+                "D",
+                "`git restore`"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "3)**:  \nYou are tasked with squashing multiple commits into a single commit to maintain a cleaner project history. Which command effectively allows you to perform this task?",
+        "options": [
+            [
+                "A",
+                "`git rebase -i HEAD~n`"
+            ],
+            [
+                "B",
+                "`git merge --squash`"
+            ],
+            [
+                "C",
+                "`git cherry-pick`"
+            ],
+            [
+                "D",
+                "`git commit --amend`"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "5)**:  \nIn the realm of advanced Git operations, you need to perform a \"cherry-pick\" of a commit from a different branch, but ensure that it applies cleanly to your current branch without conflicts. Which command would you use to achieve this, especially if you want to avoid potential merge issues?",
+        "options": [
+            [
+                "A",
+                "`git cherry-pick <commit>`"
+            ],
+            [
+                "B",
+                "`git rebase <branch>`"
+            ],
+            [
+                "C",
+                "`git merge --no-commit <branch>`"
+            ],
+            [
+                "D",
+                "`git apply <file.patch>`"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "1)**:  \nYou find yourself in a digital jungle where you need to plant the seeds of your project. To start your journey with Git, which command would you use to initialize a new repository for your exciting adventure?",
+        "options": [
+            [
+                "A",
+                "`git start`"
+            ],
+            [
+                "B",
+                "`git new`"
+            ],
+            [
+                "C",
+                "`git init`"
+            ],
+            [
+                "D",
+                "`git create`"
+            ]
+        ],
+        "answer": "C",
+        "index": 11
+    },
+    {
+        "question": "3)**:  \nAs a lead explorer on a collaborative expedition, your team has made significant updates to a shared repository. One of your team members just updated the master branch with crucial features. What command should you execute to incorporate these updates into your local branch while keeping your own changes intact?",
+        "options": [
+            [
+                "A",
+                "`git fetch`"
+            ],
+            [
+                "B",
+                "`git merge`"
+            ],
+            [
+                "C",
+                "`git pull`"
+            ],
+            [
+                "D",
+                "`git update`"
+            ]
+        ],
+        "answer": "C",
+        "index": 12
+    },
+    {
+        "question": "5)**:  \nOn a quest for code perfection, you wish to revert your repository to a previous state, but you want to preserve all the trail of your journey in the commit history. Which command will allow you to create a new commit that undoes the changes made in a specific commit while keeping all future commits intact?",
+        "options": [
+            [
+                "A",
+                "`git reset`"
+            ],
+            [
+                "B",
+                "`git revert`"
+            ],
+            [
+                "C",
+                "`git checkout`"
+            ],
+            [
+                "D",
+                "`git undo`"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "3)**:  \nIn the enchanted forest of Git, you need to tidy up your commit history by merging several minor commits into a single, meaningful commit. Which command would you wield to perform this squashing task effectively?",
+        "options": [
+            [
+                "A",
+                "`git rebase -i HEAD~n`"
+            ],
+            [
+                "B",
+                "`git squash HEAD~n`"
+            ],
+            [
+                "C",
+                "`git merge --squash`"
+            ],
+            [
+                "D",
+                "`git combine HEAD~n`"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "5)**:  \nAmidst a complex galaxy of branches within your Git repository, you find a shiny commit in another branch that could significantly enhance your current project. However, you want to ensure that it applies flawlessly without introducing conflicts. Which command will you utilize to cherry-pick this commit safely while maintaining your branch's integrity?",
+        "options": [
+            [
+                "A",
+                "`git cherry-pick <commit-id>`"
+            ],
+            [
+                "B",
+                "`git apply <commit-id>`"
+            ],
+            [
+                "C",
+                "`git merge <commit-id>`"
+            ],
+            [
+                "D",
+                "`git patch <commit-id>`"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "1)**:  \nAs a budding wizard of code, you want to embark on your magical Git journey. Which incantation do you invoke to create your very first repository?",
+        "options": [
+            [
+                "A",
+                "`git start`"
+            ],
+            [
+                "B",
+                "`git begin`"
+            ],
+            [
+                "C",
+                "`git init`"
+            ],
+            [
+                "D",
+                "`git new-repo`"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "2)**:  \nYou've summoned a team of adventurers to collaborate on your project. To ensure that everyone is on the same page, which spell (command) should you use to fetch the latest changes from the realm of the remote repository?",
+        "options": [
+            [
+                "A",
+                "`git fetch`"
+            ],
+            [
+                "B",
+                "`git gather`"
+            ],
+            [
+                "C",
+                "`git pull`"
+            ],
+            [
+                "D",
+                "`git sync`"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "3)**:  \nIn the enchanted library of commits, you wish to consolidate your various scrolls of history into a single, mighty tome. Which command will you wield to squash multiple commits into one?",
+        "options": [
+            [
+                "A",
+                "`git combine`"
+            ],
+            [
+                "B",
+                "`git merge`"
+            ],
+            [
+                "C",
+                "`git rebase -i`"
+            ],
+            [
+                "D",
+                "`git squash`"
+            ]
+        ],
+        "answer": "C",
+        "index": 18
+    },
+    {
+        "question": "4)**:  \nAs you delve deeper into the caverns of your project's history, you find a critical commit from an ally's branch that you wish to claim for your own. To integrate this treasure without stirring conflict, which powerful command do you chant?",
+        "options": [
+            [
+                "A",
+                "`git merge <branch_name>`"
+            ],
+            [
+                "B",
+                "`git cherry-pick <commit_id>`"
+            ],
+            [
+                "C",
+                "`git pick <branch_name>`"
+            ],
+            [
+                "D",
+                "`git copy <commit_id>`"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "5)**:  \nIn a dire moment of code crisis, you must revert your project to a previous state without erasing the history of your epic journey. What advanced incantation (command) must you cast to create a new commit that undoes the changes from a specific commit?",
+        "options": [
+            [
+                "A",
+                "`git reset --hard <commit_id>`"
+            ],
+            [
+                "B",
+                "`git revert <commit_id>`"
+            ],
+            [
+                "C",
+                "`git undo <commit_id>`"
+            ],
+            [
+                "D",
+                "`git rollback <commit_id>`"
+            ]
+        ],
+        "answer": "B",
+        "index": 20
+    },
+    {
+        "question": "1)**:  \nWhich command would you use to check the status of your current Git repository and see the changes you have made?",
+        "options": [
+            [
+                "A",
+                "`git commit`"
+            ],
+            [
+                "B",
+                "`git status`"
+            ],
+            [
+                "C",
+                "`git push`"
+            ],
+            [
+                "D",
+                "`git log`"
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "3)**:  \nIn a collaborative environment, you need to combine the changes from a feature branch back into the main branch. After ensuring you're on the main branch, which command will effectively merge the changes from the branch named \"feature-x\"?",
+        "options": [
+            [
+                "A",
+                "`git merge feature-x`"
+            ],
+            [
+                "B",
+                "`git rebase feature-x`"
+            ],
+            [
+                "C",
+                "`git pull feature-x`"
+            ],
+            [
+                "D",
+                "`git cherry-pick feature-x`"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "5)**:  \nYou are working with a repository that has many branches, and you need to create a new branch that is a copy of another branch, but you want it to diverge from a specific commit instead of the latest one. Which command would you use to achieve this?",
+        "options": [
+            [
+                "A",
+                "`git checkout -b new-branch commit-id`"
+            ],
+            [
+                "B",
+                "`git branch new-branch commit-id`"
+            ],
+            [
+                "C",
+                "`git checkout commit-id -b new-branch`"
+            ],
+            [
+                "D",
+                "`git switch -b new-branch commit-id`"
+            ]
+        ],
+        "answer": "C",
+        "index": 23
+    },
+    {
+        "question": "3)**:  \nIn a quest to maintain a clean project history, you need to remove a specific commit from your branch's history while preserving all the commits that come after it. Which command allows you to revert that commit without losing subsequent work?",
+        "options": [
+            [
+                "A",
+                "`git reset --hard commit-id`"
+            ],
+            [
+                "B",
+                "`git revert commit-id`"
+            ],
+            [
+                "C",
+                "`git drop commit-id`"
+            ],
+            [
+                "D",
+                "`git checkout commit-id`"
+            ]
+        ],
+        "answer": "B",
+        "index": 24
+    },
+    {
+        "question": "5)**:  \nWhile exploring a vast code repository, you discover a commit that contains crucial changes, but it's in a different branch. You want to selectively apply this commit to your current branch without merging the entire branch. Which command do you use to cherry-pick this commit effectively?",
+        "options": [
+            [
+                "A",
+                "`git cherry-pick commit-id`"
+            ],
+            [
+                "B",
+                "`git apply commit-id`"
+            ],
+            [
+                "C",
+                "`git merge commit-id`"
+            ],
+            [
+                "D",
+                "`git rebase commit-id`"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

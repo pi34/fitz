@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a magical forest, a Python program is calculating the total number of enchanted fruits collected. However, it seems to be miscounting. Can you find the line where the error is?\n\n```python\n1. total_fruits = 0\n2. enchanted_fruits = [1, 2, 3, 'four']\n3. for fruit in enchanted_fruits:\n4.     total_fruits += fruit\n5. print(\"Total enchanted fruits collected:\", total_fruits)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "A chef is trying to create a recipe list but accidentally uses the wrong data type for the ingredients. Where is the mistake in the following code?\n\n```python\n1. ingredients = [\"flour\", \"sugar\", 2, \"eggs\"]\n2. recipe = {}\n3. for item in ingredients:\n4.     recipe[item] = \"1 cup\"\n5. print(recipe)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "In a futuristic space program, a Python code snippet calculates the speed of various spacecraft. However, it encounters an issue. Can you spot the line with the error?\n\n```python\n1. spacecrafts = {\"Falcon\": 5000, \"Apollo\": 7000, \"Voyager\": \"fast\"}\n2. speeds = []\n3. for craft, speed in spacecrafts.items():\n4.     speeds.append(speed / 1000)\n5. print(\"Speeds in km/h:\", speeds)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "An artist is managing a gallery of paintings, but their code for displaying the paintings is throwing an error. Can you identify the problematic line?\n\n```python\n1. paintings = [\"Mona Lisa\", \"Starry Night\", None]\n2. for painting in paintings:\n3.     print(\"Displaying\", painting.title())\n4. print(\"Gallery is open!\")\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "C",
+        "index": 4
+    },
+    {
+        "question": "During a wildlife survey, a biologist is counting the number of different animal species. The code provided has an error. Can you find it?\n\n```python\n1. species_count = {\"lion\": 5, \"tiger\": 3, \"elephant\": \"many\"}\n2. total_count = 0\n3. for species in species_count.values():\n4.     total_count += species\n5. print(\"Total species counted:\", total_count)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "A wise wizard is writing a spell to count the number of magical creatures in his enchanted realm. However, a spell error has caused the count to be incorrect. Can you identify the line where the error is?\n\n```python\n1. magical_creatures = {\"unicorn\": 2, \"dragon\": \"three\", \"phoenix\": 1}\n2. total_creatures = 0\n3. for creature in magical_creatures.values():\n4.     total_creatures += creature\n5. print(\"Total magical creatures counted:\", total_creatures)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "A quirky robot is tasked with calculating the total weight of its collected spare parts. Unfortunately, it encounters an error during the calculation. Can you spot the flawed line in the following code?\n\n```python\n1. spare_parts = [2.5, 3.0, \"heavy\", 1.5]\n2. total_weight = 0\n3. for part in spare_parts:\n4.     total_weight += part\n5. print(\"Total weight of spare parts:\", total_weight)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 2"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "In a digital art studio, a program is intended to list the colors of paint available, but it seems to be malfunctioning. Can you determine which line holds the issue?\n\n```python\n1. paint_colors = [\"red\", \"blue\", 5, \"green\"]\n2. available_colors = []\n3. for color in paint_colors:\n4.     available_colors.append(color.upper())\n5. print(\"Available paint colors:\", available_colors)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "A historian is compiling data about ancient artifacts, but their code for summing up the years of discovery is failing. Can you find the line that's causing the trouble?\n\n```python\n1. artifacts_years = {\"pottery\": 3000, \"bronze\": 2000, \"gold\": \"ancient\"}\n2. total_years = 0\n3. for year in artifacts_years.values():\n4.     total_years += year\n5. print(\"Total years of artifacts discovery:\", total_years)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "A gardener is trying to calculate the total number of flowers in their garden, but an error is preventing accurate counting. Which line contains the bug?\n\n```python\n1. flower_counts = {\"roses\": 10, \"lilies\": 15, \"daisies\": \"many\"}\n2. total_flowers = 0\n3. for count in flower_counts.values():\n4.     total_flowers += count\n5. print(\"Total flowers in the garden:\", total_flowers)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "20, \"non-fiction\": 15, \"mystery\": \"lots\"}\n2. total_genres = 0\n3. for count in genres_count.values():\n4.     total_genres += count\n5. print(\"Total genres in the library:\", total_genres)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "4.     total_value += value\n5. print(\"Total treasure value:\", total_value)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "12, \"danish\": \"a dozen\", \"muffin\": 10}\n2. total_pastries = 0\n3. for count in pastries.values():\n4.     total_pastries += count\n5. print(\"Total pastries baked:\", total_pastries)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "20, \"tomato\": 15, \"carrot\": \"many\"}\n2. total_seeds = 0\n3. for seeds in seed_counts.values():\n4.     total_seeds += seeds\n5. print(\"Total seeds planted:\", total_seeds)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 14
+    },
+    {
+        "question": "5, \"tiger\": 3, \"bear\": \"many\"}\n2. total_animals = 0\n3. for count in animal_count.values():\n4.     total_animals += count\n5. print(\"Total animals in the zoo:\", total_animals)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "### Question 1 (Difficulty Level 1)\n**Question**: A child is trying to sum a list of numbers but encounters an error. Can you identify which line contains the mistake?\n\n```python\n1. numbers = [1, 2, \"three\", 4]\n2. total = 0\n3. for number in numbers:\n4.     total += number\n5. print(\"Total sum:\", total)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "A",
+        "index": 16
+    },
+    {
+        "question": "In a data analysis project, a programmer is using the Pandas library to calculate the average of a dataset, but the code has a bug. Can you spot the error?\n\n```python\n1. import pandas as pd\n2. data = pd.Series([10, 20, 'thirty', 40])\n3. average = data.mean()\n4. print(\"Average:\", average)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "An astronomer is attempting to plot satellite data using the Matplotlib library but encounters a critical error. Can you find the line that causes the issue?\n\n```python\n1. import matplotlib.pyplot as plt\n2. satellites = [1, 2, 3, \"four\"]\n3. plt.plot(satellites)\n4. plt.title(\"Satellite Data\")\n5. plt.show()\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 5"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "A web developer is processing user inputs for a login system but has an error in their input validation logic. Can you detect where the mistake is?\n\n```python\n1. username = \"user123\"\n2. password = \"passw0rd\"\n3. if username.isalnum() and password.isalpha():\n4.     print(\"Login successful!\")\n5. else:\n6.     print(\"Login failed!\")\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "A data scientist is trying to utilize the Scikit-learn library for a machine learning model but has made a conceptual error in the following code. Can you identify the flawed line?\n\n```python\n1. from sklearn.linear_model import LinearRegression\n2. X = [[1, 2], [2, 3], [3, 4]]\n3. y = [1, 2, \"three\"]\n4. model = LinearRegression()\n5. model.fit(X, y)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 2"
+            ],
+            [
+                "C",
+                "Line 3"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "C",
+        "index": 20
+    },
+    {
+        "question": "A child is trying to sum a list of numbers but encounters an error. Can you identify which line contains the mistake?\n\n```python\n1. numbers = [1, 2, \"three\", 4]\n2. total = 0\n3. for number in numbers:\n4.     total += number\n5. print(\"Total sum:\", total)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 21
+    },
+    {
+        "question": "In a data analysis project, a programmer is using the Pandas library to calculate the average of a dataset, but the code has a bug. Can you spot the error?\n\n```python\n1. import pandas as pd\n2. data = pd.Series([10, 20, 'thirty', 40])\n3. average = data.mean()\n4. print(\"Average:\", average)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "An astronomer is attempting to plot satellite data using the Matplotlib library but encounters a critical error. Can you find the line that causes the issue?\n\n```python\n1. import matplotlib.pyplot as plt\n2. satellites = [1, 2, 3, \"four\"]\n3. plt.plot(satellites)\n4. plt.title(\"Satellite Data\")\n5. plt.show()\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "A web developer is processing user inputs for a login system but has an error in their input validation logic. Can you detect where the mistake is?\n\n```python\n1. username = \"user123\"\n2. password = \"passw0rd\"\n3. if username.isalnum() and password.isalpha():\n4.     print(\"Login successful!\")\n5. else:\n6.     print(\"Login failed!\")\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "A data scientist is trying to utilize the Scikit-learn library for a machine learning model but has made a conceptual error in the following code. Can you identify the flawed line?\n\n```python\n1. from sklearn.linear_model import LinearRegression\n2. X = [[1, 2], [2, 3], [3, 4]]\n3. y = [1, 2, \"three\"]\n4. model = LinearRegression()\n5. model.fit(X, y)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "C",
+        "index": 25
+    }
+]

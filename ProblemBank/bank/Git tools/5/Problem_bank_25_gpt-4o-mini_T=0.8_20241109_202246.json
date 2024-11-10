@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In a collaborative project, your team is using Git to manage version control. You notice a colleague has mistakenly merged a feature branch into the main branch without the necessary approvals. Which Git tool could you use to revert the merge commit while retaining the history of your project?",
+        "options": [
+            [
+                "A",
+                "git reset --hard HEAD^"
+            ],
+            [
+                "B",
+                "git revert -m 1 <merge_commit_hash>"
+            ],
+            [
+                "C",
+                "git checkout <commit_hash>"
+            ],
+            [
+                "D",
+                "git rebase --abort"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "You are maintaining a monorepo that contains multiple projects, and you want to automate the process of running tests on a specific folder whenever changes are made. Which Git tool or feature allows you to create hooks that can trigger scripts based on the commit process?",
+        "options": [
+            [
+                "A",
+                "git bisect"
+            ],
+            [
+                "B",
+                "git clean"
+            ],
+            [
+                "C",
+                "Git hooks"
+            ],
+            [
+                "D",
+                "git cherry-pick"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "While working with Git, you develop a custom workflow using branches for features, releases, and fixes. Which command allows you to visualize your branch structure and see how your commits relate to one another in a graphical format?",
+        "options": [
+            [
+                "A",
+                "git log --oneline --graph"
+            ],
+            [
+                "B",
+                "git status --branches"
+            ],
+            [
+                "C",
+                "git diff --visual"
+            ],
+            [
+                "D",
+                "git show --tree"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "As a Git user, you encounter a situation where you need to copy commits from one branch to another, but you want to maintain their original authorship. What command would you use to achieve this while ensuring that the original commit messages are preserved?",
+        "options": [
+            [
+                "A",
+                "git merge --squash"
+            ],
+            [
+                "B",
+                "git cherry-pick -x <commit_hash>"
+            ],
+            [
+                "C",
+                "git rebase --onto"
+            ],
+            [
+                "D",
+                "git apply --reject"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "Your team has decided to adopt a practice of squashing commits before merging into the master branch. If you want to combine the last three commits into one and have the option to edit the commit message, which command would you employ?",
+        "options": [
+            [
+                "A",
+                "git merge --squash HEAD~3"
+            ],
+            [
+                "B",
+                "git rebase -i HEAD~3"
+            ],
+            [
+                "C",
+                "git commit --amend"
+            ],
+            [
+                "D",
+                "git reset --soft HEAD~3"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "In a scenario where multiple team members are working on the same feature branch but conflicting changes arise, which advanced Git command allows you to rewrite commit history, making it easier to resolve conflicts and keep the project history cleaner?",
+        "options": [
+            [
+                "A",
+                "`git rebase -i HEAD~n`"
+            ],
+            [
+                "B",
+                "`git cherry-pick`"
+            ],
+            [
+                "C",
+                "`git reset --soft HEAD~1`"
+            ],
+            [
+                "D",
+                "`git revert`"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "You are tasked with analyzing the contribution patterns of team members across multiple branches in a large repository. Which Git command can be utilized to generate a detailed log of contributions by each author, complete with commit counts and branch details?",
+        "options": [
+            [
+                "A",
+                "`git shortlog -s -n --all`"
+            ],
+            [
+                "B",
+                "`git log --author=<name> --oneline --all`"
+            ],
+            [
+                "C",
+                "`git blame`"
+            ],
+            [
+                "D",
+                "`git diff --stat`"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "During a code review, you discover a sensitive piece of information was accidentally committed to the repository. Which advanced Git command can you use to remove the sensitive data from the entire history of the repository without affecting other commits?",
+        "options": [
+            [
+                "A",
+                "`git filter-branch`"
+            ],
+            [
+                "B",
+                "`git reset --hard`"
+            ],
+            [
+                "C",
+                "`git rebase --onto`"
+            ],
+            [
+                "D",
+                "`git revert`"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "Your team is following a Git Flow branching model, and you need to quickly create a release branch from the develop branch. What is the correct command to create and switch to a new \"release\" branch based on the latest develop branch commit?",
+        "options": [
+            [
+                "A",
+                "`git checkout -b release/<version> develop`"
+            ],
+            [
+                "B",
+                "`git branch release/<version> develop`"
+            ],
+            [
+                "C",
+                "`git switch -b release/<version>`"
+            ],
+            [
+                "D",
+                "`git merge develop release/<version>`"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "After a major release, your team wants to ensure that any future merges to the main branch automatically trigger a CI/CD pipeline. Which Git feature can you configure to run scripts or commands based on commit actions, specifically for automated testing and deployment?",
+        "options": [
+            [
+                "A",
+                "Git Hooks"
+            ],
+            [
+                "B",
+                "Git Aliases"
+            ],
+            [
+                "C",
+                "Git Workflows"
+            ],
+            [
+                "D",
+                "Git Submodules"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "---\n\n**Question 1**: In a large-scale open-source project, you want to analyze the evolution of a feature over multiple branches by assessing how various commits influenced its development. Which Git tool can you utilize to visualize the changes across branches and inspect the commit history interactively, showing side-by-side diffs of code changes?",
+        "options": [
+            [
+                "A",
+                "`git blame`"
+            ],
+            [
+                "B",
+                "`git log --graph`"
+            ],
+            [
+                "C",
+                "`git diff-tree`"
+            ],
+            [
+                "D",
+                "`git cherry`"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "During a code audit, you are tasked with identifying and reverting a specific commit that introduced a critical bug across multiple branches in your repository. To do this effectively while also maintaining a detailed log of the reverted changes, which command combination should you use?",
+        "options": [
+            [
+                "A",
+                "`git revert <commit> -m 1`"
+            ],
+            [
+                "B",
+                "`git reset --hard <commit>`"
+            ],
+            [
+                "C",
+                "`git cherry-pick -x <commit>`"
+            ],
+            [
+                "D",
+                "`git checkout <commit> -- <file>`"
+            ]
+        ],
+        "answer": "A",
+        "index": 12
+    },
+    {
+        "question": "In an effort to streamline collaboration, your team has decided to implement a \"pre-commit\" hook that checks for specific code style violations before any commit is completed. Which file should you modify to implement this hook and what script should it include to enforce the rules?",
+        "options": [
+            [
+                "A",
+                "`.git/hooks/pre-commit` with a shell script executing `eslint`"
+            ],
+            [
+                "B",
+                "`.git/config/hooks/pre-commit` with a Python script running `stylelint`"
+            ],
+            [
+                "C",
+                "`.git/hooks/post-commit` with a shell script executing `rubocop`"
+            ],
+            [
+                "D",
+                "`.git/hooks/pre-push` with a shell script validating `flake8`"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "Your team has encountered a scenario where multiple feature branches diverged significantly and contain overlapping changes. You want to perform a rebase that will allow you to cleanly integrate these branches while ensuring that the history remains linear and comprehensible. What command would allow you to rebase your feature branch onto the main branch while preserving commit messages?",
+        "options": [
+            [
+                "A",
+                "`git rebase -i main`"
+            ],
+            [
+                "B",
+                "`git rebase -p main`"
+            ],
+            [
+                "C",
+                "`git merge --no-ff main`"
+            ],
+            [
+                "D",
+                "`git rebase --onto main <feature-branch>`"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "After using `git filter-branch` to remove all instances of a sensitive file from your repository\u2019s history, you realize that the size of your repository has not decreased. Which command should you run to ensure that the repository size is effectively reduced and the garbage collected files are removed from the storage?",
+        "options": [
+            [
+                "A",
+                "`git gc --prune=now`"
+            ],
+            [
+                "B",
+                "`git clean -fd`"
+            ],
+            [
+                "C",
+                "`git reflog expire --expire=now --all`"
+            ],
+            [
+                "D",
+                "`git prune --expire=now`"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "In a large-scale collaborative project utilizing Git, you want to conduct a comprehensive analysis of how a specific feature evolved over time across several branches. Which advanced Git tool can you utilize to interactively visualize the changes across branches, enabling side-by-side comparisons of code diffs and commit messages throughout the development process?",
+        "options": [
+            [
+                "A",
+                "`git reflog`"
+            ],
+            [
+                "B",
+                "`git bisect`"
+            ],
+            [
+                "C",
+                "`git log --graph`"
+            ],
+            [
+                "D",
+                "`gitk`"
+            ]
+        ],
+        "answer": "D",
+        "index": 16
+    },
+    {
+        "question": "During a meticulous code audit of a complex project, you identify a commit that introduced a critical bug affecting multiple branches. You want to revert this commit in a way that captures the reversion logs effectively. Which command combination should you deploy to revert the specific commit while generating a revert commit for each branch it influenced?",
+        "options": [
+            [
+                "A",
+                "`git revert <commit> --no-commit && git commit -m \"Reverted <commit> due to bug\"`"
+            ],
+            [
+                "B",
+                "`git cherry-pick -n <commit> && git commit -m \"Reverted bug from <commit>\"`"
+            ],
+            [
+                "C",
+                "`git revert <commit> && git rebase`"
+            ],
+            [
+                "D",
+                "`git reset --hard <commit> && git push`"
+            ]
+        ],
+        "answer": "A",
+        "index": 17
+    },
+    {
+        "question": "Your team is keen to maintain high code quality and decides to implement pre-commit hooks to enforce coding standards. To set this up, which file within your Git directory should you create or modify, and what basic shell script command could you include to check for trailing whitespace in staged files?",
+        "options": [
+            [
+                "A",
+                "Modify `.git/hooks/pre-commit` to include `git diff --cached --check`"
+            ],
+            [
+                "B",
+                "Modify `.git/config` to include `git status --check`"
+            ],
+            [
+                "C",
+                "Modify `.git/hooks/post-commit` to include `git diff --name-only`"
+            ],
+            [
+                "D",
+                "Modify `.git/hooks/applypatch-msg` to include `git log --oneline`"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "You are working on a project where multiple feature branches have diverged significantly and contain overlapping changes. To ensure a smooth integration of these branches into the main branch while retaining a clean history, which command would you use to rebase your feature branch while ensuring that the commit messages are preserved?",
+        "options": [
+            [
+                "A",
+                "`git merge --ff-only <main>`"
+            ],
+            [
+                "B",
+                "`git rebase -i <main>`"
+            ],
+            [
+                "C",
+                "`git pull --rebase <main>`"
+            ],
+            [
+                "D",
+                "`git cherry-pick <commit>`"
+            ]
+        ],
+        "answer": "B",
+        "index": 19
+    },
+    {
+        "question": "After executing `git filter-branch` to erase all instances of sensitive information from your repository's history, you notice that the repository size remains unchanged. Which command must you execute to perform a cleanup, effectively reducing the size of the repository by removing the now-unreachable objects?",
+        "options": [
+            [
+                "A",
+                "`git gc --prune=now`"
+            ],
+            [
+                "B",
+                "`git clean -fd`"
+            ],
+            [
+                "C",
+                "`git repack -a`"
+            ],
+            [
+                "D",
+                "`git reflog expire --expire=now --all`"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "---\n\n**Question 1**: In a scenario where you need to analyze the contributions of different team members across various branches in a project, which Git command provides a comprehensive breakdown of commit history by author, including specific branch details and commit counts, while also allowing you to format the output for easier readability?",
+        "options": [
+            [
+                "A",
+                "`git shortlog -s -n --all`"
+            ],
+            [
+                "B",
+                "`git log --pretty=format:\"%an: %h (%d) %s\"`"
+            ],
+            [
+                "C",
+                "`git rev-list --count --all`"
+            ],
+            [
+                "D",
+                "`git log --author=<author_name> --graph --decorate --oneline`"
+            ]
+        ],
+        "answer": "A",
+        "index": 21
+    },
+    {
+        "question": "After a successful merge, you realize that a critical feature was inadvertently included due to a miscommunication among team members. To revert the merge commit and cleanly remove the changes while preserving the history, which command would you employ to execute this task efficiently?",
+        "options": [
+            [
+                "A",
+                "`git revert -m 1 <merge_commit_hash>`"
+            ],
+            [
+                "B",
+                "`git reset --hard <commit_before_merge_hash>`"
+            ],
+            [
+                "C",
+                "`git cherry-pick -n <merge_commit_hash>`"
+            ],
+            [
+                "D",
+                "`git rebase --abort`"
+            ]
+        ],
+        "answer": "A",
+        "index": 22
+    },
+    {
+        "question": "You have been tasked with enforcing code quality standards through Git hooks in your repository. To implement a \"pre-push\" hook that executes a specific script to run tests before allowing any push to the remote, which file do you need to create or modify, and what should the basic content include to run your script?",
+        "options": [
+            [
+                "A",
+                "`.git/hooks/post-commit` with `#!/bin/sh ./run_tests.sh`"
+            ],
+            [
+                "B",
+                "`.git/hooks/pre-push` with `#!/bin/sh ./run_tests.sh`"
+            ],
+            [
+                "C",
+                "`.git/hooks/pre-commit` with `#!/bin/bash ./test_script.sh`"
+            ],
+            [
+                "D",
+                "`.git/hooks/prepare-commit-msg` with `#!/bin/sh exit 0`"
+            ]
+        ],
+        "answer": "B",
+        "index": 23
+    },
+    {
+        "question": "In a project where branches have diverged significantly and contain overlapping changes, you want to rebase your feature branch onto the main branch while preserving all commit messages and ensuring a linear history. Which command would you use to achieve this effectively?",
+        "options": [
+            [
+                "A",
+                "`git rebase --interactive main`"
+            ],
+            [
+                "B",
+                "`git rebase --onto main`"
+            ],
+            [
+                "C",
+                "`git rebase -i main`"
+            ],
+            [
+                "D",
+                "`git rebase --preserve-merges main`"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "After cleaning up sensitive information from your repository using `git filter-repo`, you notice that the overall size of the repository remains unchanged. To ensure the repository size is effectively reduced and no unreachable objects remain, which command should you run?",
+        "options": [
+            [
+                "A",
+                "`git gc --prune=now`"
+            ],
+            [
+                "B",
+                "`git clean -fdx`"
+            ],
+            [
+                "C",
+                "`git prune --expire=now`"
+            ],
+            [
+                "D",
+                "`git reflog expire --expire=now --all`"
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

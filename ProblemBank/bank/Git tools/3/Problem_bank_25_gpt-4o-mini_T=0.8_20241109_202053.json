@@ -1,0 +1,577 @@
+[
+    {
+        "question": "---\n\n- **Question**: When collaborating on a Python project using Git, which command would you use to ensure that your local repository reflects the latest changes made by your teammates, especially if they are using different branches?",
+        "options": [
+            [
+                "A",
+                "`git merge`"
+            ],
+            [
+                "B",
+                "`git pull`"
+            ],
+            [
+                "C",
+                "`git fetch`"
+            ],
+            [
+                "D",
+                "`git rebase`"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Imagine you're working on a data analysis project with Python's Pandas library. If you want to create a new branch to experiment with a unique data processing method without affecting the main project, which Git command is best suited for this?",
+        "options": [
+            [
+                "A",
+                "`git branch experiment`"
+            ],
+            [
+                "B",
+                "`git checkout -b experiment`"
+            ],
+            [
+                "C",
+                "`git merge experiment`"
+            ],
+            [
+                "D",
+                "`git pull experiment`"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "You are tasked with maintaining a Python library in Git, and you want to revert to a previous version of a specific file. Which command would you use to checkout that file from a specific commit?",
+        "options": [
+            [
+                "A",
+                "`git revert <commit_id> <file>`"
+            ],
+            [
+                "B",
+                "`git checkout <commit_id> -- <file>`"
+            ],
+            [
+                "C",
+                "`git reset <file>`"
+            ],
+            [
+                "D",
+                "`git switch <commit_id> -- <file>`"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "After making several commits in a Python project, you realize that the last commit message was misleading. Which Git command allows you to amend the last commit message while retaining all changes made in that commit?",
+        "options": [
+            [
+                "A",
+                "`git commit --amend -m \"New message\"`"
+            ],
+            [
+                "B",
+                "`git commit -m \"New message\"`"
+            ],
+            [
+                "C",
+                "`git amend commit -m \"New message\"`"
+            ],
+            [
+                "D",
+                "`git fix commit -m \"New message\"`"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "In a collaborative Python project, you notice a feature branch has diverged significantly from the main branch due to ongoing development. What is the most effective way to integrate changes from the main branch into your feature branch without losing your work?",
+        "options": [
+            [
+                "A",
+                "`git rebase main`"
+            ],
+            [
+                "B",
+                "`git merge main`"
+            ],
+            [
+                "C",
+                "`git cherry-pick main`"
+            ],
+            [
+                "D",
+                "`git pull --rebase main`"
+            ]
+        ],
+        "answer": "A",
+        "index": 5
+    },
+    {
+        "question": "In a Python project where you're using the Flask library for web development, your team decides to implement a new feature while maintaining the integrity of the main branch. What Git command would allow you to create a new branch specifically for this feature development?",
+        "options": [
+            [
+                "A",
+                "git checkout main"
+            ],
+            [
+                "B",
+                "git branch feature/new-feature"
+            ],
+            [
+                "C",
+                "git checkout -b feature/new-feature"
+            ],
+            [
+                "D",
+                "git merge feature/new-feature"
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "You are using Git to manage a Python project that involves data visualization with Matplotlib. If you want to see a graphical representation of the commit history, which Git command would you use?",
+        "options": [
+            [
+                "A",
+                "git log --graph"
+            ],
+            [
+                "B",
+                "git show"
+            ],
+            [
+                "C",
+                "git history"
+            ],
+            [
+                "D",
+                "git visualize"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "While working on a collaborative Python project using the Requests library, you need to pull the latest changes from the remote repository and rebase your current branch on top of it. Which command will achieve this?",
+        "options": [
+            [
+                "A",
+                "git pull --rebase"
+            ],
+            [
+                "B",
+                "git fetch origin"
+            ],
+            [
+                "C",
+                "git merge origin/main"
+            ],
+            [
+                "D",
+                "git rebase origin/main"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "In a scenario where you have made multiple changes to your Python scripts and are unsure about the state of your working directory, which Git command would you use to view the differences between your current changes and the last commit?",
+        "options": [
+            [
+                "A",
+                "git diff"
+            ],
+            [
+                "B",
+                "git status"
+            ],
+            [
+                "C",
+                "git log"
+            ],
+            [
+                "D",
+                "git show"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "As part of a data science project utilizing NumPy, you've identified a commit that introduced a bug. You need to find the exact commit hash that caused this issue. Which command should you use to search for the commit by its message?",
+        "options": [
+            [
+                "A",
+                "git commit --search \"bug\""
+            ],
+            [
+                "B",
+                "git log --grep=\"bug\""
+            ],
+            [
+                "C",
+                "git find \"bug\""
+            ],
+            [
+                "D",
+                "git history --message=\"bug\""
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "In a machine learning project using the Scikit-learn library, you've implemented a new model and committed your changes. However, after some testing, you realize that the performance metrics have dropped. Which Git command would you use to compare your current branch against the previous commit to identify what might have changed?",
+        "options": [
+            [
+                "A",
+                "git diff HEAD^"
+            ],
+            [
+                "B",
+                "git log"
+            ],
+            [
+                "C",
+                "git status"
+            ],
+            [
+                "D",
+                "git blame"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "You are collaborating on a Python project that involves web scraping using BeautifulSoup. Your teammate has merged a branch with code changes that affect the scraping logic. What Git command can you use to review all the changes made in that merge commit?",
+        "options": [
+            [
+                "A",
+                "git merge --abort"
+            ],
+            [
+                "B",
+                "git show [commit hash]"
+            ],
+            [
+                "C",
+                "git cherry-pick"
+            ],
+            [
+                "D",
+                "git reset --hard"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "While working on a Python project using TensorFlow, you decide to rename the branch you are currently working on to reflect the new direction of the project more accurately. Which Git command would you use to rename the current branch?",
+        "options": [
+            [
+                "A",
+                "git branch -m new-branch-name"
+            ],
+            [
+                "B",
+                "git checkout -b new-branch-name"
+            ],
+            [
+                "C",
+                "git rename current-branch-name new-branch-name"
+            ],
+            [
+                "D",
+                "git rebase new-branch-name"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "In a data visualization project utilizing Seaborn, you are about to push changes to the remote repository. However, you realize you have uncommitted changes in your working directory that you want to temporarily set aside. Which Git command would help you achieve this before pushing your changes?",
+        "options": [
+            [
+                "A",
+                "git revert"
+            ],
+            [
+                "B",
+                "git stash"
+            ],
+            [
+                "C",
+                "git commit -m \"Temporary save\""
+            ],
+            [
+                "D",
+                "git merge"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "You have been working on a Python script that uses the Requests library for API calls. After a couple of weeks, you want to create a release version from your current branch. What Git command should you use to create a tag that marks the current commit as a release version?",
+        "options": [
+            [
+                "A",
+                "git tag -a v1.0 -m \"Release version 1.0\""
+            ],
+            [
+                "B",
+                "git branch release-v1.0"
+            ],
+            [
+                "C",
+                "git commit -m \"Tag release 1.0\""
+            ],
+            [
+                "D",
+                "git push origin tag"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    },
+    {
+        "question": "You're working on a project with a team that employs Git for version control, and you need to address a situation where you have accidentally committed sensitive information in your last commit. What is the best way to remove that sensitive information from the commit history?",
+        "options": [
+            [
+                "A",
+                "Use `git reset HEAD~1` to remove the last commit and then commit again without the sensitive information."
+            ],
+            [
+                "B",
+                "Use `git revert HEAD` to negate the last commit and create a new commit."
+            ],
+            [
+                "C",
+                "Use `git filter-branch` to rewrite the commit history and remove sensitive information."
+            ],
+            [
+                "D",
+                "Use `git stash` to temporarily save the changes, then `git checkout HEAD~1` to discard the commit."
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "You are working on a data processing pipeline in a Python project that utilizes Dask for parallel computing. You want to ensure that every time a collaborator checks out the repository, they start from a clean state without local changes. What Git command would you recommend they use to discard any uncommitted changes?",
+        "options": [
+            [
+                "A",
+                "`git checkout -- .`"
+            ],
+            [
+                "B",
+                "`git clean -fd`"
+            ],
+            [
+                "C",
+                "`git reset --hard`"
+            ],
+            [
+                "D",
+                "`git stash clear`"
+            ]
+        ],
+        "answer": "C",
+        "index": 17
+    },
+    {
+        "question": "In a collaborative Python project that employs the SQLAlchemy library for database interactions, you notice you've created several branches for different features but you want to consolidate your work. What command should you use to merge all the feature branches into the main branch?",
+        "options": [
+            [
+                "A",
+                "`git merge feature-branch1 feature-branch2`"
+            ],
+            [
+                "B",
+                "`git rebase main`"
+            ],
+            [
+                "C",
+                "`git cherry-pick feature-branch1`"
+            ],
+            [
+                "D",
+                "`git combine feature-branch1 feature-branch2`"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "While working on a machine learning project using PyTorch, you want to review the changes that were made to a specific file across multiple commits. Which Git command would allow you to see the history of changes for that file?",
+        "options": [
+            [
+                "A",
+                "`git log -- file.py`"
+            ],
+            [
+                "B",
+                "`git diff HEAD -- file.py`"
+            ],
+            [
+                "C",
+                "`git blame file.py`"
+            ],
+            [
+                "D",
+                "`git show -- file.py`"
+            ]
+        ],
+        "answer": "A",
+        "index": 19
+    },
+    {
+        "question": "Your team has established a branching strategy where all new features must be developed on separate branches. You've completed your feature, and your colleague has informed you that your branch should be rebased onto the latest main branch before merging. What command would you use to perform this rebase?",
+        "options": [
+            [
+                "A",
+                "`git rebase main`"
+            ],
+            [
+                "B",
+                "`git merge main`"
+            ],
+            [
+                "C",
+                "`git pull --rebase`"
+            ],
+            [
+                "D",
+                "`git checkout main; git rebase feature-branch`"
+            ]
+        ],
+        "answer": "A",
+        "index": 20
+    },
+    {
+        "question": "In a collaborative Python project using the Tornado web framework, your team decides to create a hotfix for a critical bug. What is the best Git workflow to develop and merge this hotfix while ensuring the main branch remains stable?",
+        "options": [
+            [
+                "A",
+                "Checkout the main branch, make changes directly, and push to remote."
+            ],
+            [
+                "B",
+                "Create a new hotfix branch from the main branch, commit the changes, and merge it back into the main branch."
+            ],
+            [
+                "C",
+                "Pull the latest code from the main branch, delete the bug branch, and create a new commit for the fix."
+            ],
+            [
+                "D",
+                "Create a new branch from the feature branch, make changes, and push directly to the main branch."
+            ]
+        ],
+        "answer": "B",
+        "index": 21
+    },
+    {
+        "question": "You are working on a large Python data processing project using the PySpark library. After several commits, you realize that your recent changes have negatively impacted performance. Which Git command allows you to identify the commit that introduced this performance regression?",
+        "options": [
+            [
+                "A",
+                "git log --oneline"
+            ],
+            [
+                "B",
+                "git blame"
+            ],
+            [
+                "C",
+                "git bisect"
+            ],
+            [
+                "D",
+                "git cherry-pick"
+            ]
+        ],
+        "answer": "C",
+        "index": 22
+    },
+    {
+        "question": "During a code review session for a Python project utilizing the Flask library, you want to see a unified diff of the changes introduced by your pull request compared to the main branch. Which Git command would best provide this information?",
+        "options": [
+            [
+                "A",
+                "git diff main...your-feature-branch"
+            ],
+            [
+                "B",
+                "git merge --no-ff"
+            ],
+            [
+                "C",
+                "git log --graph"
+            ],
+            [
+                "D",
+                "git status"
+            ]
+        ],
+        "answer": "A",
+        "index": 23
+    },
+    {
+        "question": "Suppose you are contributing to an open-source Python library managed by multiple collaborators. If you want to save your current work and switch to a different branch to work on an urgent bug fix without losing your progress, which Git command should you use?",
+        "options": [
+            [
+                "A",
+                "git stash"
+            ],
+            [
+                "B",
+                "git commit -m \"WIP\""
+            ],
+            [
+                "C",
+                "git branch -m"
+            ],
+            [
+                "D",
+                "git checkout"
+            ]
+        ],
+        "answer": "A",
+        "index": 24
+    },
+    {
+        "question": "You have been working extensively on a machine learning project with TensorFlow, and you need to share your current progress with your team while still keeping your local changes intact. How can you best achieve this using Git?",
+        "options": [
+            [
+                "A",
+                "Create a new branch, commit your changes, and push the branch to remote."
+            ],
+            [
+                "B",
+                "Push your current branch to remote without committing."
+            ],
+            [
+                "C",
+                "Merge your branch into the main branch without committing."
+            ],
+            [
+                "D",
+                "Create a tag to mark your current state before sharing."
+            ]
+        ],
+        "answer": "A",
+        "index": 25
+    }
+]

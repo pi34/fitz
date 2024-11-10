@@ -1,0 +1,347 @@
+[
+    {
+        "question": "In a multi-developer project, you accidentally added sensitive information to your commit history. Which Git command should you use to permanently remove it from the repository while ensuring that it does not show up in the commit log for future references?",
+        "options": [
+            [
+                "A",
+                "git reset --hard HEAD~1"
+            ],
+            [
+                "B",
+                "git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch sensitive_file.txt' --prune-empty --tag-name-filter cat -- --all"
+            ],
+            [
+                "C",
+                "git revert HEAD"
+            ],
+            [
+                "D",
+                "git clean -fd"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "If a team member has been pushing directly to the main branch, causing conflicts, which strategy can you implement using Git to ensure that all future contributions are made through a designated feature branch while preserving the history of the main branch?",
+        "options": [
+            [
+                "A",
+                "Enforce branch protection rules on the main branch to require pull requests."
+            ],
+            [
+                "B",
+                "Delete the main branch and recreate it from the last commit."
+            ],
+            [
+                "C",
+                "Run git rebase on the main branch to squash all commits."
+            ],
+            [
+                "D",
+                "Merge all feature branches directly into the main branch."
+            ]
+        ],
+        "answer": "A",
+        "index": 2
+    },
+    {
+        "question": "You are using Git to manage a project with multiple collaborators. You want to review all changes made by a specific developer over a certain time period. Which command would you use to achieve this?",
+        "options": [
+            [
+                "A",
+                "git log --author=\"Developer Name\" --since=\"2 weeks ago\""
+            ],
+            [
+                "B",
+                "git checkout Developer-Branch"
+            ],
+            [
+                "C",
+                "git blame --since=\"2 weeks ago\" file.txt"
+            ],
+            [
+                "D",
+                "git diff HEAD~5 HEAD"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "After rebasing your feature branch onto the latest main branch, you discover that there are too many conflicts to manually resolve. Which command will abort the rebase process and return your feature branch to its previous state?",
+        "options": [
+            [
+                "A",
+                "git merge --abort"
+            ],
+            [
+                "B",
+                "git rebase --abort"
+            ],
+            [
+                "C",
+                "git reset --soft HEAD@{1}"
+            ],
+            [
+                "D",
+                "git stash pop"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "You want to create a Git alias that allows you to quickly check the status of your repository along with the top five most recent commits in a single command. Which of the following commands would you use to set up this alias?",
+        "options": [
+            [
+                "A",
+                "git config --global alias.quickstatus '!git status && git log -5'"
+            ],
+            [
+                "B",
+                "git config --global alias.qs 'status && log -5'"
+            ],
+            [
+                "C",
+                "git config --global alias.quickstatus 'status | log -5'"
+            ],
+            [
+                "D",
+                "git config --global alias.quickstatus 'status && log --oneline -5'"
+            ]
+        ],
+        "answer": "D",
+        "index": 5
+    },
+    {
+        "question": "In a scenario where you have merged a feature branch into the main branch, but later realized that the merge introduced a critical bug. Which of the following methods is the most efficient way to undo the merge while preserving the history of the main branch?",
+        "options": [
+            [
+                "A",
+                "`git reset --hard HEAD~1`"
+            ],
+            [
+                "B",
+                "`git revert -m 1 <merge_commit_hash>`"
+            ],
+            [
+                "C",
+                "`git checkout -b temp_branch && git cherry-pick <previous_commit_hash>`"
+            ],
+            [
+                "D",
+                "`git rebase -i HEAD~1`"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "Imagine you are collaborating on a project with multiple contributors. A contributor has made several small commits that are related to a single feature. Which Git command allows you to combine these multiple commits into a single commit for a cleaner project history before merging into the main branch?",
+        "options": [
+            [
+                "A",
+                "`git merge --squash <feature_branch>`"
+            ],
+            [
+                "B",
+                "`git rebase -i HEAD~n`"
+            ],
+            [
+                "C",
+                "`git cherry-pick <commit_hash>`"
+            ],
+            [
+                "D",
+                "`git commit --amend`"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "You are working on a project that requires maintaining a stable version while also experimenting on a separate branch. To ensure that the experimental branch can be abandoned without impacting the stable version, which Git command would best help you create a new branch based on the current stable state?",
+        "options": [
+            [
+                "A",
+                "`git branch -f experimental`"
+            ],
+            [
+                "B",
+                "`git checkout -b experimental stable`"
+            ],
+            [
+                "C",
+                "`git clone -b stable <repository_url>`"
+            ],
+            [
+                "D",
+                "`git switch -b experimental`"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "While attempting to push your local changes to a remote repository, you encounter a non-fast-forward error due to new commits made in the remote repository. Which of the following Git commands is the most appropriate to resolve this issue while ensuring your local changes are preserved?",
+        "options": [
+            [
+                "A",
+                "`git fetch --all`"
+            ],
+            [
+                "B",
+                "`git pull --rebase`"
+            ],
+            [
+                "C",
+                "`git push --force`"
+            ],
+            [
+                "D",
+                "`git merge origin/main`"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "In an effort to enhance collaboration, you wish to enforce a policy where all feature branches must pass a certain set of tests before they can be merged into the main branch. Which Git feature can be used in conjunction with a continuous integration pipeline to enforce this?",
+        "options": [
+            [
+                "A",
+                "Protected Branches"
+            ],
+            [
+                "B",
+                "Git Tags"
+            ],
+            [
+                "C",
+                "Forking Strategy"
+            ],
+            [
+                "D",
+                "Git Hooks"
+            ]
+        ],
+        "answer": "A",
+        "index": 10
+    },
+    {
+        "question": "---\n\n**Question 1**: In a situation where you need to revert a specific commit in a shared repository, but that commit was part of a series of logically connected changes, which Git strategy would minimize disruption while preserving the context of the other commits?",
+        "options": [
+            [
+                "A",
+                "Use `git revert` followed by an interactive rebase to adjust subsequent commits."
+            ],
+            [
+                "B",
+                "Create a new branch, reapply the changes from the desired commit, and merge it back to the main branch."
+            ],
+            [
+                "C",
+                "Perform a soft reset to the commit before the one you want to revert and make a new commit with the necessary changes."
+            ],
+            [
+                "D",
+                "Cherry-pick the unwanted commit into the main branch to remove its changes while keeping history intact."
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "You're maintaining a large monorepo with numerous sub-projects. If you want to ensure that commits related to one specific sub-project do not clutter the main history, which Git tool or feature can help you achieve this through better commit organization?",
+        "options": [
+            [
+                "A",
+                "Use commit squashing during merges to combine multiple commits into one."
+            ],
+            [
+                "B",
+                "Implement Git submodules to keep the sub-projects in separate repositories."
+            ],
+            [
+                "C",
+                "Use `git filter-branch` to rewrite history and remove unrelated commits."
+            ],
+            [
+                "D",
+                "Create a separate branch for the sub-project and use `git subtree` to merge as needed."
+            ]
+        ],
+        "answer": "D",
+        "index": 12
+    },
+    {
+        "question": "In a collaborative environment, you notice that your team has been pushing directly to the main branch, leading to a chaotic commit history. What Git strategy could you implement to create a standardized workflow that encourages feature branch usage while also cleaning up the commit history of the main branch?",
+        "options": [
+            [
+                "A",
+                "Set branch protection rules on the main branch to disallow direct pushes."
+            ],
+            [
+                "B",
+                "Utilize a Git hook to automatically create a feature branch for every commit made to the main branch."
+            ],
+            [
+                "C",
+                "Enforce a rebase workflow that requires everyone to rebase their changes onto the main branch periodically."
+            ],
+            [
+                "D",
+                "Regularly squash and merge feature branches into the main branch while enforcing commit message conventions."
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "While working on a feature branch, you realize that you need to incorporate major updates from the main branch. However, you want to ensure you can test the integration without affecting the feature branch's state. What is the best approach to achieve this using Git?",
+        "options": [
+            [
+                "A",
+                "Merge the main branch into your feature branch to resolve conflicts immediately."
+            ],
+            [
+                "B",
+                "Create a temporary branch from your feature branch, merge the main branch there, and run tests before merging back."
+            ],
+            [
+                "C",
+                "Cherry-pick the relevant commits from the main branch into the feature branch."
+            ],
+            [
+                "D",
+                "Use `git stash` to save changes, switch to the main branch, pull updates, and then reapply your stash."
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "You are tasked with creating a comprehensive release log for your project, detailing changes made since the last release. Which Git command combination would best facilitate generating a clean, readable log that excludes noise from merge commits?",
+        "options": [
+            [
+                "A",
+                "`git log --no-merges --pretty=format:\"%h - %an, %ar : %s\"`"
+            ],
+            [
+                "B",
+                "`git log --oneline --graph --decorate --simplify-by-decoration`"
+            ],
+            [
+                "C",
+                "`git log --merges --format=full`"
+            ],
+            [
+                "D",
+                "`git log --first-parent --no-merges`"
+            ]
+        ],
+        "answer": "A",
+        "index": 15
+    }
+]

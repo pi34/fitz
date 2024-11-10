@@ -1,0 +1,347 @@
+[
+    {
+        "question": "In Git, what is the significance of the command `git commit --amend`?",
+        "options": [
+            [
+                "A",
+                "It deletes the last commit permanently from the repository."
+            ],
+            [
+                "B",
+                "It allows you to modify the most recent commit by adding changes or updating the commit message."
+            ],
+            [
+                "C",
+                "It creates a new branch from the last commit."
+            ],
+            [
+                "D",
+                "It merges the last two commits into one without altering their histories."
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "What does the command `git rebase` accomplish in a collaborative environment?",
+        "options": [
+            [
+                "A",
+                "It permanently removes commits from the history to simplify the branch structure."
+            ],
+            [
+                "B",
+                "It allows developers to integrate changes from one branch into another while maintaining a linear project history."
+            ],
+            [
+                "C",
+                "It creates a duplicate of the current branch to avoid conflicts."
+            ],
+            [
+                "D",
+                "It disconnects the current branch from the remote repository."
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "How does the `git stash` command support developers working on multiple features simultaneously?",
+        "options": [
+            [
+                "A",
+                "It removes all untracked files from the working directory."
+            ],
+            [
+                "B",
+                "It allows developers to save their uncommitted changes temporarily and revert to a clean working state."
+            ],
+            [
+                "C",
+                "It permanently deletes the current branch to start fresh."
+            ],
+            [
+                "D",
+                "It syncs local changes with the remote repository without committing."
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "When using `git pull`, what two actions does Git perform?",
+        "options": [
+            [
+                "A",
+                "It fetches changes from the remote repository and merges them into the current branch."
+            ],
+            [
+                "B",
+                "It creates a new branch and fetches the latest updates."
+            ],
+            [
+                "C",
+                "It only updates the local repository without merging changes."
+            ],
+            [
+                "D",
+                "It deletes outdated local branches after syncing."
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "What is the primary purpose of the `.gitignore` file in a Git repository?",
+        "options": [
+            [
+                "A",
+                "To track changes made to the file itself."
+            ],
+            [
+                "B",
+                "To specify which files or directories Git should ignore and not track in version control."
+            ],
+            [
+                "C",
+                "To store user preferences for Git commands."
+            ],
+            [
+                "D",
+                "To document coding standards and best practices for the project."
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "- **Question**: In Git, what does the command `git cherry-pick` allow you to do?",
+        "options": [
+            [
+                "A",
+                "Merge two branches and resolve conflicts automatically."
+            ],
+            [
+                "B",
+                "Apply the changes from a specific commit to your current branch."
+            ],
+            [
+                "C",
+                "Delete unwanted commits from the commit history."
+            ],
+            [
+                "D",
+                "Create a new branch from the current commit."
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "What role does the `git tag` command serve in the version control process?",
+        "options": [
+            [
+                "A",
+                "It creates temporary checkpoints to save changes before committing."
+            ],
+            [
+                "B",
+                "It labels specific commits as important milestones in the project history."
+            ],
+            [
+                "C",
+                "It merges different branches into one without conflicts."
+            ],
+            [
+                "D",
+                "It reverts the project to a previous commit in the history."
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "Which of the following best describes the purpose of a \"remote\" in Git?",
+        "options": [
+            [
+                "A",
+                "A copy of your local repository stored on your machine."
+            ],
+            [
+                "B",
+                "A reference to a version of your repository hosted on a server."
+            ],
+            [
+                "C",
+                "A backup of your project files in cloud storage."
+            ],
+            [
+                "D",
+                "A way to monitor changes made by other developers in real-time."
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "When you run the command `git reset --hard`, what happens to your working directory?",
+        "options": [
+            [
+                "A",
+                "It saves the current changes in a temporary area called 'the stash'."
+            ],
+            [
+                "B",
+                "It removes all uncommitted changes and resets the working directory to the last committed state."
+            ],
+            [
+                "C",
+                "It creates a new branch that tracks changes made after the last commit."
+            ],
+            [
+                "D",
+                "It combines all changes into the previous commit, effectively undoing recent work."
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "In the context of Git branching, what is the primary use of the `git flow` model?",
+        "options": [
+            [
+                "A",
+                "To streamline the process of merging features directly into the main branch."
+            ],
+            [
+                "B",
+                "To automate the creation of release notes based on commit messages."
+            ],
+            [
+                "C",
+                "To manage different types of branches for features, releases, and hotfixes systematically."
+            ],
+            [
+                "D",
+                "To enable multiple developers to work on the same feature simultaneously without issues."
+            ]
+        ],
+        "answer": "C",
+        "index": 10
+    },
+    {
+        "question": "In a scenario where you want to review the history of commits in a specific branch, which command would you employ to visualize the commit logs in a concise format?",
+        "options": [
+            [
+                "A",
+                "`git log --oneline`"
+            ],
+            [
+                "B",
+                "`git history --short`"
+            ],
+            [
+                "C",
+                "`git snapshot`"
+            ],
+            [
+                "D",
+                "`git timeline`"
+            ]
+        ],
+        "answer": "A",
+        "index": 11
+    },
+    {
+        "question": "When collaborating on a project, what is the primary purpose of creating a new branch with the command `git branch feature-x`?",
+        "options": [
+            [
+                "A",
+                "To delete the current branch and start anew"
+            ],
+            [
+                "B",
+                "To create a separate line of development for new features"
+            ],
+            [
+                "C",
+                "To merge changes from the main branch"
+            ],
+            [
+                "D",
+                "To synchronize changes with a remote repository"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "If you want to see a detailed comparison of changes between your current branch and another branch, which command would you use?",
+        "options": [
+            [
+                "A",
+                "`git diff branch-name`"
+            ],
+            [
+                "B",
+                "`git compare branch-name`"
+            ],
+            [
+                "C",
+                "`git status branch-name`"
+            ],
+            [
+                "D",
+                "`git view branch-name`"
+            ]
+        ],
+        "answer": "A",
+        "index": 13
+    },
+    {
+        "question": "In Git, what does the command `git fetch` accomplish in relation to the remote repository?",
+        "options": [
+            [
+                "A",
+                "It automatically merges changes from the remote branch to the local branch."
+            ],
+            [
+                "B",
+                "It retrieves updates from the remote branch without modifying your local branches."
+            ],
+            [
+                "C",
+                "It permanently deletes outdated branches from the remote repository."
+            ],
+            [
+                "D",
+                "It creates a backup of your current branch in the remote repository."
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "When you encounter a merge conflict during a pull request, what is the best initial step to resolve the situation?",
+        "options": [
+            [
+                "A",
+                "Discard all changes and revert to the previous commit."
+            ],
+            [
+                "B",
+                "Open the conflicting files, manually resolve the conflicts, and then stage the changes."
+            ],
+            [
+                "C",
+                "Force push your current branch to overwrite the remote branch."
+            ],
+            [
+                "D",
+                "Create a new branch to avoid dealing with conflicts."
+            ]
+        ],
+        "answer": "B",
+        "index": 15
+    }
+]

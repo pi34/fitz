@@ -1,0 +1,577 @@
+[
+    {
+        "question": "In the following code snippet, a simple print statement is trying to output a string. Identify the line number where the error occurs. \n\n```python\n1  print(\"Hello, World!)\n2  a = 5\n3  b = 10\n4  c = a + b\n5  print(c)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "The following code is intended to read a file and print its contents. Can you spot the error in the line numbers?\n\n```python\n1  with open('example.txt', 'r') as file:\n2      content = file.readlines\n3      for line in content:\n4          print(line)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "In this Python snippet, a function is defined to calculate the square of a number. What line contains the bug?\n\n```python\n1  def square(num):\n2      return num ** 2\n3  result = square(5)\n4  print(\"The square is: \" + result)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "D",
+        "index": 3
+    },
+    {
+        "question": "Look at the following code intended to create a list of squares from 1 to 5 using list comprehension. Identify the line number with the error.\n\n```python\n1  squares = []\n2  for i in range(1, 6):\n3      squares.append(i ** 2)\n4  print(squares[6])\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "D",
+        "index": 4
+    },
+    {
+        "question": "This code snippet uses the `pandas` library to manipulate a DataFrame. Can you identify where the issue lies?\n\n```python\n1  import pandas as pd\n2  df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})\n3  df['C'] = df['A'] + df['B']\n4  print(df['C'].mean)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "D",
+        "index": 5
+    },
+    {
+        "question": "In this code snippet, a function is trying to return the maximum value from a list. Can you spot where the error occurs?\n\n```python\n1  def find_max(values):\n2      max_value = max(values)\n3      return max_value\n4  numbers = [3, 1, 4, 1, 5]\n5  print(find_max(numbers)\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 5"
+            ],
+            [
+                "C",
+                "Line 1"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "This code is meant to count the occurrences of each word in a list. Where does the problem lie in this snippet?\n\n```python\n1  def count_words(words):\n2      word_count = {}\n3      for word in words:\n4          word_count[word] = word_count.get(word, 0) + 1\n5      return count\n6  text = [\"apple\", \"banana\", \"apple\"]\n7  print(count_words(text))\n```",
+        "options": [
+            [
+                "A",
+                "Line 5"
+            ],
+            [
+                "B",
+                "Line 4"
+            ],
+            [
+                "C",
+                "Line 2"
+            ],
+            [
+                "D",
+                "Line 6"
+            ]
+        ],
+        "answer": "A",
+        "index": 7
+    },
+    {
+        "question": "Examine this script that attempts to filter even numbers from a list. Can you identify the line with the mistake?\n\n```python\n1  def filter_evens(numbers):\n2      return [num for num in numbers if num % 2 = 0]\n3  nums = [1, 2, 3, 4, 5, 6]\n4  print(filter_evens(nums))\n```",
+        "options": [
+            [
+                "A",
+                "Line 2"
+            ],
+            [
+                "B",
+                "Line 1"
+            ],
+            [
+                "C",
+                "Line 4"
+            ],
+            [
+                "D",
+                "Line 3"
+            ]
+        ],
+        "answer": "A",
+        "index": 8
+    },
+    {
+        "question": "In this code snippet, an attempt is made to create a dictionary. Can you identify the source of the error?\n\n```python\n1  my_dict = {}\n2  my_dict['name'] = 'Alice'\n3  my_dict['age'] = 30\n4  my_dict['city'] = 'New York'\n5  print(my_dict['country'])\n```",
+        "options": [
+            [
+                "A",
+                "Line 5"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 2"
+            ],
+            [
+                "D",
+                "Line 1"
+            ]
+        ],
+        "answer": "A",
+        "index": 9
+    },
+    {
+        "question": "This Python code intends to reshape a NumPy array. Can you find the line where things go awry?\n\n```python\n1  import numpy as np\n2  arr = np.array([[1, 2], [3, 4], [5, 6]])\n3  reshaped_arr = arr.reshape(2, 3)\n4  print(reshaped_arr)\n```",
+        "options": [
+            [
+                "A",
+                "Line 1"
+            ],
+            [
+                "B",
+                "Line 3"
+            ],
+            [
+                "C",
+                "Line 2"
+            ],
+            [
+                "D",
+                "Line 4"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    },
+    {
+        "question": "---\n\n### Difficulty Level 1\n\n**Question**: In this Python code snippet, a simple function is defined to add two numbers. What line contains the bug?\n\n```python\n1  def add_numbers(a, b):\n2      return a + b\n3  result = add_numbers(5, \"10\")\n4  print(\"The result is: \" + result)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "B",
+        "index": 11
+    },
+    {
+        "question": "This code aims to filter out even numbers from a list using the `filter` function. Can you identify where the mistake occurs?\n\n```python\n1  numbers = [1, 2, 3, 4, 5, 6]\n2  evens = filter(lambda x: x % 2 = 0, numbers)\n3  print(list(evens))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "None"
+            ]
+        ],
+        "answer": "B",
+        "index": 12
+    },
+    {
+        "question": "In this advanced code snippet, an attempt is made to perform a complex operation using the `scikit-learn` library. Where is the error in the code?\n\n```python\n1  from sklearn.datasets import load_iris\n2  from sklearn.model_selection import train_test_split\n3  data = load_iris()\n4  X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)\n5  model = SomeModel()\n6  model.fit(X_train, y_train)\n7  predictions = model.predict(X_test)\n8  print(predictions)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "5"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "2"
+            ]
+        ],
+        "answer": "B",
+        "index": 13
+    },
+    {
+        "question": "This code snippet is attempting to calculate the factorial of a number using recursion. What line has the bug?\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      return n * factorial(n - 2)\n5  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "2"
+            ]
+        ],
+        "answer": "B",
+        "index": 14
+    },
+    {
+        "question": "This code is using the `matplotlib` library to plot a graph. Can you identify the error?\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title(\"Sample Plot\")\n6  plt.show(plt)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "6"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "C",
+        "index": 15
+    },
+    {
+        "question": "In this Python code snippet, a simple function is defined to add two numbers. What line contains the bug?\n\n```python\n1  def add_numbers(a, b):\n2      return a + b\n3  result = add_numbers(5, \"10\")\n4  print(\"The result is: \" + result)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "C",
+        "index": 16
+    },
+    {
+        "question": "This code snippet is attempting to filter out even numbers from a list using the `filter` function. Can you identify where the mistake occurs?\n\n```python\n1  numbers = [1, 2, 3, 4, 5, 6]\n2  evens = filter(lambda x: x % 2 = 0, numbers)\n3  print(list(evens))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "None of the above"
+            ]
+        ],
+        "answer": "B",
+        "index": 17
+    },
+    {
+        "question": "In this advanced code snippet, an attempt is made to perform a complex operation using the `scikit-learn` library. Where is the error in the code?\n\n```python\n1  from sklearn.datasets import load_iris\n2  from sklearn.model_selection import train_test_split\n3  data = load_iris()\n4  X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)\n5  model = SomeModel()\n6  model.fit(X_train, y_train)\n7  predictions = model.predict(X_test)\n8  print(predictions)\n```",
+        "options": [
+            [
+                "A",
+                "5"
+            ],
+            [
+                "B",
+                "6"
+            ],
+            [
+                "C",
+                "2"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "A",
+        "index": 18
+    },
+    {
+        "question": "This code snippet is attempting to calculate the factorial of a number using recursion. What line has the bug?\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      return n * factorial(n - 2)\n5  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "C",
+        "index": 19
+    },
+    {
+        "question": "This code is using the `matplotlib` library to plot a graph. Can you identify the error?\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title(\"Sample Plot\")\n6  plt.show(plt)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "4"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "6"
+            ]
+        ],
+        "answer": "D",
+        "index": 20
+    },
+    {
+        "question": "In this Python code snippet, an attempt is made to add two values. Can you identify where it goes wrong?\n\n```python\n1  def add_numbers(a, b):\n2      return a + b\n3  result = add_numbers(5, \"10\")\n4  print(\"The result is: \" + result)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "4"
+            ]
+        ],
+        "answer": "C",
+        "index": 21
+    },
+    {
+        "question": "This code aims to filter out even numbers from a list using the `filter` function. Can you spot the mistake?\n\n```python\n1  numbers = [1, 2, 3, 4, 5, 6]\n2  evens = filter(lambda x: x % 2 = 0, numbers)\n3  print(list(evens))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "3"
+            ],
+            [
+                "D",
+                "None"
+            ]
+        ],
+        "answer": "B",
+        "index": 22
+    },
+    {
+        "question": "In this advanced code snippet, there is an attempt to utilize the `scikit-learn` library for data modeling. What line contains the error?\n\n```python\n1  from sklearn.datasets import load_iris\n2  from sklearn.model_selection import train_test_split\n3  data = load_iris()\n4  X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2, random_state=42)\n5  model = SomeModel()\n6  model.fit(X_train, y_train)\n7  predictions = model.predict(X_test)\n8  print(predictions)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "3"
+            ],
+            [
+                "C",
+                "5"
+            ],
+            [
+                "D",
+                "7"
+            ]
+        ],
+        "answer": "C",
+        "index": 23
+    },
+    {
+        "question": "This code snippet is tasked with calculating the factorial of a number. Identify the problematic line.\n\n```python\n1  def factorial(n):\n2      if n == 1:\n3          return 1\n4      return n * factorial(n - 2)\n5  print(factorial(5))\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "4"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "C",
+        "index": 24
+    },
+    {
+        "question": "In this code using the `matplotlib` library to generate a plot, can you find the error?\n\n```python\n1  import matplotlib.pyplot as plt\n2  x = [1, 2, 3, 4]\n3  y = [10, 20, 25, 30]\n4  plt.plot(x, y)\n5  plt.title(\"Sample Plot\")\n6  plt.show(plt)\n```",
+        "options": [
+            [
+                "A",
+                "1"
+            ],
+            [
+                "B",
+                "2"
+            ],
+            [
+                "C",
+                "6"
+            ],
+            [
+                "D",
+                "5"
+            ]
+        ],
+        "answer": "C",
+        "index": 25
+    }
+]

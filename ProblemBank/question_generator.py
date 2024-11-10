@@ -15,7 +15,7 @@ INCLUDE_QUESTION_HISTORY = True
 
 class QuestionGenerator:
 
-    def __init__(self, api_key=None, topic="", topic_context="", question_type="MCQ", total=5, mutate=False, difficulty=5):
+    def __init__(self, api_key=None, topic="", topic_context="", question_type="MCQ", total=5, mutate=False, difficulty=-1):
 
         self.client = AsyncOpenAI(
             api_key=api_key,
@@ -98,7 +98,7 @@ class QuestionGenerator:
         for question in questions:
             try:
                 q = re.search(question_pattern, question, flags=re.DOTALL | re.IGNORECASE).group(1).strip()
-                options = re.findall(options_pattern, question, flags=re.DOTALL | re.IGNORECASE)
+                options = re.findall(options_pattern, question, flags=re.DOTALL)
                 options = [(a, b.strip()) for a, b in options]
                 answer = re.search(answer_pattern, question, flags=re.IGNORECASE).group(1).strip()
                 parsed_questions.append({
@@ -110,7 +110,6 @@ class QuestionGenerator:
                 print("Failed to parse response:", e, question)
 
         print(f"Parsed {len(parsed_questions)} questions")
-        # print(response)
         self.problem_bank.extend(parsed_questions)
         self.append_to_file(parsed_questions)
 
