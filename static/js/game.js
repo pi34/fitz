@@ -24,6 +24,7 @@ let enemies;
 let projectiles;
 let healthText;
 let scoreText;
+let level = 0;
 let score = 0;
 let gameOver = false;
 let lastFired = 0;
@@ -34,6 +35,7 @@ function preload() {
     // Load all game assets
     this.load.image('player', 'static/assets/player.png');
     this.load.image('enemy', 'static/assets/enemy.png');
+    this.load.image('bigEnemy', 'static/assets/bigEnemy.png');
     this.load.image('basic', 'static/assets/basic-projectile.png');
     this.load.image('laser', 'static/assets/laser-projectile.png');
     this.load.image('plasma', 'static/assets/plasma-projectile.png');
@@ -98,7 +100,7 @@ function create() {
 
     // Spawn enemies periodically
     this.time.addEvent({
-        delay: 400,
+        delay: 750,
         callback: spawnEnemy,
         callbackScope: this,
         loop: true
@@ -123,7 +125,7 @@ function update() {
     this.aKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.sKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     this.dKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    const speed = 200;
+    const speed = 200 + 100*level;
 
     if (cursors.left.isDown || this.aKey.isDown) {
         player.body.setVelocityX(-speed);
@@ -150,7 +152,7 @@ function update() {
 
     // Update enemies to follow player
     enemies.getChildren().forEach(enemy => {
-        this.physics.moveToObject(enemy, player, 100);
+        this.physics.moveToObject(enemy, player, 100 + 50*level);
     });
 }
 
@@ -158,19 +160,28 @@ function spawnEnemy() {
     // Spawn enemy at random edge of screen
     if (gameOver) return
     let x, y;
-    if (Math.random() < 0.5) {
-        x = Math.random() < 0.5 ? 0 : config.width;
-        y = Math.random() * config.height;
-    } else {
+    let dist;
+    do {
         x = Math.random() * config.width;
-        y = Math.random() < 0.5 ? 0 : config.height;
+        y = Math.random() * config.height;
+        dist = Math.sqrt((x - player.x)**2+(y - player.y)**2);
     }
+    while (dist / config.height < 0.75);
 
-    const enemy = this.add.sprite(x, y, 'enemy');
-    enemy.setDisplaySize(48, 60); // Set enemy size
+    let enemyType = "enemy";
+    enemyType = Math.random() < 0.1 + 0.2*level ? "bigEnemy" : enemyType
+    const enemy = this.add.sprite(x, y, enemyType);
+    if (enemyType === "enemy") {
+        enemy.setDisplaySize(48, 60); // Set enemy size
+        enemy.health = 30
+    }
+    else if (enemyType === "bigEnemy") {
+        let scale = 2;
+        enemy.setDisplaySize(48 * scale, 60 * scale); // Set enemy size
+        enemy.health = 150
+    }
     this.physics.add.existing(enemy);
     enemies.add(enemy);
-    enemy.health = 30;
 }
 
 function fireProjectile(enemy) {
@@ -235,6 +246,7 @@ function hitEnemy(projectile, enemy) {
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
+        level = 0.001 * score
         scoreText.setText('Score: ' + score);
         this.dieSound.play();
     }
@@ -247,6 +259,7 @@ function hitPlayer(player, enemy) {
     player.health -= 10;
     healthText.setText('Health: ' + player.health);
     this.hurtSound.play();
+    level = 0;
 
     if (player.health <= 0) {
         gameOver = true;
