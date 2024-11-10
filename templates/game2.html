@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Survival Game</title>
+    <style>
+        canvas {
+            background-color: #222;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h2>Score: <span id="score">0</span></h2>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        const socket = io();
+
+
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        let score = 0;
+
+
+        let playerId = null;
+        const player = { x: canvas.width / 2, y: canvas.height / 2, size: 20, speed: 4, health: 100 };
+        const otherPlayer = { x: canvas.width / 2, y: canvas.height / 2, size: 20, health: 100 };
+
+
+        // Set player ID and initialize positions when connected
+        socket.on('connect', () => {
+            playerId = socket.id;
+            socket.emit('new_player', { id: playerId, x: player.x, y: player.y, health: player.health });
+        });
+
+
+        // Receive initial positions or updates for the other player
+        socket.on('update_other_player', data => {
+            if (data.id !== playerId) {
+                otherPlayer.x = data.x;
+                otherPlayer.y = data.y;
+                otherPlayer.health = data.health;
+            }
+        });
+
+
+        const zombies = [];
+        const bullets = [];
+        let isGameOver = false;
+
+
+        const keys = {
+            ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false // Use Arrow keys for one player
+        };
+
+
+        window.addEventListener("keydown", (e) => keys[e.key] = true);
+        window.addEventListener("keyup", (e) => keys[e.key] = false);
+
+
+        function movePlayer() {
+            if (keys.ArrowUp && player.y > 0) player.y -= player.speed;
+            if (keys.ArrowDown && player.y < canvas.height - player.size) player.y += player.speed;
+            if (keys.ArrowLeft && player.x > 0) player.x -= player.speed;
+            if (keys.ArrowRight && player.x < canvas.width - player.size) player.x += player.speed;
+
+
+            // Emit player position to server
+            socket.emit('player_move', { id: playerId, x: player.x, y: player.y, health: player.health });
+        }
+
+
+        function shootBullet() {
+            const bullet = {
+                x: player.x,
+                y: player.y,
+                size: 5,
+                speed: 6,
+                vx: 6 * (Math.random() > 0.5 ? 1 : -1), // Example directions for demo
+                vy: 6 * (Math.random() > 0.5 ? 1 : -1)
+            };
+
+
+            bullets.push(bullet);
+            socket.emit('shoot_bullet', { id: playerId, bullet: bullet }); // Notify server of bullet shot
+        }
+
+
+        setInterval(shootBullet, 500); // Shoot every 500ms
+
+
+        function drawPlayer() {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(player.x, player.y, player.size, player.size);
+        }
+
+
+        function drawOtherPlayer() {
+            ctx.fillStyle = "red";
+            ctx.fillRect(otherPlayer.x, otherPlayer.y, otherPlayer.size, otherPlayer.size);
+        }
+
+
+        function update() {
+            if (player.health <= 0) {
+                isGameOver = true;
+            }
+
+
+            if (!isGameOver) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+                movePlayer();
+                drawPlayer();
+                drawOtherPlayer();
+
+
+                requestAnimationFrame(update);
+            } else {
+                ctx.fillStyle = "white";
+                ctx.font = "30px Arial";
+                ctx.fillText("Game Over", canvas.width / 2 - 75, canvas.height / 2);
+                socket.emit('game_over', { id: playerId, score: score }); // Notify server of game over
+            }
+        }
+
+
+        update();
+    </script>
+</body>
+</html>
+
+
+
