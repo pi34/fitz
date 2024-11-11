@@ -1,0 +1,232 @@
+[
+    {
+        "question": "In which habitat do tigers primarily thrive, showcasing their prowess as apex predators?",
+        "options": [
+            [
+                "A",
+                "Frozen tundras"
+            ],
+            [
+                "B",
+                "Dense rainforests"
+            ],
+            [
+                "C",
+                "Dry deserts"
+            ],
+            [
+                "D",
+                "Open grasslands"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "What is the distinctive feature that sets each tiger apart, making them uniquely identifiable?",
+        "options": [
+            [
+                "A",
+                "The shape of their ears"
+            ],
+            [
+                "B",
+                "The pattern of their stripes"
+            ],
+            [
+                "C",
+                "The color of their eyes"
+            ],
+            [
+                "D",
+                "The length of their tails"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "What is the primary reason behind the tiger's nocturnal hunting behavior?",
+        "options": [
+            [
+                "A",
+                "They see better in the dark"
+            ],
+            [
+                "B",
+                "Their prey is more active at night"
+            ],
+            [
+                "C",
+                "They prefer cooler temperatures"
+            ],
+            [
+                "D",
+                "They avoid competition with other predators"
+            ]
+        ],
+        "answer": "C",
+        "index": 3
+    },
+    {
+        "question": "In a symbolic sense, what does the tiger often represent in various cultures around the world?",
+        "options": [
+            [
+                "A",
+                "Peace and tranquility"
+            ],
+            [
+                "B",
+                "Strength and courage"
+            ],
+            [
+                "C",
+                "Wisdom and knowledge"
+            ],
+            [
+                "D",
+                "Love and compassion"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "Which of the following adaptations allows tigers to excel in their role as stealthy hunters?",
+        "options": [
+            [
+                "A",
+                "Their ability to climb trees"
+            ],
+            [
+                "B",
+                "Their powerful swimming skills"
+            ],
+            [
+                "C",
+                "Their keen sense of hearing"
+            ],
+            [
+                "D",
+                "Their retractable claws"
+            ]
+        ],
+        "answer": "D",
+        "index": 5
+    },
+    {
+        "question": "What is the average weight of an adult Siberian tiger, making it the largest subspecies of tiger?",
+        "options": [
+            [
+                "A",
+                "200-300 pounds"
+            ],
+            [
+                "B",
+                "300-600 pounds"
+            ],
+            [
+                "C",
+                "400-650 pounds"
+            ],
+            [
+                "D",
+                "700-900 pounds"
+            ]
+        ],
+        "answer": "C",
+        "index": 6
+    },
+    {
+        "question": "Which of the following is the primary reason for the decline in tiger populations globally?",
+        "options": [
+            [
+                "A",
+                "Climate change"
+            ],
+            [
+                "B",
+                "Habitat destruction and poaching"
+            ],
+            [
+                "C",
+                "Natural predation"
+            ],
+            [
+                "D",
+                "Disease outbreaks"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "In which part of the world can you find the Bengal tiger, known for its striking orange coat and black stripes?",
+        "options": [
+            [
+                "A",
+                "Africa"
+            ],
+            [
+                "B",
+                "Southeast Asia"
+            ],
+            [
+                "C",
+                "India and Bangladesh"
+            ],
+            [
+                "D",
+                "Russia"
+            ]
+        ],
+        "answer": "C",
+        "index": 8
+    },
+    {
+        "question": "What unique adaptation do tigers have that allows them to swim effectively, even in cold water?",
+        "options": [
+            [
+                "A",
+                "Webbed feet"
+            ],
+            [
+                "B",
+                "Thick fur and an insulating layer of fat"
+            ],
+            [
+                "C",
+                "Specialized gills"
+            ],
+            [
+                "D",
+                "High metabolism"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "Which of the following behaviors is characteristic of tigers when it comes to marking their territory?",
+        "options": [
+            [
+                "A",
+                "They use vocalizations and scent markings"
+            ],
+            [
+                "B",
+                "They create large scratch marks on trees"
+            ],
+            [
+                "C",
+                "They urinate in specific spots"
+            ],
+            [
+                "D",
+                "All of the above"
+            ]
+        ],
+        "answer": "D",
+        "index": 10
+    }
+]

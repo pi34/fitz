@@ -1,0 +1,117 @@
+[
+    {
+        "question": "What adaptation allows tigers to maintain stealth while hunting in dense forest environments?",
+        "options": [
+            [
+                "A",
+                "Their striped fur, which breaks up their outline"
+            ],
+            [
+                "B",
+                "Their retractable claws, which minimize noise"
+            ],
+            [
+                "C",
+                "Their wide range of vocalizations to confuse prey"
+            ],
+            [
+                "D",
+                "Their exceptional eyesight, which allows them to see in low light"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "Tigers are known for their solitary behavior, but what unique social structure do they display, particularly in relation to cub rearing?",
+        "options": [
+            [
+                "A",
+                "All females in a territory collaborate to raise cubs"
+            ],
+            [
+                "B",
+                "Males help rear their offspring until they are weaned"
+            ],
+            [
+                "C",
+                "Females may form loose associations with each other for mutual protection"
+            ],
+            [
+                "D",
+                "Tigers exhibit matriarchal societies where older females dominate"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "In terms of diet, what is the primary reason that tigers are considered apex predators in their ecosystems?",
+        "options": [
+            [
+                "A",
+                "They have no natural predators and can take down large prey"
+            ],
+            [
+                "B",
+                "They primarily consume carrion, reducing competition"
+            ],
+            [
+                "C",
+                "They can hunt multiple prey species at once due to cooperative behavior"
+            ],
+            [
+                "D",
+                "Their diet is exclusively herbivorous, which allows them to avoid competition"
+            ]
+        ],
+        "answer": "A",
+        "index": 3
+    },
+    {
+        "question": "What role does the tiger's roar play in its communication strategy within its territory?",
+        "options": [
+            [
+                "A",
+                "It serves to attract mates during mating season only"
+            ],
+            [
+                "B",
+                "It is used to communicate with other species in the area"
+            ],
+            [
+                "C",
+                "It marks territory boundaries and warns off intruders"
+            ],
+            [
+                "D",
+                "It is solely a call for help when in distress"
+            ]
+        ],
+        "answer": "C",
+        "index": 4
+    },
+    {
+        "question": "Which of the following conservation strategies is vital for maintaining genetic diversity in isolated tiger populations?",
+        "options": [
+            [
+                "A",
+                "Habitat restoration to increase prey availability"
+            ],
+            [
+                "B",
+                "Establishing wildlife corridors to connect fragmented habitats"
+            ],
+            [
+                "C",
+                "Captive breeding programs without reintroduction efforts"
+            ],
+            [
+                "D",
+                "International bans on tiger-related products without local enforcement"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    }
+]

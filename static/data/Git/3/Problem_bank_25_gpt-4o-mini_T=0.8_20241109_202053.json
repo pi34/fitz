@@ -1,6 +1,6 @@
 [
     {
-        "question": "---\n\n- **Question**: When collaborating on a Python project using Git, which command would you use to ensure that your local repository reflects the latest changes made by your teammates, especially if they are using different branches?",
+        "question": "When collaborating on a Python project using Git, which command would you use to ensure that your local repository reflects the latest changes made by your teammates, especially if they are using different branches?",
         "options": [
             [
                 "A",

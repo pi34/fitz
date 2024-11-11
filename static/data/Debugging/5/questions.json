@@ -345,7 +345,7 @@
         "index": 15
     },
     {
-        "question": "---\n\n**Question 1**: In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
+        "question": "In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
         "options": [
             [
                 "A",
@@ -460,7 +460,7 @@
         "index": 20
     },
     {
-        "question": "---\n\n**Question 1**: In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
+        "question": "In a mystical tavern, a bard is attempting to keep track of the number of drinks ordered using a nested loop. However, an error lurks in his code. Identify the line where the issue resides in this snippet:\n\n```python\n1  drinks = [\"mead\", \"ale\", \"wine\"]\n2  counts = [2, 3, 1]\n3  total_orders = 0\n4  for i in range(len(drinks)):\n5      total_orders += counts[i]   # A toast that might overflow with errors!\n6  print(\"Total drinks ordered: \" + total_orders)\n```",
         "options": [
             [
                 "A",

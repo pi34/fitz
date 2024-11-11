@@ -115,7 +115,7 @@
         "index": 5
     },
     {
-        "question": "---\n\n**Question 1**: In a mysterious forest, a wizard attempts to calculate the heights of enchanted trees using magical data. However, the spell falters due to a curious bug in the code.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
+        "question": "In a mysterious forest, a wizard attempts to calculate the heights of enchanted trees using magical data. However, the spell falters due to a curious bug in the code.\n\n**Sample Code**:\n```python\n1: def calculate_tree_height(data):\n2:     total_height = 0\n3:     for tree in data:\n4:         total_height += tree['height']\n5:     average_height = total_height / len(data)\n6:     return average_height\n7: \n8: enchanted_trees = [{'name': 'Elder', 'height': 10}, {'name': 'Oak', 'height': None}, {'name': 'Pine', 'height': 12}]\n9: print(calculate_tree_height(enchanted_trees))\n```",
         "options": [
             [
                 "A",

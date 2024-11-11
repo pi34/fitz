@@ -230,29 +230,6 @@
         "index": 10
     },
     {
-        "question": "20, \"non-fiction\": 15, \"mystery\": \"lots\"}\n2. total_genres = 0\n3. for count in genres_count.values():\n4.     total_genres += count\n5. print(\"Total genres in the library:\", total_genres)\n```",
-        "options": [
-            [
-                "A",
-                "Line 1"
-            ],
-            [
-                "B",
-                "Line 2"
-            ],
-            [
-                "C",
-                "Line 3"
-            ],
-            [
-                "D",
-                "Line 4"
-            ]
-        ],
-        "answer": "A",
-        "index": 11
-    },
-    {
         "question": "4.     total_value += value\n5. print(\"Total treasure value:\", total_value)\n```",
         "options": [
             [
@@ -345,7 +322,7 @@
         "index": 15
     },
     {
-        "question": "### Question 1 (Difficulty Level 1)\n**Question**: A child is trying to sum a list of numbers but encounters an error. Can you identify which line contains the mistake?\n\n```python\n1. numbers = [1, 2, \"three\", 4]\n2. total = 0\n3. for number in numbers:\n4.     total += number\n5. print(\"Total sum:\", total)\n```",
+        "question": "A child is trying to sum a list of numbers but encounters an error. Can you identify which line contains the mistake?\n\n```python\n1. numbers = [1, 2, \"three\", 4]\n2. total = 0\n3. for number in numbers:\n4.     total += number\n5. print(\"Total sum:\", total)\n```",
         "options": [
             [
                 "A",

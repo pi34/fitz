@@ -1,0 +1,232 @@
+[
+    {
+        "question": "Which species of tiger is known for its impressive swimming ability and often hunts aquatic prey?",
+        "options": [
+            [
+                "A",
+                "Bengal Tiger"
+            ],
+            [
+                "B",
+                "Siberian Tiger"
+            ],
+            [
+                "C",
+                "Sumatran Tiger"
+            ],
+            [
+                "D",
+                "Indochinese Tiger"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "What is the term for the unique coat pattern of each tiger, which is similar to a human fingerprint?",
+        "options": [
+            [
+                "A",
+                "Striation"
+            ],
+            [
+                "B",
+                "Tigris Mark"
+            ],
+            [
+                "C",
+                "Stripe Identification"
+            ],
+            [
+                "D",
+                "Fur Pattern"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "In the wild, what is the general lifespan of a tiger, particularly in its natural habitat?",
+        "options": [
+            [
+                "A",
+                "5-10 years"
+            ],
+            [
+                "B",
+                "10-15 years"
+            ],
+            [
+                "C",
+                "15-20 years"
+            ],
+            [
+                "D",
+                "20-25 years"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "Which organization is primarily responsible for the conservation and protection of tigers globally, often implementing significant initiatives?",
+        "options": [
+            [
+                "A",
+                "WWF (World Wildlife Fund)"
+            ],
+            [
+                "B",
+                "IUCN (International Union for Conservation of Nature)"
+            ],
+            [
+                "C",
+                "CITES (Convention on International Trade in Endangered Species)"
+            ],
+            [
+                "D",
+                "WCS (Wildlife Conservation Society)"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "What is the primary diet of tigers in the wild, and how does this affect their role in the ecosystem?",
+        "options": [
+            [
+                "A",
+                "Herbivores; they promote plant growth"
+            ],
+            [
+                "B",
+                "Carnivores; they help regulate prey populations"
+            ],
+            [
+                "C",
+                "Omnivores; they maintain biodiversity"
+            ],
+            [
+                "D",
+                "Scavengers; they aid in decomposition"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "---\n\n**Question 1**: What is the primary reason for the decline in tiger populations across various habitats?",
+        "options": [
+            [
+                "A",
+                "Climate change"
+            ],
+            [
+                "B",
+                "Habitat loss and poaching"
+            ],
+            [
+                "C",
+                "Competition with other large predators"
+            ],
+            [
+                "D",
+                "Genetic mutations"
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "Which subspecies of tiger is the largest and known for its distinctive light orange coat and black stripes?",
+        "options": [
+            [
+                "A",
+                "Bengal Tiger"
+            ],
+            [
+                "B",
+                "Siberian Tiger"
+            ],
+            [
+                "C",
+                "Indo-Chinese Tiger"
+            ],
+            [
+                "D",
+                "Sumatran Tiger"
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "Tigers are known for their solitary nature. What is the primary reason they establish large territories?",
+        "options": [
+            [
+                "A",
+                "To attract mates year-round"
+            ],
+            [
+                "B",
+                "To ensure enough prey availability"
+            ],
+            [
+                "C",
+                "To avoid diseases from other tigers"
+            ],
+            [
+                "D",
+                "To communicate over long distances"
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "What role do tigers play in their ecosystem that significantly impacts other species and habitats?",
+        "options": [
+            [
+                "A",
+                "They are primary producers, supporting plant life."
+            ],
+            [
+                "B",
+                "They act as keystone predators, maintaining the balance of herbivore populations."
+            ],
+            [
+                "C",
+                "They have no significant ecological role."
+            ],
+            [
+                "D",
+                "They are scavengers that clean up dead animals."
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "The \"Tiger Conservation Plan\" emphasizes which of the following strategies to ensure the survival of tigers?",
+        "options": [
+            [
+                "A",
+                "Increasing the number of zoos globally"
+            ],
+            [
+                "B",
+                "Enhancing legal protection and habitat restoration"
+            ],
+            [
+                "C",
+                "Promoting hunting as a form of population control"
+            ],
+            [
+                "D",
+                "Restricting tiger movement to smaller reserves"
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    }
+]

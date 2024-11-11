@@ -1,0 +1,232 @@
+[
+    {
+        "question": "What is the primary color of a tiger's fur?",
+        "options": [
+            [
+                "A",
+                "Orange"
+            ],
+            [
+                "B",
+                "Black"
+            ],
+            [
+                "C",
+                "White"
+            ],
+            [
+                "D",
+                "Brown"
+            ]
+        ],
+        "answer": "A",
+        "index": 1
+    },
+    {
+        "question": "Imagine you are a wildlife biologist tracking tigers in the wild. Which of the following behaviors would best indicate that a tiger is marking its territory?",
+        "options": [
+            [
+                "A",
+                "Climbing a tree"
+            ],
+            [
+                "B",
+                "Rubbing its body against a tree trunk"
+            ],
+            [
+                "C",
+                "Roaring loudly"
+            ],
+            [
+                "D",
+                "Chasing a deer"
+            ]
+        ],
+        "answer": "B",
+        "index": 2
+    },
+    {
+        "question": "In a hypothetical scenario where tigers and humans coexist, what method could most effectively reduce human-tiger conflicts in rural areas?",
+        "options": [
+            [
+                "A",
+                "Relocating tigers to urban environments"
+            ],
+            [
+                "B",
+                "Building electric fences around farms"
+            ],
+            [
+                "C",
+                "Offering financial incentives for tiger hunting"
+            ],
+            [
+                "D",
+                "Ignoring the problem and letting nature take its course"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "As an advocate for tiger conservation, which of the following strategies would be the most effective in preserving the genetic diversity of tiger populations in the wild?",
+        "options": [
+            [
+                "A",
+                "Establishing protected corridors between fragmented habitats"
+            ],
+            [
+                "B",
+                "Capturing and breeding tigers in captivity"
+            ],
+            [
+                "C",
+                "Promoting tiger tourism in their natural habitats"
+            ],
+            [
+                "D",
+                "Reducing hunting regulations to increase population growth"
+            ]
+        ],
+        "answer": "A",
+        "index": 4
+    },
+    {
+        "question": "Which lesser-known tiger subspecies was once believed to be extinct in the wild but has recently been spotted in remote regions?",
+        "options": [
+            [
+                "A",
+                "Siberian tiger"
+            ],
+            [
+                "B",
+                "South China tiger"
+            ],
+            [
+                "C",
+                "Indochinese tiger"
+            ],
+            [
+                "D",
+                "Sumatran tiger"
+            ]
+        ],
+        "answer": "B",
+        "index": 5
+    },
+    {
+        "question": "What unique feature helps a tiger's coat blend into its natural habitat?",
+        "options": [
+            [
+                "A",
+                "Its striped pattern"
+            ],
+            [
+                "B",
+                "Its bright color"
+            ],
+            [
+                "C",
+                "Its long tail"
+            ],
+            [
+                "D",
+                "Its fluffy fur"
+            ]
+        ],
+        "answer": "A",
+        "index": 6
+    },
+    {
+        "question": "In what type of environment do tigers primarily live?",
+        "options": [
+            [
+                "A",
+                "Deserts"
+            ],
+            [
+                "B",
+                "Arctic tundra"
+            ],
+            [
+                "C",
+                "Forests and grasslands"
+            ],
+            [
+                "D",
+                "Urban cities"
+            ]
+        ],
+        "answer": "C",
+        "index": 7
+    },
+    {
+        "question": "What is the primary diet of a tiger in the wild?",
+        "options": [
+            [
+                "A",
+                "Fruits and vegetables"
+            ],
+            [
+                "B",
+                "Fish and crustaceans"
+            ],
+            [
+                "C",
+                "Large mammals like deer and wild boar"
+            ],
+            [
+                "D",
+                "Small rodents and insects"
+            ]
+        ],
+        "answer": "C",
+        "index": 8
+    },
+    {
+        "question": "How do tigers communicate with each other in the wild?",
+        "options": [
+            [
+                "A",
+                "By singing"
+            ],
+            [
+                "B",
+                "Through growls, roars, and scent markings"
+            ],
+            [
+                "C",
+                "By dancing"
+            ],
+            [
+                "D",
+                "By changing color"
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "Which of the following is a significant threat to tiger populations worldwide?",
+        "options": [
+            [
+                "A",
+                "Climate change"
+            ],
+            [
+                "B",
+                "Overpopulation of tigers"
+            ],
+            [
+                "C",
+                "Habitat loss and poaching"
+            ],
+            [
+                "D",
+                "Increased food supply"
+            ]
+        ],
+        "answer": "C",
+        "index": 10
+    }
+]

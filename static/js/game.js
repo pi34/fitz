@@ -25,6 +25,7 @@ let projectiles;
 let healthText;
 let scoreText;
 let powerText;
+let levelText;
 let level = 0;
 let powerUpLevel = 0;
 let powerUpTime = 0;
@@ -34,6 +35,7 @@ let gameOver = false;
 let lastFired = 0;
 let currentProjectileType = 'basic'; // Track current projectile type
 let background; // For background reference
+let baseSpawnRate = 750;
 
 function preload() {
     // Load all game assets
@@ -97,15 +99,16 @@ function create() {
     this.physics.add.overlap(player, enemies, hitPlayer, null, this);
 
     // Add UI
-    healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#fff' });
-    scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#fff' });
-    powerText = this.add.text(16, 100, 'Power Level: 0', { fontSize: '32px', fill: '#fff' });
+    healthText = this.add.text(16, 16, 'Health: 100', { fontSize: '32px', fill: '#222222' });
+    scoreText = this.add.text(16, 50, 'Score: 0', { fontSize: '32px', fill: '#222222' });
+    powerText = this.add.text(16, 84, 'Power Level: 0', { fontSize: '32px', fill: '#222222' });
+    levelText = this.add.text(16, 118, 'Difficulty Level: 0', { fontSize: '32px', fill: '#222222' });
 
 
 
     // Spawn enemies periodically
     this.time.addEvent({
-        delay: 750 - 500*level,
+        delay: baseSpawnRate - baseSpawnRate*level,
         callback: spawnEnemy,
         callbackScope: this,
         loop: true
@@ -152,7 +155,7 @@ function update() {
     const time = this.time.now;
     if (time > lastFired) {
         fireProjectile.call(this, this.input.mousePointer);
-        lastFired = time + 100 - 20*fireRateMultiplier;
+        lastFired = time + 100 - 50*fireRateMultiplier;
     }
     let pointerX = this.input.activePointer.x;
     let pointerY = this.input.activePointer.y;
@@ -167,13 +170,13 @@ function update() {
         let enemyAngle = Phaser.Math.Angle.Between(player.x, player.y, enemy.x, enemy.y) / Math.PI * 180;
         let diffAngle = Math.abs(povAngle - enemyAngle)
 
-        let base_speed = 75
+        let base_speed = 70
         if (enemyType === "bigEnemy") base_speed *= 0.5
         else if (enemyType === "eggEnemy") base_speed *= 0.75
         else if (enemyType === "stalkerEnemy") {
-            base_speed *= diffAngle > 75 ? 2.5 : 0;
+            base_speed *= diffAngle > 60 ? 2.5 : 0;
         }
-        this.physics.moveToObject(enemy, player, base_speed + 50*level);
+        this.physics.moveToObject(enemy, player, base_speed*(level+1));
     });
 
     const curTime = this.time.now;
@@ -183,9 +186,11 @@ function update() {
         powerUpLevel = Math.max(0, powerUpLevel);
     }
     powerText.setText('Power Level: ' + powerUpLevel);
+    levelText.setText('Difficulty Level: ' + Math.round(level * 100) / 100);
 
 
-    const levelsPerWeapon = 3;
+
+    const levelsPerWeapon = 2;
     let weaponNum = Math.floor(powerUpLevel / levelsPerWeapon);
     fireRateMultiplier = powerUpLevel - levelsPerWeapon*weaponNum;
     if (weaponNum === 0) currentProjectileType = 'basic';
@@ -218,9 +223,9 @@ function spawnEnemy(x=null, y=null, enemyType=null) {
     }
     else {
         enemyType = "enemy";
-        enemyType = Math.random() < 0.1 + 0.2*level ? "bigEnemy" : enemyType
-        enemyType = Math.random() < 0.1 + 0.2*level ? "stalkerEnemy" : enemyType
-        enemyType = Math.random() < 0.1 + 0.2*level ? "eggEnemy" : enemyType
+        enemyType = Math.random() < 0.1 + 0.25*level ? "stalkerEnemy" : enemyType
+        enemyType = Math.random() < 0.1 + 0.1*level ? "bigEnemy" : enemyType
+        enemyType = Math.random() < 0.1 + 0.15*level ? "eggEnemy" : enemyType
     }
 
     const enemy = this.add.sprite(x, y, enemyType);
@@ -307,7 +312,7 @@ function hitEnemy(projectile, enemy) {
     if (enemy.health <= 0) {
         enemy.destroy();
         score += 10;
-        level += 0.02
+        level += 0.025
         scoreText.setText('Score: ' + score);
         this.dieSound.play();
 
@@ -329,7 +334,7 @@ function hitPlayer(player, enemy) {
     player.health -= 10;
     healthText.setText('Health: ' + player.health);
     this.hurtSound.play();
-    level = 0;
+    level /= 2;
 
     if (player.health <= 0) {
         gameOver = true;
@@ -339,6 +344,14 @@ function hitPlayer(player, enemy) {
             fill: '#fff'
         }).setOrigin(0.5);
     }
+
+    enemies.getChildren().forEach(enemy => {
+        let x = enemy.x;
+        let y = enemy.y;
+        let dist = Math.sqrt((x - player.x)**2+(y - player.y)**2);
+        if (dist / config.height < 0.5) enemy.destroy();
+    });
+
 }
 
 function findNearestEnemy() {

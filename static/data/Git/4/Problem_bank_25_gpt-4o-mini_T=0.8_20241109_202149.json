@@ -230,7 +230,7 @@
         "index": 10
     },
     {
-        "question": "---\n\n**Question 1**: In a situation where you need to revert a specific commit in a shared repository, but that commit was part of a series of logically connected changes, which Git strategy would minimize disruption while preserving the context of the other commits?",
+        "question": "In a situation where you need to revert a specific commit in a shared repository, but that commit was part of a series of logically connected changes, which Git strategy would minimize disruption while preserving the context of the other commits?",
         "options": [
             [
                 "A",

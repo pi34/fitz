@@ -1,3 +1,7 @@
+import glob
+import os
+import random
+
 from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO, emit
 import json
@@ -25,11 +29,26 @@ def quiz():
 def get_questions(type):
     try:
         if type == 'Debugging':
-            with open('static/data/Debugging/5/questions.json') as f:
-                questions = json.load(f)
+
+            questions = []
+            # Use glob to find all JSON files in the folder
+            for file_path in glob.glob(os.path.join("static/data/Debugging/[345]/*.json")):
+                print(file_path)
+                with open(file_path, 'r', encoding="utf8") as file:
+                    data = json.load(file)
+                    questions.extend(data)
+            random.shuffle(questions)
+
         elif type == 'Git':
-            with open('static/data/Git/5/questions.json') as f:
-                questions = json.load(f)
+
+            questions = []
+            # Use glob to find all JSON files in the folder
+            for file_path in glob.glob(os.path.join("static/data/Git/[345]/*.json")):
+                print(file_path)
+                with open(file_path, 'r', encoding="utf8") as file:
+                    data = json.load(file)
+                    questions.extend(data)
+            random.shuffle(questions)
         else:
             return jsonify({'error': 'Invalid question type'}), 400
         
@@ -58,4 +77,4 @@ def handle_answer(data):
             emit('upgrade_projectile', broadcast=True)
 
 if __name__ == '__main__':
-    socketio.run(app, port=8000, host='localhost', debug=True)
+    socketio.run(app, port=8000, host='0.0.0.0', debug=True)

@@ -115,7 +115,7 @@
         "index": 5
     },
     {
-        "question": "---\n\n**Question 1 (Difficulty Level: 1)**:  \nWhat does the command `git init` accomplish in a Git repository?",
+        "question": "What does the command `git init` accomplish in a Git repository?",
         "options": [
             [
                 "A",
@@ -138,7 +138,7 @@
         "index": 6
     },
     {
-        "question": "3)**:  \nIn a collaborative project, you need to pull the latest changes from the remote repository while also merging them with your local changes. Which command should you use?",
+        "question": "In a collaborative project, you need to pull the latest changes from the remote repository while also merging them with your local changes. Which command should you use?",
         "options": [
             [
                 "A",
@@ -161,7 +161,7 @@
         "index": 7
     },
     {
-        "question": "5)**:  \nYou encounter a situation where you need to revert to a previous state of your repository but want to keep all subsequent changes in the history. Which Git command will allow you to do this effectively?",
+        "question": "You encounter a situation where you need to revert to a previous state of your repository but want to keep all subsequent changes in the history. Which Git command will allow you to do this effectively?",
         "options": [
             [
                 "A",
@@ -184,7 +184,7 @@
         "index": 8
     },
     {
-        "question": "3)**:  \nYou are tasked with squashing multiple commits into a single commit to maintain a cleaner project history. Which command effectively allows you to perform this task?",
+        "question": "You are tasked with squashing multiple commits into a single commit to maintain a cleaner project history. Which command effectively allows you to perform this task?",
         "options": [
             [
                 "A",
@@ -207,7 +207,7 @@
         "index": 9
     },
     {
-        "question": "5)**:  \nIn the realm of advanced Git operations, you need to perform a \"cherry-pick\" of a commit from a different branch, but ensure that it applies cleanly to your current branch without conflicts. Which command would you use to achieve this, especially if you want to avoid potential merge issues?",
+        "question": "In the realm of advanced Git operations, you need to perform a \"cherry-pick\" of a commit from a different branch, but ensure that it applies cleanly to your current branch without conflicts. Which command would you use to achieve this, especially if you want to avoid potential merge issues?",
         "options": [
             [
                 "A",
@@ -230,7 +230,7 @@
         "index": 10
     },
     {
-        "question": "1)**:  \nYou find yourself in a digital jungle where you need to plant the seeds of your project. To start your journey with Git, which command would you use to initialize a new repository for your exciting adventure?",
+        "question": "You find yourself in a digital jungle where you need to plant the seeds of your project. To start your journey with Git, which command would you use to initialize a new repository for your exciting adventure?",
         "options": [
             [
                 "A",
@@ -253,7 +253,7 @@
         "index": 11
     },
     {
-        "question": "3)**:  \nAs a lead explorer on a collaborative expedition, your team has made significant updates to a shared repository. One of your team members just updated the master branch with crucial features. What command should you execute to incorporate these updates into your local branch while keeping your own changes intact?",
+        "question": "As a lead explorer on a collaborative expedition, your team has made significant updates to a shared repository. One of your team members just updated the master branch with crucial features. What command should you execute to incorporate these updates into your local branch while keeping your own changes intact?",
         "options": [
             [
                 "A",
@@ -276,7 +276,7 @@
         "index": 12
     },
     {
-        "question": "5)**:  \nOn a quest for code perfection, you wish to revert your repository to a previous state, but you want to preserve all the trail of your journey in the commit history. Which command will allow you to create a new commit that undoes the changes made in a specific commit while keeping all future commits intact?",
+        "question": "On a quest for code perfection, you wish to revert your repository to a previous state, but you want to preserve all the trail of your journey in the commit history. Which command will allow you to create a new commit that undoes the changes made in a specific commit while keeping all future commits intact?",
         "options": [
             [
                 "A",
@@ -299,7 +299,7 @@
         "index": 13
     },
     {
-        "question": "3)**:  \nIn the enchanted forest of Git, you need to tidy up your commit history by merging several minor commits into a single, meaningful commit. Which command would you wield to perform this squashing task effectively?",
+        "question": "In the enchanted forest of Git, you need to tidy up your commit history by merging several minor commits into a single, meaningful commit. Which command would you wield to perform this squashing task effectively?",
         "options": [
             [
                 "A",
@@ -322,7 +322,7 @@
         "index": 14
     },
     {
-        "question": "5)**:  \nAmidst a complex galaxy of branches within your Git repository, you find a shiny commit in another branch that could significantly enhance your current project. However, you want to ensure that it applies flawlessly without introducing conflicts. Which command will you utilize to cherry-pick this commit safely while maintaining your branch's integrity?",
+        "question": "Amidst a complex galaxy of branches within your Git repository, you find a shiny commit in another branch that could significantly enhance your current project. However, you want to ensure that it applies flawlessly without introducing conflicts. Which command will you utilize to cherry-pick this commit safely while maintaining your branch's integrity?",
         "options": [
             [
                 "A",
@@ -345,7 +345,7 @@
         "index": 15
     },
     {
-        "question": "1)**:  \nAs a budding wizard of code, you want to embark on your magical Git journey. Which incantation do you invoke to create your very first repository?",
+        "question": "As a budding wizard of code, you want to embark on your magical Git journey. Which incantation do you invoke to create your very first repository?",
         "options": [
             [
                 "A",
@@ -368,7 +368,7 @@
         "index": 16
     },
     {
-        "question": "2)**:  \nYou've summoned a team of adventurers to collaborate on your project. To ensure that everyone is on the same page, which spell (command) should you use to fetch the latest changes from the realm of the remote repository?",
+        "question": "You've summoned a team of adventurers to collaborate on your project. To ensure that everyone is on the same page, which spell (command) should you use to fetch the latest changes from the realm of the remote repository?",
         "options": [
             [
                 "A",
@@ -391,7 +391,7 @@
         "index": 17
     },
     {
-        "question": "3)**:  \nIn the enchanted library of commits, you wish to consolidate your various scrolls of history into a single, mighty tome. Which command will you wield to squash multiple commits into one?",
+        "question": "In the enchanted library of commits, you wish to consolidate your various scrolls of history into a single, mighty tome. Which command will you wield to squash multiple commits into one?",
         "options": [
             [
                 "A",
@@ -414,7 +414,7 @@
         "index": 18
     },
     {
-        "question": "4)**:  \nAs you delve deeper into the caverns of your project's history, you find a critical commit from an ally's branch that you wish to claim for your own. To integrate this treasure without stirring conflict, which powerful command do you chant?",
+        "question": "As you delve deeper into the caverns of your project's history, you find a critical commit from an ally's branch that you wish to claim for your own. To integrate this treasure without stirring conflict, which powerful command do you chant?",
         "options": [
             [
                 "A",
@@ -437,7 +437,7 @@
         "index": 19
     },
     {
-        "question": "5)**:  \nIn a dire moment of code crisis, you must revert your project to a previous state without erasing the history of your epic journey. What advanced incantation (command) must you cast to create a new commit that undoes the changes from a specific commit?",
+        "question": "In a dire moment of code crisis, you must revert your project to a previous state without erasing the history of your epic journey. What advanced incantation (command) must you cast to create a new commit that undoes the changes from a specific commit?",
         "options": [
             [
                 "A",
@@ -460,7 +460,7 @@
         "index": 20
     },
     {
-        "question": "1)**:  \nWhich command would you use to check the status of your current Git repository and see the changes you have made?",
+        "question": "Which command would you use to check the status of your current Git repository and see the changes you have made?",
         "options": [
             [
                 "A",
@@ -483,7 +483,7 @@
         "index": 21
     },
     {
-        "question": "3)**:  \nIn a collaborative environment, you need to combine the changes from a feature branch back into the main branch. After ensuring you're on the main branch, which command will effectively merge the changes from the branch named \"feature-x\"?",
+        "question": "In a collaborative environment, you need to combine the changes from a feature branch back into the main branch. After ensuring you're on the main branch, which command will effectively merge the changes from the branch named \"feature-x\"?",
         "options": [
             [
                 "A",
@@ -506,7 +506,7 @@
         "index": 22
     },
     {
-        "question": "5)**:  \nYou are working with a repository that has many branches, and you need to create a new branch that is a copy of another branch, but you want it to diverge from a specific commit instead of the latest one. Which command would you use to achieve this?",
+        "question": "You are working with a repository that has many branches, and you need to create a new branch that is a copy of another branch, but you want it to diverge from a specific commit instead of the latest one. Which command would you use to achieve this?",
         "options": [
             [
                 "A",
@@ -529,7 +529,7 @@
         "index": 23
     },
     {
-        "question": "3)**:  \nIn a quest to maintain a clean project history, you need to remove a specific commit from your branch's history while preserving all the commits that come after it. Which command allows you to revert that commit without losing subsequent work?",
+        "question": "In a quest to maintain a clean project history, you need to remove a specific commit from your branch's history while preserving all the commits that come after it. Which command allows you to revert that commit without losing subsequent work?",
         "options": [
             [
                 "A",
@@ -552,7 +552,7 @@
         "index": 24
     },
     {
-        "question": "5)**:  \nWhile exploring a vast code repository, you discover a commit that contains crucial changes, but it's in a different branch. You want to selectively apply this commit to your current branch without merging the entire branch. Which command do you use to cherry-pick this commit effectively?",
+        "question": "While exploring a vast code repository, you discover a commit that contains crucial changes, but it's in a different branch. You want to selectively apply this commit to your current branch without merging the entire branch. Which command do you use to cherry-pick this commit effectively?",
         "options": [
             [
                 "A",

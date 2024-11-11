@@ -115,7 +115,7 @@
         "index": 5
     },
     {
-        "question": "- **Question**: In Git, what does the command `git cherry-pick` allow you to do?",
+        "question": "In Git, what does the command `git cherry-pick` allow you to do?",
         "options": [
             [
                 "A",

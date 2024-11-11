@@ -230,7 +230,7 @@
         "index": 10
     },
     {
-        "question": "---\n\n**Question 1**: In a large-scale open-source project, you want to analyze the evolution of a feature over multiple branches by assessing how various commits influenced its development. Which Git tool can you utilize to visualize the changes across branches and inspect the commit history interactively, showing side-by-side diffs of code changes?",
+        "question": "In a large-scale open-source project, you want to analyze the evolution of a feature over multiple branches by assessing how various commits influenced its development. Which Git tool can you utilize to visualize the changes across branches and inspect the commit history interactively, showing side-by-side diffs of code changes?",
         "options": [
             [
                 "A",
@@ -460,7 +460,7 @@
         "index": 20
     },
     {
-        "question": "---\n\n**Question 1**: In a scenario where you need to analyze the contributions of different team members across various branches in a project, which Git command provides a comprehensive breakdown of commit history by author, including specific branch details and commit counts, while also allowing you to format the output for easier readability?",
+        "question": "In a scenario where you need to analyze the contributions of different team members across various branches in a project, which Git command provides a comprehensive breakdown of commit history by author, including specific branch details and commit counts, while also allowing you to format the output for easier readability?",
         "options": [
             [
                 "A",

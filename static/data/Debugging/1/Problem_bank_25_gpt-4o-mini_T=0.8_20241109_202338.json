@@ -230,7 +230,7 @@
         "index": 10
     },
     {
-        "question": "---\n\n### Difficulty Level 1\n\n**Question**: In this Python code snippet, a simple function is defined to add two numbers. What line contains the bug?\n\n```python\n1  def add_numbers(a, b):\n2      return a + b\n3  result = add_numbers(5, \"10\")\n4  print(\"The result is: \" + result)\n```",
+        "question": "In this Python code snippet, a simple function is defined to add two numbers. What line contains the bug?\n\n```python\n1  def add_numbers(a, b):\n2      return a + b\n3  result = add_numbers(5, \"10\")\n4  print(\"The result is: \" + result)\n```",
         "options": [
             [
                 "A",

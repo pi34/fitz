@@ -1,0 +1,232 @@
+[
+    {
+        "question": "What unique physical feature distinguishes the Sumatran tiger from other tiger subspecies?",
+        "options": [
+            [
+                "A",
+                "Larger paws adapted for snow"
+            ],
+            [
+                "B",
+                "Darker fur with closer-set stripes"
+            ],
+            [
+                "C",
+                "A longer tail for balance in trees"
+            ],
+            [
+                "D",
+                "A more robust jaw structure for stronger bites"
+            ]
+        ],
+        "answer": "B",
+        "index": 1
+    },
+    {
+        "question": "Which of the following tiger subspecies is considered the most critically endangered, with estimates suggesting fewer than 400 individuals remaining in the wild?",
+        "options": [
+            [
+                "A",
+                "Bengal tiger"
+            ],
+            [
+                "B",
+                "Amur (Siberian) tiger"
+            ],
+            [
+                "C",
+                "South China tiger"
+            ],
+            [
+                "D",
+                "Indochinese tiger"
+            ]
+        ],
+        "answer": "C",
+        "index": 2
+    },
+    {
+        "question": "In tiger communication, what does the term \"chuffing\" refer to?",
+        "options": [
+            [
+                "A",
+                "A growl indicating aggression"
+            ],
+            [
+                "B",
+                "A soft vocalization used for social bonding"
+            ],
+            [
+                "C",
+                "A long-distance roar to assert territory"
+            ],
+            [
+                "D",
+                "A sound made during mating rituals"
+            ]
+        ],
+        "answer": "B",
+        "index": 3
+    },
+    {
+        "question": "What is the primary reason for the striking coloration of a tiger's fur?",
+        "options": [
+            [
+                "A",
+                "To attract potential mates"
+            ],
+            [
+                "B",
+                "To provide camouflage in their natural habitat"
+            ],
+            [
+                "C",
+                "To regulate body temperature"
+            ],
+            [
+                "D",
+                "To signal dominance to other animals"
+            ]
+        ],
+        "answer": "B",
+        "index": 4
+    },
+    {
+        "question": "In the context of tiger conservation, which of the following is NOT a direct threat to their survival?",
+        "options": [
+            [
+                "A",
+                "Habitat loss due to deforestation"
+            ],
+            [
+                "B",
+                "Poaching for traditional medicine"
+            ],
+            [
+                "C",
+                "Climate change affecting prey availability"
+            ],
+            [
+                "D",
+                "Increased reproduction rates in wild populations"
+            ]
+        ],
+        "answer": "D",
+        "index": 5
+    },
+    {
+        "question": "In terms of ecological impact, what role do tigers play in their habitat that underscores their importance in maintaining biodiversity?",
+        "options": [
+            [
+                "A",
+                "They are primary producers that generate energy for the ecosystem."
+            ],
+            [
+                "B",
+                "They are keystone predators, regulating the population of herbivores and maintaining balance."
+            ],
+            [
+                "C",
+                "They serve as scavengers that consume dead animals, preventing disease spread."
+            ],
+            [
+                "D",
+                "They are the main pollinators for various plant species in their environment."
+            ]
+        ],
+        "answer": "B",
+        "index": 6
+    },
+    {
+        "question": "Considering the evolutionary adaptations of tigers, which characteristic most significantly contributes to their prowess as stealthy hunters?",
+        "options": [
+            [
+                "A",
+                "Their large size, which allows them to overpower prey."
+            ],
+            [
+                "B",
+                "Their striped coat, which provides camouflage in various environments."
+            ],
+            [
+                "C",
+                "Their retractable claws, which help them grip surfaces when climbing."
+            ],
+            [
+                "D",
+                "Their keen sense of smell, which aids in tracking down prey from a distance."
+            ]
+        ],
+        "answer": "B",
+        "index": 7
+    },
+    {
+        "question": "In the context of social behavior, how do tigers typically establish and defend their territories in the wild?",
+        "options": [
+            [
+                "A",
+                "By forming large social groups that patrol together."
+            ],
+            [
+                "B",
+                "Through vocalizations and scent marking to communicate boundaries."
+            ],
+            [
+                "C",
+                "By physically confronting any intruders that enter their space."
+            ],
+            [
+                "D",
+                "By migrating to different areas when food resources are low."
+            ]
+        ],
+        "answer": "B",
+        "index": 8
+    },
+    {
+        "question": "When considering the impact of climate change on tiger habitats, which of the following scenarios illustrates a potential consequence for their survival?",
+        "options": [
+            [
+                "A",
+                "Increased rainfall leading to the expansion of prey species."
+            ],
+            [
+                "B",
+                "Rising temperatures causing a shift in forest composition and prey availability."
+            ],
+            [
+                "C",
+                "Deforestation stimulating the growth of new vegetation."
+            ],
+            [
+                "D",
+                "The introduction of invasive species that enhance biodiversity."
+            ]
+        ],
+        "answer": "B",
+        "index": 9
+    },
+    {
+        "question": "Which behavioral adaptation allows tigers to thrive in their diverse habitats, ranging from tropical forests to grasslands?",
+        "options": [
+            [
+                "A",
+                "Their ability to hunt in packs, which increases efficiency."
+            ],
+            [
+                "B",
+                "Their solitary nature, which reduces competition for resources."
+            ],
+            [
+                "C",
+                "Their seasonal migration patterns that follow prey movements."
+            ],
+            [
+                "D",
+                "Their omnivorous diet that includes both plants and animals."
+            ]
+        ],
+        "answer": "B",
+        "index": 10
+    }
+]

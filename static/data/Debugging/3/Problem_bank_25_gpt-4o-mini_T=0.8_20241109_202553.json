@@ -115,7 +115,7 @@
         "index": 5
     },
     {
-        "question": "---\n\n**Question 1**: While working with the `matplotlib` library, you attempt to plot a simple line graph, but the code throws an error. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. x = [1, 2, 3, 4]\n3. y = [10, 20, 30]\n4. plt.plot(x, y)\n5. plt.title(\"Line Graph\")\n6. plt.show()\n```",
+        "question": "While working with the `matplotlib` library, you attempt to plot a simple line graph, but the code throws an error. Which line contains the bug?\n\n```python\n1. import matplotlib.pyplot as plt\n2. x = [1, 2, 3, 4]\n3. y = [10, 20, 30]\n4. plt.plot(x, y)\n5. plt.title(\"Line Graph\")\n6. plt.show()\n```",
         "options": [
             [
                 "A",
