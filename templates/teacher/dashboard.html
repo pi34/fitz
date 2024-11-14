@@ -376,11 +376,75 @@
     </div>
 </div>
 
-
 <script>
+    // Function to create a quiz
+    async function createQuiz() {
+        // Get input values
+        const topic = document.getElementById('topic').value;
+        const numQuestions = document.getElementById('num-questions').value;
+
+        if (!topic) {
+            alert('Please enter a quiz topic');
+            return;
+        }
+
+        try {
+            // Show loading state
+            const loadingElement = document.getElementById('loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'block';
+            }
+
+            // Disable the create button while processing
+            const createButton = document.querySelector('button[onclick="createQuiz()"]');
+            if (createButton) {
+                createButton.disabled = true;
+            }
+
+            // Make API call
+            const response = await fetch('/teacher/create_quiz', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    topic: topic,
+                    num_questions: parseInt(numQuestions)
+                })
+            });
+
+            const data = await response.json();
+
+            // Handle errors
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
+            // Success - reload page to show new quiz
+            alert('Quiz created successfully!');
+            location.reload();
+
+        } catch (error) {
+            console.error('Error creating quiz:', error);
+            alert('Error creating quiz: ' + error.message);
+        } finally {
+            // Hide loading state
+            const loadingElement = document.getElementById('loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'none';
+            }
+
+            // Re-enable the create button
+            const createButton = document.querySelector('button[onclick="createQuiz()"]');
+            if (createButton) {
+                createButton.disabled = false;
+            }
+        }
+    }
+
+    // Function to view scores for a quiz
     async function viewScores(quizId) {
         try {
-            console.log('Fetching scores for quiz:', quizId);
             const response = await fetch(`/teacher/quiz-scores/${quizId}`);
             
             if (!response.ok) {
@@ -388,36 +452,30 @@
             }
             
             const data = await response.json();
-            console.log('Received data:', data);  // Debug log
-            
-            if (data.error) {
-                throw new Error(data.error);
-            }
+            console.log('Score data:', data);  // Debug log
             
             // Show modal
             const modal = document.getElementById('scores-modal');
-            if (!modal) {
-                throw new Error('Modal element not found');
+            if (modal) {
+                modal.style.display = 'block';
+                
+                // Update modal title
+                const modalTitle = document.getElementById('modal-title');
+                if (modalTitle) {
+                    modalTitle.textContent = `Game Rooms - ${data.quiz_topic || 'Quiz'}`;
+                }
+                
+                // Display scores
+                displayScores(data.game_rooms || []);
             }
-            modal.style.display = 'block';
-            
-            // Set title
-            const modalTitle = document.getElementById('modal-title');
-            if (modalTitle) {
-                modalTitle.textContent = `Game Rooms - ${data.quiz_topic || 'Quiz'}`;
-            }
-            
-            // Display scores
-            displayScores(data.game_rooms || []);
-            
         } catch (error) {
             console.error('Error fetching scores:', error);
             alert('Error loading scores: ' + error.message);
         }
     }
 
+    // Function to display scores in the modal
     function displayScores(gameRooms) {
-        console.log('Displaying scores:', gameRooms);  // Debug log
         const tbody = document.getElementById('scores-tbody');
         if (!tbody) {
             console.error('Scores tbody not found');
@@ -438,31 +496,24 @@
         
         gameRooms.forEach(room => {
             try {
-                if (!room || !room.quiz_state) {
-                    console.error('Invalid room data:', room);
-                    return;
-                }
-
                 const progress = room.total_questions ? 
                     (room.quiz_state.current_index / room.total_questions) * 100 : 0;
-                
-                const status = room.status || 'Active';  // Default to 'Active' if status is undefined
                 
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${room.room_code || 'N/A'}</td>
                     <td>
-                        <span class="status-badge status-${status.toLowerCase()}">
-                            ${status}
+                        <span class="status-badge status-${(room.status || 'active').toLowerCase()}">
+                            ${room.status || 'Active'}
                         </span>
                     </td>
-                    <td>${room.quiz_state.score || 0}</td>
+                    <td>${room.quiz_state?.score || 0}</td>
                     <td>
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: ${progress}%"></div>
                         </div>
                         <span style="font-size: 0.9em; color: #666; margin-top: 5px; display: block;">
-                            ${room.quiz_state.current_index || 0} / ${room.total_questions || 0}
+                            ${room.quiz_state?.current_index || 0} / ${room.total_questions || 0}
                         </span>
                     </td>
                     <td>${formatDate(room.start_time)}</td>
@@ -470,11 +521,12 @@
                 `;
                 tbody.appendChild(row);
             } catch (error) {
-                console.error('Error displaying room:', error, room);
+                console.error('Error displaying room:', error);
             }
         });
     }
 
+    // Helper function to format dates
     function formatDate(dateString) {
         if (!dateString) return 'N/A';
         try {
@@ -485,38 +537,7 @@
         }
     }
 
-    function filterScores(filter) {
-        const tbody = document.getElementById('scores-tbody');
-        if (!tbody) return;
-
-        const rows = tbody.querySelectorAll('tr');
-        if (!rows.length) return;
-        
-        // Skip if only one row with colspan (no data message)
-        if (rows.length === 1 && rows[0].querySelector('td[colspan]')) {
-            return;
-        }
-        
-        rows.forEach(row => {
-            const statusElement = row.querySelector('.status-badge');
-            if (!statusElement) return;
-            
-            const status = statusElement.textContent.trim().toLowerCase();
-            const shouldShow = 
-                filter === 'all' || 
-                (filter === 'active' && status === 'active') ||
-                (filter === 'completed' && status === 'completed');
-            
-            row.style.display = shouldShow ? '' : 'none';
-        });
-        
-        // Update filter buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.toggle('active', 
-                btn.textContent.trim().toLowerCase().includes(filter));
-        });
-    }
-
+    // Helper function to close modal
     function closeModal() {
         const modal = document.getElementById('scores-modal');
         if (modal) {
@@ -532,7 +553,7 @@
         }
     }
 
-    // Add escape key handler for modal
+    // Close modal with escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             closeModal();
