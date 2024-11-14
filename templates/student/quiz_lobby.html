@@ -1,0 +1,195 @@
+<!-- templates/student/quiz_lobby.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Lobby - {{ quiz.topic }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .quiz-info {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .join-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .role-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .role-button {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            min-width: 200px;
+            transition: all 0.2s;
+        }
+
+        .role-button:hover {
+            transform: translateY(-5px);
+            border-color: #0d6efd;
+        }
+
+        .role-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .room-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0d6efd;
+            margin: 20px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0d6efd;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/student" class="back-button">← Back to Quizzes</a>
+            <h1>Join Quiz</h1>
+        </div>
+
+        <div class="quiz-info">
+            <h2>{{ quiz.topic }}</h2>
+            <p>Quiz ID: {{ quiz_id }}</p>
+            <p>Number of questions: {{ quiz.questions|length }}</p>
+        </div>
+
+        <div class="join-section">
+            <h2>Choose Your Role</h2>
+            <div class="role-buttons">
+                <div class="role-button" onclick="createRoom('quiz')">
+                    <div class="role-icon">📝</div>
+                    <h3>Quiz Player</h3>
+                    <p>Answer questions to help your teammate</p>
+                </div>
+                <div class="role-button" onclick="createRoom('game')">
+                    <div class="role-icon">🎮</div>
+                    <h3>Game Player</h3>
+                    <p>Play the game based on quiz answers</p>
+                </div>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Creating game room...</p>
+            </div>
+
+            <div id="room-code" class="room-code"></div>
+        </div>
+    </div>
+
+    <script>
+        async function createRoom(playerType) {
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.querySelector('.role-buttons').style.display = 'none';
+
+            try {
+                const response = await fetch('/create_game_room', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        quiz_id: '{{ quiz_id }}'
+                    })
+                });
+
+                const data = await response.json();
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+
+                // Show room code briefly
+                const roomCodeDiv = document.getElementById('room-code');
+                roomCodeDiv.textContent = `Room Code: ${data.room_code}`;
+                roomCodeDiv.style.display = 'block';
+
+                // Redirect after a short delay
+                setTimeout(() => {
+                    const url = playerType === 'quiz' ? 
+                        `/quiz/${data.room_code}` : 
+                        `/game/${data.room_code}`;
+                    window.location.href = url;
+                }, 1500);
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error creating game room');
+                document.getElementById('loading').style.display = 'none';
+                document.querySelector('.role-buttons').style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>

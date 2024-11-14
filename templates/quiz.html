@@ -1,325 +1,263 @@
+<!-- templates/quiz.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ quiz.topic }} - Quiz</title>
     <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-
-        .type-button {
-            display: block; /* Makes each button take up full width */
-            width: 100%; /* Full width of the container */
-            text-align: center; /* Centers text horizontally */
-            white-space: nowrap; /* Prevents text from wrapping to multiple lines */
-            box-sizing: border-box; /* Ensures padding doesn’t affect width */
-            padding: 10px; /* Adjust padding as needed */
-        }
-
-        body, html {
-            height: 100%;
-            margin: 0;
+        body {
             font-family: Arial, sans-serif;
-            background-image: url('static/assets/quiz.webp');
-            background-size: cover;
-            background-width: 1200px;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center;    /* Center content horizontally */
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
         }
 
-        /* Style for legible text */
-        .legible-text {
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem; /* Adjust size as needed */
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
-            margin: 1rem 0;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-        .header-text {
-            color: white;
-            font-weight: bold;
-            font-size: 2rem; /* Adjust size as needed */
+        #waiting-message {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
-            margin: 1rem 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .quiz-container {
-            max-width: 900px;
-            width: 90%;
-            margin: 1rem auto;
-            padding: 2rem;
+            background: white;
+            padding: 20px;
             border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-        
-
-        p {
-            text-align: center;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .type-selector {
-            margin-bottom: 1.5rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .type-button {
-            padding: 0.6rem 1.2rem;
-            border: 2px solid #007bff;
-            background-color: white;
-            color: #007bff;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
+        #score {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #0d6efd;
             font-weight: bold;
-            transition: all 0.3s ease;
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
         }
 
-        .type-button:hover {
-            background-color: #e6f0ff;
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
         }
 
-        .type-button.active {
-            background-color: #007bff;
-            color: white;
-            border-color: #007bff;
+        .progress {
+            height: 100%;
+            background-color: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        #question-text {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
         .option {
             display: block;
+            width: 100%;
+            padding: 15px;
             margin: 10px 0;
-            padding: 20px 40px;
-            border: 2px solid #ddd;
+            border: 2px solid #dee2e6;
             border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s, transform 0.2s;
             background-color: white;
-            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
         }
 
         .option:hover {
-            background-color: #f1f8ff;
+            background-color: #f8f9fa;
             transform: translateY(-2px);
         }
 
-        .result {
-            margin-top: 1rem;
-            padding: 1rem;
+        .option.selected {
+            background-color: #cfe2ff;
+            border-color: #0d6efd;
+        }
+
+        #feedback {
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 8px;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1rem;
+            display: none;
         }
 
         .correct {
             background-color: #d4edda;
             color: #155724;
+            border: 1px solid #badbcc;
         }
 
         .incorrect {
             background-color: #f8d7da;
             color: #721c24;
+            border: 1px solid #f5c2c7;
         }
 
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 1.5rem;
-            background-color: #007bff;
+        #next-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0d6efd;
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, box-shadow 0.3s;
-            text-align: center;
+            margin-top: 15px;
+            display: none;
+            transition: background-color 0.2s;
         }
 
-        .button:hover {
+        #next-button:hover {
             background-color: #0056b3;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-
-        #loading {
-            text-align: center;
-            padding: 20px;
-            color: #555;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
 </head>
 <body>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <p class="legible-text">Help your friend by answering questions correctly!</p>
-    <p class="legible-text">Answer Git questions for upgrading projectile and answer debugging questions to heal up</p>
-
-    <div class="quiz-container">
-        <div class="type-selector">
-            <button class="type-button active" data-type="Debugging">Debugging</button>
-            <button class="type-button" data-type="Git">Git</button>
+    <div class="container">
+        <div id="waiting-message">
+            <h2>Waiting for game player to join...</h2>
+            <p>Share the room code: <strong>{{ room }}</strong></p>
         </div>
-        <div id="loading">Loading questions...</div>
-        <div id="question"></div>
-        <div id="options"></div>
-        <div id="result" class="result" style="display: none;"></div>
-        <button id="nextQuestion" class="button" style="display: none;">Next Question</button>
+
+        <div id="score">Score: 0</div>
+
+        <div class="quiz-container">
+            <div class="progress-bar">
+                <div id="progress" class="progress" style="width: 0%"></div>
+            </div>
+
+            <div id="question-text"></div>
+            <div id="options"></div>
+            <div id="feedback"></div>
+            <button id="next-button" onclick="nextQuestion()">Next Question</button>
+        </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         const socket = io();
-        let questions = {
-            Debugging: [],
-            Git: []
-        };
+        const room = "{{ room }}";
+        const playerType = 'quiz';
         let currentQuestion = null;
-        let currentQuestionType = 'Debugging';
+        let currentQuestionIndex = 0;
+        let questions = JSON.parse('{{ questions_json|safe }}');
+        
+        // Connect to room
+        socket.emit('join', {
+            room: room,
+            player_type: playerType
+        });
 
-        function getRandomQuestion(type) {
-            const typeQuestions = questions[type];
-            if (!typeQuestions || typeQuestions.length === 0) return null;
-            return typeQuestions[Math.floor(Math.random() * typeQuestions.length)];
-        }
+        // Handle player status updates
+        socket.on('player_joined', function(data) {
+            console.log('Player joined event:', data);
+            if (data.room_status.quiz_player && data.room_status.game_player) {
+                document.getElementById('waiting-message').style.display = 'none';
+                displayQuestion(questions[currentQuestionIndex]);
+            } else {
+                document.getElementById('waiting-message').style.display = 'block';
+            }
+        });
+
+        socket.on('player_left', function(data) {
+            console.log('Player left:', data);
+            document.getElementById('waiting-message').style.display = 'block';
+            alert(`The ${data.player_type} player has left the game`);
+        });
 
         function displayQuestion(question) {
-            if (!question) {
-                document.getElementById('loading').style.display = 'block';
-                document.getElementById('loading').textContent = 'No questions available for this type';
-                return;
-            }
-
-            document.getElementById('loading').style.display = 'none';
             currentQuestion = question;
             
-            const questionElement = document.getElementById('question');
-            questionElement.innerHTML = marked.parse(question.question);
+            // Update progress bar
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            document.getElementById('progress').style.width = `${progress}%`;
             
+            // Display question
+            document.getElementById('question-text').textContent = 
+                `Question ${currentQuestionIndex + 1} of ${questions.length}: ${question.question}`;
+            
+            // Display options
             const optionsContainer = document.getElementById('options');
             optionsContainer.innerHTML = '';
             
-            question.options.forEach(option => {
+            question.options.forEach((option) => {
                 const button = document.createElement('button');
                 button.className = 'option';
-                button.innerHTML = marked.parse(`${option[0]}. ${option[1]}`);
-                button.disabled = false;
-                button.addEventListener('click', function() {
-                    checkAnswer(option);
-                });
+                button.textContent = option;
+                button.onclick = () => selectOption(button, option);
                 optionsContainer.appendChild(button);
             });
 
-            const resultDiv = document.getElementById('result');
-            resultDiv.style.display = 'none';
-            resultDiv.textContent = '';
-            document.getElementById('nextQuestion').style.display = 'none';
+            // Reset feedback and next button
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('next-button').style.display = 'none';
         }
 
-        function switchQuestionType(type) {
-            currentQuestionType = type;
-            document.querySelectorAll('.type-button').forEach(button => {
-                button.classList.toggle('active', button.dataset.type === type);
+        function selectOption(button, selectedOption) {
+            // Remove selected class from all options
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
             });
-
-            if (questions[type].length === 0) {
-                loadQuestions(type);
-            } else {
-                displayQuestion(getRandomQuestion(type));
-            }
-        }
-
-        function checkAnswer(selectedAnswer) {
-            const resultDiv = document.getElementById('result');
-            const nextButton = document.getElementById('nextQuestion');
             
-            if (selectedAnswer[0] == currentQuestion.answer) {
-                resultDiv.textContent = 'Correct!';
-                resultDiv.className = 'result correct';
-                submitAnswer(true, currentQuestionType);
-            } else {
-                resultDiv.textContent = `Incorrect. The correct answer is ${currentQuestion.answer}`;
-                resultDiv.className = 'result incorrect';
-                submitAnswer(false, currentQuestionType);
+            // Add selected class to clicked option
+            button.classList.add('selected');
+            
+            // Disable all options after selection
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+            });
+
+            const correct = selectedOption === currentQuestion.correct_answer;
+            const feedback = document.getElementById('feedback');
+            
+            feedback.textContent = correct ? 
+                'Correct! ' + currentQuestion.explanation :
+                'Incorrect. The correct answer is: ' + currentQuestion.correct_answer + '. ' + currentQuestion.explanation;
+            
+            feedback.className = `feedback ${correct ? 'correct' : 'incorrect'}`;
+            feedback.style.display = 'block';
+
+            // Show next button
+            document.getElementById('next-button').style.display = 'block';
+            
+            // Emit result to game player
+            socket.emit('submit_answer', { 
+                correct: correct,
+                room: room
+            });
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex >= questions.length) {
+                alert('Quiz completed!');
+                // You could redirect or show a summary here
+                return;
             }
             
-            resultDiv.style.display = 'block';
-            nextButton.style.display = 'block';
-
-            Array.from(document.getElementsByClassName('option')).forEach(option => {
-                option.disabled = true;
-                option.style.cursor = 'default';
-            });
+            displayQuestion(questions[currentQuestionIndex]);
         }
 
-        function submitAnswer(correct, type) {
-            socket.emit('submit_answer', { correct: correct, type: type });
-        }
-
-        function loadQuestions(type) {
-            document.getElementById('loading').style.display = 'block';
-            fetch(`/get-questions/${type}`)
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load questions');
-                    return response.json();
-                })
-                .then(data => {
-                    questions[type] = data;
-                    displayQuestion(getRandomQuestion(type));
-                })
-                .catch(error => {
-                    document.getElementById('loading').textContent = 
-                        'Error loading questions. Please check if the server is running.';
-                    console.error('Error:', error);
-                });
-        }
-
-        window.onload = () => {
-            loadQuestions(currentQuestionType);
-            document.getElementById('nextQuestion').addEventListener('click', () => {
-                displayQuestion(getRandomQuestion(currentQuestionType));
-            });
-            document.querySelectorAll('.type-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    switchQuestionType(this.dataset.type);
-                });
-            });
-        };
+        socket.on('update_score', function(data) {
+            document.getElementById('score').textContent = `Score: ${data.score}`;
+        });
     </script>
 </body>
 </html>

@@ -1,4 +1,63 @@
+let room;  // Will store the room code
+let playerType;  // Will store the player type
+let isGameReady = false;
+
+// Get room code from URL
+const pathParts = window.location.pathname.split('/');
+room = pathParts[pathParts.length - 1];
+playerType = 'game';  // Since this is the game page
+
 const socket = io();
+
+// Connect to room
+socket.emit('join', {
+    room: room,
+    player_type: playerType
+});
+
+// Add waiting message div
+const waitingMessage = document.createElement('div');
+waitingMessage.id = 'waiting-message';
+waitingMessage.innerHTML = '<h2>Waiting for quiz player to join...</h2>';
+waitingMessage.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);';
+document.body.appendChild(waitingMessage);
+
+// Create game container
+const gameContainer = document.createElement('div');
+gameContainer.id = 'gameContainer';
+gameContainer.style.display = 'none';
+document.body.appendChild(gameContainer);
+
+// Handle player connections
+// Add this in both quiz.html and game.html socket event handlers
+socket.on('connect', function() {
+    console.log('Connected to server');
+});
+
+socket.on('player_joined', function(data) {
+    console.log('Player joined event:', data);
+    if (data.room_status.quiz_player && data.room_status.game_player) {
+        console.log('Both players present, showing game');
+        document.getElementById('waiting-message').style.display = 'none';
+        document.getElementById('quiz-container').style.display = 'block';  // or gameContainer for game.html
+    } else {
+        console.log('Waiting for other player');
+        document.getElementById('waiting-message').style.display = 'block';
+        document.getElementById('quiz-container').style.display = 'none';  // or gameContainer for game.html
+    }
+});
+
+socket.on('player_left', function(data) {
+    console.log('Player left event:', data);
+    document.getElementById('waiting-message').style.display = 'block';
+    document.getElementById('quiz-container').style.display = 'none';  // or gameContainer for game.html
+    alert(`The ${data.player_type} player has left the game`);
+});
+
+socket.on('error', function(data) {
+    console.error('Socket error:', data);
+    alert(data.message);
+});
 
 const config = {
     type: Phaser.AUTO,
@@ -39,22 +98,22 @@ let baseSpawnRate = 750;
 
 function preload() {
     // Load all game assets
-    this.load.image('player', 'static/assets/player.png');
-    this.load.image('enemy', 'static/assets/enemy.png');
-    this.load.image('bigEnemy', 'static/assets/bigEnemy.png');
-    this.load.image('eggEnemy', 'static/assets/eggEnemy.png');
-    this.load.image('stalkerEnemy', 'static/assets/stalkerEnemy.png');
-    this.load.image('basic', 'static/assets/basic-projectile.png');
-    this.load.image('laser', 'static/assets/laser-projectile.png');
-    this.load.image('plasma', 'static/assets/plasma-projectile.png');
-    this.load.image('background', 'static/assets/background.png')
-    this.load.audio('die', 'static/assets/chicken_die_2.mp3');
-    this.load.audio('hit', 'static/assets/hit_marker.mp3');
-    this.load.audio('hurt', 'static/assets/take_damage.mp3');
-    this.load.audio('gameOver', 'static/assets/game_over.mp3');
-    this.load.audio('pew', 'static/assets/pew.mp3');
-    this.load.audio('regen', 'static/assets/regen.mp3');
-    this.load.audio('powerUp', 'static/assets/power_up.mp3');
+    this.load.image('player', '../static/assets/player.png');
+    this.load.image('enemy', '../static/assets/enemy.png');
+    this.load.image('bigEnemy', '../static/assets/bigEnemy.png');
+    this.load.image('eggEnemy', '../static/assets/eggEnemy.png');
+    this.load.image('stalkerEnemy', '../static/assets/stalkerEnemy.png');
+    this.load.image('basic', '../static/assets/basic-projectile.png');
+    this.load.image('laser', '../static/assets/laser-projectile.png');
+    this.load.image('plasma', '../static/assets/plasma-projectile.png');
+    this.load.image('background', '../static/assets/background.png')
+    this.load.audio('die', '../static/assets/chicken_die_2.mp3');
+    this.load.audio('hit', '../static/assets/hit_marker.mp3');
+    this.load.audio('hurt', '../static/assets/take_damage.mp3');
+    this.load.audio('gameOver', '../static/assets/game_over.mp3');
+    this.load.audio('pew', '../static/assets/pew.mp3');
+    this.load.audio('regen', '../static/assets/regen.mp3');
+    this.load.audio('powerUp', '../static/assets/power_up.mp3');
 }
 
 function create() {
